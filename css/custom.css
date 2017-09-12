@@ -1,0 +1,565 @@
+a.light_green,
+span.light_green {
+  color: #81b604;
+}
+.light_grey {
+  color: #BBB;
+}
+.light_green_bold {
+  color: #81b604;
+  font-weight: bold;
+}
+optgroup {
+  color: #81b604;
+  border-bottom: 1px #CCC dotted;
+}
+.white {
+  color: #FFFFFF;
+}
+.dark_green {
+  color: #428301;
+}
+.dark_green_shadow {
+  color: #408301;
+}
+.navbar-brand {
+  font-size: 32px;
+  color: #FFFFFF;
+  padding-top: 30px;
+}
+.navbar.navbar-language {
+  min-height: 10px !important;
+  background: none !important;
+  position: relative;
+  top: 10;
+  left: 1;
+  margin-bottom: 0px !important ;
+}
+.navbar.navbar-language .navbar-nav {
+  margin-top: -5px !important;
+}
+.navbar.navbar-language .navbar-nav .navPoint-me .dropdown-toggle {
+  padding-top: none !important;
+  padding-bottom: none !important;
+  color: #333;
+}
+.navbar.navbar-social {
+  min-height: 10px !important;
+  background: 0 0 !important;
+  position: absolute;
+  top: 10px;
+  right: 9%;
+  margin-top: 20px !important;
+}
+.ui-autocomplete {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 200px;
+}
+body {
+  padding-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #EEE;
+}
+hr {
+  border-top: 1px solid #CCC;
+}
+a {
+  cursor: pointer;
+}
+#login_top {
+  overflow: hidden;
+}
+#login_top a {
+  color: #81b604;
+}
+#login_top .login_box {
+  color: #FFFFFF;
+  font-size: 10px;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#login_top input[type='text'],
+#login_top input[type='password'] {
+  width: 100%;
+  color: #000000;
+}
+.info_box_start {
+  font-size: 12px;
+  margin-top: 10px;
+  min-height: 80px;
+}
+.header_banner {
+  width: 100%;
+  margin-top: -10px;
+}
+.start_register_box {
+  background-color: #FFF;
+  margin-bottom: 20px;
+}
+.start_register_header {
+  min-height: 60px;
+  font-size: 18px;
+  line-height: 1.1;
+}
+.start_register_header .small {
+  font-size: 14px;
+  min-height: none;
+  line-height: 0.8;
+  margin: 0px;
+}
+.start_register_header .small a {
+  color: #FFF;
+}
+.start_register_header div {
+  padding: 0;
+}
+.profile_header {
+  background-size: 100% auto !important;
+  max-height: 300px  !important;
+  background-repeat: no-repeat !important;
+  height: 270px;
+  text-shadow: 1px 1px 1px #000 !important;
+}
+section {
+  margin-bottom: 40px;
+}
+section.start_boxes {
+  margin-bottom: 10px;
+}
+.subtitle {
+  color: #FFFFFF;
+  display: block;
+  width: 100px;
+  font-size: 11px !important;
+  float: left;
+  padding-top: 25px;
+}
+@media (max-width: 767px) {
+  .subtitle {
+    padding-top: 10px;
+  }
+  #login_top .login_box {
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .info_box_start {
+    font-size: 12px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    min-height: 0;
+  }
+  .navbar-brand {
+    font-size: 32px;
+    padding-top: 15px;
+  }
+  .subtitle {
+    padding-top: 10px;
+  }
+  #login_top .login_box input[type=text],
+  #login_top input[type='password'] {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .subtitle {
+    color: #FFFFFF;
+    display: block;
+    width: 200px;
+    font-size: 11px !important;
+    float: left;
+    padding-top: 0px;
+    margin-top: -10px;
+    padding-left: 20px;
+  }
+}
+.header_start {
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.form_line {
+  margin-bottom: 10px;
+}
+button.step {
+  font-size: 16px;
+}
+/* PROFIL */
+table.left_profile {
+  width: 90%;
+}
+.content {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.content_image {
+  float: right;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+}
+p.sub_info_listing_grid small {
+  font-size: 80%;
+}
+p.sub_info_listing_grid {
+  line-height: 1.1;
+}
+/* FORM  */
+option.select-hr {
+  border-top: 1px dotted #000;
+}
+/* PROFILE*/
+.galerie_default {
+  border: 4px #81B604 solid;
+}
+/* LISTING GRID*/
+a.thumbnail {
+  text-decoration: none;
+  color: #333333;
+}
+a.thumbnail-grid {
+  width: 100%;
+  max-width: 125px;
+  cursor: pointer;
+}
+a.thumbnail-line {
+  width: 100%;
+  cursor: pointer;
+}
+a.thumbnail-list {
+  width: 100%;
+  max-width: 100%;
+  cursor: pointer;
+}
+.grid_box {
+  height: 200px;
+  word-wrap: break-word;
+}
+.grid_line_image {
+  width: 20%;
+  max-width: 50px;
+  margin: 5px;
+}
+.grid_button-right {
+  font-size: 4rem !important;
+  color: #CCC;
+  text-align: right;
+}
+.grid_image {
+  width: 100%;
+  max-width: 125px;
+  margin-bottom: 10px;
+}
+.list_box {
+  height: 100px;
+}
+/*Bootstrap Manipulations*/
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9 {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.choice_form_line {
+  margin: 0;
+  padding: 0;
+}
+.choice-button {
+  margin-top: 100px;
+  margin-left: 10px;
+  border: 2px #FFFFFF solid;
+  max-width: 95%;
+  overflow: hidden;
+}
+a.history_back {
+  background: none;
+  height: 100%;
+  margin-left: -10px;
+  height: 50px;
+  margin-right: 10px;
+  border: none;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.choice-element-sportsman {
+  height: 172px;
+  background-image: url(../images/default/start_choice/sportsman.jpg);
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-right: 10px #FFFFFF solid;
+  border-bottom: 10px #FFFFFF solid;
+}
+.choice-element-trainer {
+  height: 172px;
+  background-image: url(../images/default/start_choice/trainer.jpg);
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-bottom: 10px #FFFFFF solid;
+}
+.choice-element-club {
+  height: 172px;
+  background-image: url(../images/default/start_choice/club.jpg);
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-right: 10px #FFFFFF solid;
+}
+.choice-element-location {
+  height: 172px;
+  background-image: url(../images/default/start_choice/location.jpg);
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media (max-width: 767px) {
+  .choice-element-club,
+  .choice-element-trainer,
+  .choice-element-sportsman {
+    border-right: none;
+  }
+  .choice-element-club {
+    border-bottom: 10px #FFFFFF solid;
+  }
+}
+.choice-start_register_box {
+  padding: 10px;
+}
+.nav_user_image {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 0px;
+  line-height: 0;
+  background-color: #FFF;
+  border: 0px;
+  border-radius: 4px;
+  margin: 0px;
+  margin-top: -5px;
+}
+/*BADGES */
+.badge {
+  background: #81b604 none repeat scroll 0 0;
+  border: 1px solid #428301;
+  border-radius: 50px;
+  box-sizing: content-box;
+  color: #FFF;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  margin: -0.75rem 0rem 0rem -0.3125rem;
+  min-width: 0.625rem;
+  padding: 0rem 0.3125rem;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 500;
+}
+.row {
+  margin: 0 !important;
+}
+.row-index {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+h4.profile {
+  width: 50%;
+  border-bottom: #81b604 2px solid;
+  max-width: 300px;
+}
+h4.search {
+  width: 100%;
+  border-bottom: #81b604 2px solid;
+  max-width: 420px;
+}
+h1 {
+  border-bottom: #81b604 2px solid;
+  width: 70%;
+  font-size: 28px;
+}
+.nav-footer {
+  margin-top: 40px;
+}
+.index_intro_header {
+  background-color: #FFF;
+  height: 130px;
+  margin-bottom: 30px !important;
+}
+h2.index_left {
+  font-size: 2.2rem;
+  margin: 5px 20px !important;
+  color: #999;
+}
+h2.index_right {
+  font-size: 2.2rem;
+  margin: 5px 20px !important;
+  color: #999;
+}
+.sub_side_bar .sub_nav {
+  display: none;
+}
+.main_content hr {
+  margin: 5px;
+}
+.list-group-item hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 0;
+  border-top: 2px solid #CCC;
+}
+/*SHOUT BOX*/
+.shoutbox-left {
+  float: left;
+  margin-right: 5px;
+  width: 50px;
+  height: 0px;
+  overflow: visible;
+}
+.shoutbox-right {
+  padding-left: 60px;
+  margin-bottom: 10px;
+}
+.shoutbox_action {
+  float: right;
+  display: block;
+}
+.pagination {
+  margin: 0 ;
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .index_intro_header {
+    height: 60px;
+    margin-bottom: 10px !important;
+    margin-top: -40px !important;
+  }
+  h2.index_left {
+    font-size: 1.5rem;
+    margin: 5px 10px !important;
+  }
+  h2.index_right {
+    font-size: 1.5rem;
+    margin: 5px 10px !important;
+  }
+}
+@media (max-width: 991px) {
+  .side_bar .sub_nav {
+    display: none;
+  }
+  .sub_side_bar .sub_nav {
+    display: block;
+  }
+  .pagination {
+    margin: 10px 0px;
+  }
+}
+.view_box {
+  float: right;
+}
+#moreImages {
+  display: none;
+  width: 600px;
+  height: 600px;
+  padding-top: 50%;
+  text-align: center;
+}
+/*Messages*/
+.message_bottom_button {
+  margin-top: 5px;
+}
+.history_back_bottom {
+  float: left;
+  padding-left: 30px;
+  padding-top: 15px;
+}
+.history_back_bottom a {
+  color: #9d9d9d;
+}
+a.list-group-item i {
+  margin-right: 10px;
+}
+.thumbnail-line-more {
+  cursor: pointer;
+  text-shadow: 0 1px 0 #fff;
+  background-image: linear-gradient(to bottom, #ffffff 0, #e0e0e0 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-repeat: repeat-x;
+  border-color: #ccc;
+}
+/*MODAL*/
+.modal-header .close {
+  margin-top: -24px;
+  margin-right: -24px;
+  border: 2px #FFF solid;
+  opacity: 1;
+  background-color: #000;
+  color: #FFF;
+  border-radius: 12px;
+  font-weight: normal;
+  width: 24px;
+  height: 24px;
+  z-index: 99999;
+}
+/* Affiliate Box*/
+.affiliate {
+  border-top: 1px #DDD solid;
+  padding: 3px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.affiliate img {
+  max-width: 100%;
+  height: auto;
+  align-content: center;
+}
+.affiliate-header {
+  font-size: 9px;
+  color: #AAA;
+  position: relative;
+  float: right;
+  right: 20px;
+  margin-top: -15px;
+  padding: 5px;
+}
+.is-right {
+  float: right;
+}
+.is-left {
+  float: right;
+}
+.content-box-right {
+  background: #FFF;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}

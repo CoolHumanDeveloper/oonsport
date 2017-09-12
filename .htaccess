@@ -1,0 +1,106 @@
+RewriteEngine On
+
+DirectoryIndex index.php
+RewriteRule ^content/(.*)$ index.php?content=content&content_value=$1 [QSA,L]
+RewriteRule ^profile/gallery/(.*)$ index.php?content=profile_gallery&content_value=$1 [QSA,L]
+RewriteRule ^profile/(.*)$ index.php?content=profile&content_value=$1 [QSA,L]
+RewriteRule ^dashboard/(.*)$ index.php?content=dashboard&content_value=$1 [QSA,L]
+RewriteRule ^shoutbox/(.*)$ index.php?content=shoutbox&content_value=$1 [QSA,L]
+RewriteRule ^marketplace/offer/(.*)$ index.php?content=marketplace_offer&content_value=$1 [QSA,L]
+RewriteRule ^marketplace/$ index.php?content=marketplace&content_value=$1 [QSA,L]
+RewriteRule ^group/(.*)$ index.php?content=group&content_value=$1 [QSA,L]
+RewriteRule ^error/(.*)$ index.php?content=error&content_value=$1 [QSA,L]
+RewriteRule ^register/(.*)$ index.php?content=register&content_value=$1 [QSA,L]
+RewriteRule ^login/(.*)$ index.php?content=login&content_value=$1 [QSA,L]
+RewriteRule ^search/(.*)$ index.php?content=search&content_value=$1 [QSA,L]
+RewriteRule ^advancedsearch/(.*)$ index.php?content=advancedsearch&content_value=$1 [QSA,L]
+RewriteRule ^reset-password/(.*)$ index.php?content=reset-password&content_value=$1 [QSA,L]
+RewriteRule ^me/(.*)/(.*)/$ index.php?content=me&content_value=$1&sub_content_value=$2 [QSA,L]
+RewriteRule ^me/(.*)$ index.php?content=me&content_value=$1 [QSA,L]
+RewriteRule ^api/(.*)$ index.php?content=api&content_value=$1 [QSA,L]
+
+RewriteRule ^js/ajax_source/zipformquery/(.*)/$ js/ajax_source/zipformquery.php?geozone=$1 [QSA,L]
+RewriteRule ^tools/webplayer/(.*)/$ js/flowplayer/index.php?video=$1 [QSA,L]
+
+#Komprimierung
+<ifModule mod_headers.c>
+Header set Connection keep-alive
+</ifModule> 
+
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/atom_xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/x-shockwave-flash
+</IfModule>
+
+# Deflate Compression by MimeType
+<IfModule mod_deflate.c>
+<FilesMatch "\.(js|jpg|jpeg|gif|png|css|txt|html)$">
+ExpiresActive on
+ExpiresDefault "access plus 1 month"
+SetOutputFilter DEFLATE
+</FilesMatch>
+</IfModule>
+
+# gzip Compression if availiable
+<IfModule mod_gzip.c>
+mod_gzip_on       Yes
+mod_gzip_dechunk  Yes
+mod_gzip_item_include file      \.(html?|txt|css|js|php|pl)$
+mod_gzip_item_include handler   ^cgi-script$
+mod_gzip_item_include mime      ^text/.*
+mod_gzip_item_include mime      ^application/x-javascript.*
+mod_gzip_item_exclude mime      ^image/.*
+mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</IfModule>
+
+#Ende Komprimierung
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 seconds"
+    ExpiresByType image/x-icon "access plus 2692000 seconds"
+    ExpiresByType image/jpeg "access plus 2692000 seconds"
+    ExpiresByType image/png "access plus 2692000 seconds"
+    ExpiresByType image/gif "access plus 2692000 seconds"
+    ExpiresByType application/x-shockwave-flash "access plus 2692000 seconds"
+    ExpiresByType text/css "access plus 2692000 seconds"
+    ExpiresByType text/javascript "access plus 2692000 seconds"
+    ExpiresByType application/x-javascript "access plus 2692000 seconds"
+</IfModule>
+<IfModule mod_headers.c>
+       <filesMatch "\\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+      Header set Cache-Control "max-age=2592000, public"
+   </filesMatch>
+   <filesMatch "\\.(css)$">
+      Header set Cache-Control "max-age=604800, public"
+   </filesMatch>
+   <filesMatch "\\.(js)$">
+      Header set Cache-Control "max-age=216000, private"
+   </filesMatch>
+   <filesMatch "\\.(xml|txt)$">
+      Header set Cache-Control "max-age=216000, public, must-revalidate"
+   </filesMatch>
+   <filesMatch "\\.(html|htm|php)$">
+      Header set Cache-Control "max-age=1, private, must-revalidate"
+   </filesMatch>
+
+    Header unset ETag
+    Header unset Last-Modified
+</IfModule>
+
+ErrorDocument 400 /error/400
+ErrorDocument 401 /error/401
+ErrorDocument 403 /error/403
+ErrorDocument 404 /error/404
+ErrorDocument 500 /error/500 

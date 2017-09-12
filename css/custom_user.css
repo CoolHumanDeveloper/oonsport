@@ -1,0 +1,37 @@
+.navbar-brand
+{
+	padding-top:15px;
+}
+
+
+.subtitle
+{
+	color:#FFFFFF;
+	display:block;
+	width:100px;
+	font-size:11px !important;
+	float:left;
+	padding-top:10px;
+}
+
+@media (max-width: 400px)
+ {
+	 
+			 .subtitle
+		{
+			color:#FFFFFF;
+			display:block;
+			width:200px;
+			font-size:11px !important;
+			float:left;
+			padding-top:0px;
+			margin-top:-10px;
+			padding-left:20px;
+		}
+ }
+ 
+ .message_listing_element
+ 
+ {
+	 margin-bottom:20px !important;
+ }
