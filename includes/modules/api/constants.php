@@ -9,6 +9,8 @@
 define('JWT_KEY', "ABCDEFGHIJKLMN0PORSTUVWXYZ");
 define('JWT_ALG', "HS512");
 
+define('SUCCESS', 200);
+
 define('HEADER_UNAUTHORIZED', 'HTTP/1.1 401 Unauthorized');
 define('HEADER_UNAUTHORIZED_CODE', 401);
 define('HEADER_FORBIDDEN', 'HTTP/1.1 403 Forbidden');

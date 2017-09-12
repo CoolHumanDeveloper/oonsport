@@ -124,9 +124,6 @@ else if($_SERVER['SERVER_PORT'] == 443) {
     include (SERVER_PATH . "includes/functions/locate.php");
 
     $skriptstart = microtime(true);
-    debug1("==========================" . __LINE__);
-    debug1($_SESSION);
-    debug1("==========================" . __LINE__);
 
     error_reporting(0);
     ini_set("display_errors", 0);

@@ -12,19 +12,6 @@ require ("api/constants.php");
 require ("api/functions.php");
 require ("api/jwt/src/JWT.php");
 
-function debug($obj){
-    $fp = fopen("debug.txt", "a");
-    fputs($fp, print_r($obj, true) . "\n");
-    fclose($fp);
-}
-//debug("==== content ====");
-//debug($content);
-//debug("==== data ====");
-//debug($data);
-//debug("==== request ====");
-//debug($_REQUEST);
-//debug("==== end ====");
-
 $jwt = new \Firebase\JWT\JWT();
 $apiname = $_GET['content_value'];
 switch($apiname){
@@ -42,12 +29,15 @@ switch($apiname){
         }
     case "login":
     case "reigister":
-    case "getlanguages":
-    case "getcountries":
+    case "chk_nickname":
+    case "chk_email":
+    case "get_countries":
         require(MODULE_PATH . "api/$apiname.php");
         break;
 	  
 	default:
-          require(MODULE_PATH . "api/notfound.php");
+        require(MODULE_PATH . "api/notfound.php");
     break;
 }
+$response['code'] = SUCCESS;
+die(json_encode($response));

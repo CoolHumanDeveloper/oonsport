@@ -13,17 +13,10 @@ if(isset($_POST['register_step'])) {
 			$_SESSION['register_type'] = $_POST['register_type'];
 			$_SESSION['register_step'] = 2;
 		}
-            debug1("==========================" . __LINE__);
-            debug1($_SESSION);
-            debug1("==========================" . __LINE__);
 		break;
 
 
 		case 2:
-
-            debug1("==========================" . __LINE__);
-            debug1($_SESSION);
-            debug1("==========================" . __LINE__);
 		$_SESSION['system_message'] = '';
 		$register_error=0;
 		$_SESSION['register_step_2'] = 0;
@@ -120,10 +113,6 @@ if(isset($_POST['register_step'])) {
 		
 		// PERSÖNLCHE DATEN
 		case 3:
-
-            debug1("==========================" . __LINE__);
-            debug1($_SESSION);
-            debug1("==========================" . __LINE__);
 		$_SESSION['system_message'] = '';
 		$register_error=0;
 		$_SESSION['register_step_3'] = 0;
