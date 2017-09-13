@@ -31,6 +31,8 @@ define('INVALID_TOKEN', 503);
 define('INVALID_EMAIL', 510);
 define('INVALID_PASSWORD', 511);
 define('INVALID_STATUS', 512);
+define('INVALID_DOB', 513);
+define('INVALID_PLACE', 514);
 define('DUPLICATED_EMAIL', 520);
 define('DUPLICATED_NICKNAME', 521);
 define('SHORT_NICKNAME', 531);
