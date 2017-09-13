@@ -5,12 +5,18 @@ if (!isset($email) || !isset($password)) {
     die(json_encode($response));
 }
 
-$sql = "SELECT * FROM user u, user_details ud WHERE u.user_id=ud.user_id AND u.user_email='$email' AND u.user_password='".md5($password)."' AND u.user_status=1  LIMIT 1";
+$sql = "SELECT * FROM user WHERE user_email='$email' AND user_password=md5('$password') LIMIT 1";
 $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch();
 
 if ($user) {
+    if ($user['user_status'] == 0)
+    {
+        $response['error'] = NOTVERIFIED;
+        header(HEADER_FORBIDDEN);
+        die(json_encode($response));
+    }
     $params = array(
         "email" => $user['user_email'],
         "logintime" => date("Y-m-d H:i:s")
@@ -20,6 +26,6 @@ if ($user) {
 } else {
     $response['error'] = INVALID_PASSWORD;
     header(HEADER_FORBIDDEN);
+    die(json_encode($response));
 }
-die(json_encode($response));
 ?>
