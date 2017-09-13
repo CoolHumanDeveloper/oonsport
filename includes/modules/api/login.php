@@ -10,22 +10,23 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch();
 
-if ($user) {
-    if ($user['user_status'] == 0)
-    {
-        $response['error'] = NOTVERIFIED;
-        header(HEADER_FORBIDDEN);
-        die(json_encode($response));
-    }
-    $params = array(
-        "email" => $user['user_email'],
-        "logintime" => date("Y-m-d H:i:s")
-    );
-    $token = $jwt::encode($params, JWT_KEY, JWT_ALG);
-    $response['token'] = $token;
-} else {
+if (!$user) {
     $response['error'] = INVALID_PASSWORD;
     header(HEADER_FORBIDDEN);
     die(json_encode($response));
 }
+
+if ($user['user_status'] == 0)
+{
+    $response['error'] = NOTVERIFIED;
+    header(HEADER_FORBIDDEN);
+    die(json_encode($response));
+}
+
+$params = array(
+    "email" => $user['user_email'],
+    "logintime" => date("Y-m-d H:i:s")
+);
+$token = $jwt::encode($params, JWT_KEY, JWT_ALG);
+$response['token'] = $token;
 ?>
