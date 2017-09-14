@@ -1,24 +1,24 @@
 <?php
 if (!isset($email) || !isset($password)) {
     header(HEADER_SERVERERR);
-    $response['error'] = MISSING_PARAMETER;
+    $response['code'] = MISSING_PARAMETER;
     die(json_encode($response));
 }
 
 $sql = "SELECT * FROM user WHERE user_email='$email' AND user_password=md5('$password') LIMIT 1";
 $query = $DB->prepare($sql);
 $query->execute();
-$user = $query->fetch();
+$user = $query->fetch(PDO::FETCH_ASSOC);
 
 if (!$user) {
-    $response['error'] = INVALID_PASSWORD;
+    $response['code'] = INVALID_PASSWORD;
     header(HEADER_FORBIDDEN);
     die(json_encode($response));
 }
 
 if ($user['user_status'] == 0)
 {
-    $response['error'] = NOTVERIFIED;
+    $response['code'] = NOTVERIFIED;
     header(HEADER_FORBIDDEN);
     die(json_encode($response));
 }
@@ -29,4 +29,25 @@ $params = array(
 );
 $token = $jwt::encode($params, JWT_KEY, JWT_ALG);
 $response['token'] = $token;
+
+$userinfo = array();
+$userinfo['email'] = $email;
+
+$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+$query = $DB->prepare($sql);
+$query->execute();
+$user_detail = $query->fetch(PDO::FETCH_ASSOC);
+unset($user_detail['user_id']);
+foreach($user_detail as $key => $ud)
+    $userinfo[$key] = $ud;
+
+$sql = "SELECT * FROM user_profile WHERE user_id=" . $user['user_id'];
+$query = $DB->prepare($sql);
+$query->execute();
+$user_profile = $query->fetch(PDO::FETCH_ASSOC);
+unset($user_profile['user_id']);
+foreach($user_profile as $key => $ud)
+    $userinfo[$key] = $ud;
+
+$response['userinfo'] = $userinfo;
 ?>

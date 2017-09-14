@@ -1,15 +1,21 @@
 <?php
+require ("api/functions.php");
 $content = file_get_contents("php://input");
-if ($content)
-    $params = json_decode($content);
-else
+//debug($content);
+if ($content) {
+//    debug("====" . __LINE__);
+    $params = json_decode($content, true);
+} else {
+//    debug("====" . __LINE__);
     $params = $_REQUEST;
+}
 
+//debug("====" . __LINE__);
+//debug($params);
 extract($params);
 $response = array();
 
 require ("api/constants.php");
-require ("api/functions.php");
 require ("api/jwt/src/JWT.php");
 
 $jwt = new \Firebase\JWT\JWT();
@@ -32,6 +38,7 @@ switch($apiname){
     case "chk_nickname":
     case "chk_email":
     case "get_countries":
+    case "chk_logindata":
         require(MODULE_PATH . "api/$apiname.php");
         break;
 	  
