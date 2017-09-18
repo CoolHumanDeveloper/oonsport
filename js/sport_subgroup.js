@@ -47,6 +47,6 @@ function getSubGroup(groupid,sub_groupid,level){
    }
    
    var queryString = "?groupid=" + groupid  + "&sub_groupid=" + sub_groupid + "&level=" + level ;
-   ajaxRequest.open("GET", "//" + location.host + "/js/ajax_source/sport_subgroup.php" + queryString, true);
+   ajaxRequest.open("GET", "//" + location.host + "/oonsrc/js/ajax_source/sport_subgroup.php" + queryString, true); //// OONSRC
    ajaxRequest.send(null); 
 }

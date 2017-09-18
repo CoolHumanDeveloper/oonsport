@@ -490,7 +490,8 @@ else {
      ";
 
 }
- 
+//die($sql);
+
 if($total < 1) {
     $_SESSION['system_temp_message'] .= set_system_message("error",TEXT_SEARCH_NO_RESULTS);		
             header("Location: ".SITE_URL."search/");
@@ -758,7 +759,7 @@ $footer_ext = '
 
 	</script>
     
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBmiMufjGEPl3hRAXuGk6TQD2QLJPm7AEU"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAAUCGinXBvsdx8WHD_PdVvoXA42lakEd4"></script>
     <script src="#SITE_URL#js/geo_search.js"></script>
 ';
 

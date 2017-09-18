@@ -58,6 +58,6 @@ function getSearchSubGroup(groupid,sub_groupid,level){
    
    var queryString = "?search_groupid=" + groupid  + "&search_sub_groupid=" + sub_groupid + "&search_level=" + level + more_selected_values;
    console.log(queryString);
-   ajaxRequest.open("GET", "//" + location.host + "/js/ajax_source/search_sport_subgroup.php" + queryString, true);
+   ajaxRequest.open("GET", "//" + location.host + "/oonsrc/js/ajax_source/search_sport_subgroup.php" + queryString, true);
    ajaxRequest.send(null); 
 }

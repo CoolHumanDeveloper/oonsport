@@ -22,6 +22,7 @@ $jwt = new \Firebase\JWT\JWT();
 $apiname = $_GET['content_value'];
 switch($apiname){
     case "getdata":
+    case "search":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);
@@ -38,6 +39,8 @@ switch($apiname){
     case "chk_nickname":
     case "chk_email":
     case "get_countries":
+    case "get_sportgroup":
+    case "get_sportsubgroup":
     case "chk_logindata":
         require(MODULE_PATH . "api/$apiname.php");
         break;
