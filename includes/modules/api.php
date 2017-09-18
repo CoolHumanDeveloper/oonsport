@@ -23,6 +23,7 @@ $apiname = $_GET['content_value'];
 switch($apiname){
     case "getdata":
     case "search":
+    case "marketplace":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);
