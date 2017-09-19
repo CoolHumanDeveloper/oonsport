@@ -6,5 +6,5 @@
  * Time: 7:14 AM
  */
 header(HEADER_NOTFOUND, true, HEADER_NOTFOUND_CODE);
-$response['error'] = MISSING_API;
+$response['code'] = MISSING_API;
 die(json_encode($response));

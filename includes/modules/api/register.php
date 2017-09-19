@@ -8,14 +8,14 @@ if (!isset($register_type) || !$register_type
     || (!isset($gender) || $gender == "") && $register_type != 3 && $register_type != 4
     || !isset($dob) || trim($dob) == ""
     || !isset($country) || trim($country) == ""
-    || (!isset($geo) || trim($geo) == "") && (!isset($place) || trim($place) == "")
+    //|| (!isset($geo) || trim($geo) == "") && (!isset($place) || trim($place) == "")
     || !isset($groups) || trim($groups) == ""
     || !isset($profession) || trim($profession) == ""
-    || (!isset($groups_status) || $groups_status == "") && $_SESSION['register_type'] != 3 && $_SESSION['register_type'] != 4
+    || (!isset($groups_status) || $groups_status == "") && $register_type != 3 && $register_type != 4
     || !isset($groups_handycap) || trim($groups_handycap) == ""
 ) {
     header(HEADER_SERVERERR);
-    $response['error'] = MISSING_PARAMETER;
+    $response['code'] = MISSING_PARAMETER;
     die(json_encode($response));
 }
 
@@ -25,7 +25,7 @@ if (check_user_nickname($nickname)) {
     die(json_encode($response));
 }
 
-if (strlen($_POST['register_nickname']) < 3) {
+if (strlen($nickname) < 3) {
     header(HEADER_SERVERERR);
     $response['code'] = SHORT_NICKNAME;
     die(json_encode($response));
@@ -44,8 +44,8 @@ if (check_email($email)) {
     die(json_encode($response));
 }
 
-if (strtotime($_POST['register_dob']) > strtotime("- " .REGISTER_MIN_YEARS . "years")) {
-    if($_SESSION['register_type'] < 3) {
+if (strtotime($dob) > strtotime("- " .REGISTER_MIN_YEARS . "years")) {
+    if($register_type < 3) {
         header(HEADER_SERVERERR);
         $response['code'] = INVALID_DOB;
         die(json_encode($response));

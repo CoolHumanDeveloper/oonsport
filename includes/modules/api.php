@@ -1,7 +1,7 @@
 <?php
+define('DEBUG_MODE', false);
 require ("api/functions.php");
 $content = file_get_contents("php://input");
-//debug($content);
 if ($content) {
 //    debug("====" . __LINE__);
     $params = json_decode($content, true);
@@ -20,6 +20,7 @@ require ("api/jwt/src/JWT.php");
 
 $jwt = new \Firebase\JWT\JWT();
 $apiname = $_GET['content_value'];
+//debug("==$apiname==" . __LINE__);
 switch($apiname){
     case "getdata":
     case "search":
@@ -30,6 +31,7 @@ switch($apiname){
     case "del_shoutbox":
     case "reactivate_shoutbox":
     case "get_mails":
+    case "create_mail":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);
@@ -42,7 +44,7 @@ switch($apiname){
             }
         }
     case "login":
-    case "reigister":
+    case "register":
     case "chk_nickname":
     case "chk_email":
     case "get_countries":
@@ -56,5 +58,6 @@ switch($apiname){
         require(MODULE_PATH . "api/notfound.php");
     break;
 }
+//debug("====" . __LINE__);
 $response['code'] = SUCCESS;
 die(json_encode($response));

@@ -183,5 +183,91 @@ $query = $DB->prepare($sql);
 $query->execute();
 $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
+$search_users = array();
+foreach ($result as $k => $item) {
+    $search_user = $item;
+//    $search_item=$result_item; // TEMPLATE SETZEN
+//    $search_item = str_replace("#SEARCH_ID#",md5($search['user_id'].$search['user_nickname']),$search_item);
+//    $search_item = str_replace("#SEARCH_IMAGE_GRID#",build_default_image($search['user_id'],"115x100","grid_image"),$search_item);
+//    $search_item = str_replace("#SEARCH_IMAGE_LIST#",build_default_image($search['user_id'],"100x100","list_image"),$search_item);
+    $sql = "SELECT 
+            m.*,
+            u.user_type,
+            ud.user_gender
+        FROM 
+        user_media m
+        INNER JOIN user_to_media um ON um.media_id=m.media_id
+        INNER JOIN user u ON um.user_id = u.user_id
+        INNER JOIN user_details ud ON ud.user_id = u.user_id 
+        WHERE 
+        u.user_id = '".$item['user_id']."' AND
+        um.user_default_media = 1 AND 
+        m.media_type = 1 
+        LIMIT 1";
+
+    $query = $DB->prepare($sql);
+    $query->execute();
+    $image = $query->fetch();
+
+    if ($image['media_id']) {
+        $media_file = $image['media_file'];
+    } else {
+        $sql = "SELECT 
+            u.user_type,
+            ud.user_gender
+        FROM 
+        user u 
+        INNER JOIN user_details ud ON ud.user_id = u.user_id 
+        WHERE 
+        u.user_id = '" . $item['user_id'] . "'
+        LIMIT 1";
+
+        $query = $DB->prepare($sql);
+        $query->execute();
+        $image = $query->fetch();
+
+        if ($image != NULL && $image['user_type'] <= 2) {
+            if ($image['user_gender'] == 'f') {
+                $profileImage = 'user_blank_female.jpg';
+            } else {
+                $profileImage = 'user_blank_male.jpg';
+            }
+        } else if ($image['user_type'] == 3) {
+            $profileImage = 'user_blank_club.jpg';
+        } else if ($image['user_type'] == 4) {
+            $profileImage = 'user_blank_location.jpg';
+        } else {
+            $profileImage = 'user_blank.jpg';
+        }
+        $media_file = '#SITE_URL#images/default/user/' . $profileImage;
+    }
+    $type = "profil";
+    $size = "100x100";
+    $img = $type."/".$size."/".$media_file.".jpg";
+
+    // Fallback, falls eine URL Angeben ist für z.B. default image
+    if(stristr($media_file, "#SITE_URL#") == true) {
+        $image_file = str_replace("#SITE_URL#",SITE_URL, $media_file);
+    } else {
+        if (!file_exists(SERVER_IMAGE_PATH . "_static/" . $img)) {
+            $image_file = SITE_IMAGE_URL . "temp/" . $img;
+        } else {
+            $image_file = SITE_IMAGE_URL . "_static/" . $img;
+        }
+    }
+    $search_user['image_file'] = $image_file;
+
+    // Nur Anzeigen wenn es ungleich dem Eigenen ist.
+    $search_country_prefix="";
+    if($item['user_country'] != $userinfo['user_country']) {
+        $search_country_prefix = strtoupper($item['user_country']) . " - ";
+    }
+    $search_user['country'] = $search_country_prefix;
+    $search_user['city'] = get_city_name($item['user_geo_city_id'],$item['user_country']);
+    $search_user['main_sport'] = get_user_main_sport($item['user_id']);
+
+    $search_users[] = $search_user;
+}
+
 $response['total'] = $total;
-$response['result'] = $result;
+$response['result'] = $search_users;
