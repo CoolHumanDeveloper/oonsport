@@ -52,35 +52,6 @@ if (strtotime($_POST['register_dob']) > strtotime("- " .REGISTER_MIN_YEARS . "ye
     }
 }
 
-$geo = isset($geo) ? $geo : '';
-$place = isset($place) ? $place : '';
-$gender = isset($gender) ? $gender : '';
-$groups_status = isset($groups_status) ? $groups_status : '';
-
-if ($geo != '') {
-    if ($place != '' && $place != 'undefined') {
-        if (geo_locate_check($place) == false) {
-            header(HEADER_SERVERERR);
-            $response['code'] = INVALID_PLACE;
-            die(json_encode($response));
-        }
-    } else {
-        $place = geo_locate_by_input( get_country_name( $country ) . ',' . $geo);
-
-        if(!$place) {
-            header(HEADER_SERVERERR);
-            $response['code'] = INVALID_PLACE;
-            die(json_encode($response));
-        }
-    }
-} else {
-    if (geo_locate_check($place) == false) {
-        header(HEADER_SERVERERR);
-        $response['code'] = INVALID_PLACE;
-        die(json_encode($response));
-    }
-}
-
 $auth_key = md5($password . $email . $register_type . time() . rand(0, 999));
 
 $sql = "INSERT INTO `user` (`user_password`, `user_email`, `user_type`, `user_status`, `user_auth_key`, user_register_date) VALUES (md5('$password'), '$email', '$register_type', 0, '$auth_key', NOW())";
@@ -93,7 +64,6 @@ if (!$user_id > 0) {
     $response['code'] = FAIL_USER;
     die(json_encode($response));
 }
-//$profile_geo=get_city_latlng($_SESSION['register_city_id'], $_SESSION['register_country']);
 
 $dob = date("Y-m-d", strtotime($dob));
 $sql = "INSERT INTO `user_details` (`user_id`, `user_nickname`, `user_firstname`, `user_lastname`, `user_dob`, `user_gender`, user_country, `user_geo_city_id`) VALUES ('$user_id', '$nickname', '$firstname', '$lastname', '$dob', '$gender', '$country', '$place');";

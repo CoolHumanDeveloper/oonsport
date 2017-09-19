@@ -23,7 +23,13 @@ $apiname = $_GET['content_value'];
 switch($apiname){
     case "getdata":
     case "search":
-    case "marketplace":
+    case "get_marketplaces":
+    case "get_shoutboxs":
+    case "add_shoutbox":
+    case "add_marketplace":
+    case "del_shoutbox":
+    case "reactivate_shoutbox":
+    case "get_mails":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);

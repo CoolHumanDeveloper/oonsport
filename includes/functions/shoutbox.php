@@ -182,8 +182,7 @@ function build_shoutbox_feed( $user_id, $page, $filter = false ) {
                 " . $search_sql . "
 				ud.user_country='" . $_SESSION[ 'user' ][ 'user_country' ] . "' 
 			GROUP BY ubox.shoutbox_message_id";
-        die($sql);
-        
+
             $query = $DB->prepare( $sql );
             $query->execute();
             $total = $query->rowCount();
