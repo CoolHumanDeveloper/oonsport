@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c4aab9-b50a-487f-ab15-b4c09931ef7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/modules/api/del_mail.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,7 +79,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="del_mail.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="del_mail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/modules/api/del_mail.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="680">
@@ -124,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="del_shoutbox.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="del_shoutbox.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/modules/api/del_shoutbox.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="20" column="135" lean-forward="true" selection-start-line="20" selection-start-column="135" selection-end-line="20" selection-end-column="135" />
               <folding>
                 <marker date="1505777202739" expanded="true" signature="273:326" ph="select * fro... user" />
               </folding>
@@ -400,7 +399,7 @@
       <workItem from="1505406635430" duration="7017000" />
       <workItem from="1505475084850" duration="2531000" />
       <workItem from="1505686925884" duration="24224000" />
-      <workItem from="1505769291018" duration="11598000" />
+      <workItem from="1505769291018" duration="11653000" />
     </task>
     <task id="LOCAL-00001" summary="api excel&#10;chk email, nickname api">
       <created>1505260044590</created>
@@ -465,11 +464,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505779859027</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="del mail api">
+      <created>1505780932326</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1505780932326</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100738000" />
+    <option name="totallyTimeSpent" value="100793000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -507,16 +513,12 @@
     <MESSAGE value="modify login api" />
     <MESSAGE value="add search api" />
     <MESSAGE value="add marketplace, shoutbox, mail api" />
-    <option name="LAST_COMMIT_MESSAGE" value="add marketplace, shoutbox, mail api" />
+    <MESSAGE value="add del mail api" />
+    <MESSAGE value="del mail api" />
+    <option name="LAST_COMMIT_MESSAGE" value="del mail api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/includes/modules/api/del_shoutbox.php</url>
-          <line>20</line>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
@@ -1072,17 +1074,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/reactivate_shoutbox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding>
-            <marker date="1505777206142" expanded="true" signature="273:326" ph="select * fro... user" />
-            <marker date="1505777206142" expanded="true" signature="427:632" ph="UPDATE `user... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/api/mail_inbox.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1096,16 +1087,6 @@
         <state relative-caret-position="527">
           <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/del_shoutbox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <marker date="1505777202739" expanded="true" signature="273:326" ph="select * fro... user" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1126,30 +1107,6 @@
           <folding>
             <marker date="1504458797683" expanded="true" signature="89:288" ph="SELECT * FRO... message" />
             <marker date="1504458797683" expanded="true" signature="4005:4605" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/get_mails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="66" lean-forward="false" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="66" />
-          <folding>
-            <marker date="1505778350126" expanded="true" signature="285:338" ph="select * fro... user" />
-            <marker date="1505778350126" expanded="true" signature="523:710" ph="SELECT * FRO... message" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/functions/session_register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="210" column="34" lean-forward="true" selection-start-line="210" selection-start-column="34" selection-end-line="210" selection-end-column="34" />
-          <folding>
-            <marker date="1505258687738" expanded="true" signature="11203:11465" ph="INSERT INTO `user`... " />
-            <marker date="1505258687738" expanded="true" signature="11775:12228" ph="INSERT INTO `user_details`... " />
-            <marker date="1505258687738" expanded="true" signature="12702:13071" ph="INSERT INTO `user_to_sport_group_value`... " />
-            <marker date="1505258687738" expanded="true" signature="13191:13251" ph="INSERT INTO `user_profile`... " />
           </folding>
         </state>
       </provider>
@@ -1323,6 +1280,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/reactivate_shoutbox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding>
+            <marker date="1505777206142" expanded="true" signature="273:326" ph="select * fro... user" />
+            <marker date="1505777206142" expanded="true" signature="427:632" ph="UPDATE `user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/api/del_mail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -1333,6 +1301,40 @@
             <marker date="1505780885756" expanded="true" signature="495:781" ph="SELECT * FRO... message" />
             <marker date="1505780885756" expanded="true" signature="1012:1095" ph="UPDATE messa... " />
             <marker date="1505780885756" expanded="true" signature="1181:1342" ph="UPDATE user_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/functions/session_register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="210" column="34" lean-forward="true" selection-start-line="210" selection-start-column="34" selection-end-line="210" selection-end-column="34" />
+          <folding>
+            <marker date="1505258687738" expanded="true" signature="11203:11465" ph="INSERT INTO `user`... " />
+            <marker date="1505258687738" expanded="true" signature="11775:12228" ph="INSERT INTO `user_details`... " />
+            <marker date="1505258687738" expanded="true" signature="12702:13071" ph="INSERT INTO `user_to_sport_group_value`... " />
+            <marker date="1505258687738" expanded="true" signature="13191:13251" ph="INSERT INTO `user_profile`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/get_mails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="66" lean-forward="false" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="66" />
+          <folding>
+            <marker date="1505778350126" expanded="true" signature="285:338" ph="select * fro... user" />
+            <marker date="1505778350126" expanded="true" signature="523:710" ph="SELECT * FRO... message" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/del_shoutbox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="135" lean-forward="true" selection-start-line="20" selection-start-column="135" selection-end-line="20" selection-end-column="135" />
+          <folding>
+            <marker date="1505777202739" expanded="true" signature="273:326" ph="select * fro... user" />
           </folding>
         </state>
       </provider>
