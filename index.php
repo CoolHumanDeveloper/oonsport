@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 
 function debug1($obj){
     $fp = fopen("debug.txt", 'a');

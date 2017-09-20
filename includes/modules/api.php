@@ -32,6 +32,7 @@ switch($apiname){
     case "reactivate_shoutbox":
     case "get_mails":
     case "create_mail":
+    case "profile":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);

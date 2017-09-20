@@ -144,5 +144,10 @@ $query = $DB->prepare( $sql );
 $query->execute();
 $result = $query->fetchAll();
 
+foreach($result as $key => $item)
+{
+    $result[$key]['user_image'] = api_build_default_image( $item[ 'user_id' ], "50x50");
+}
+
 $response['total'] = $total;
 $response['result'] = $result;

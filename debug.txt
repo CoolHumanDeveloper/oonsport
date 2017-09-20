@@ -1,0 +1,150 @@
+====5
+====12
+Array
+(
+    [register_type] => 3
+    [nickname] => aaa
+    [password] => aaa
+    [email] => aaa@gmail.com
+    [firstname] => aaa
+    [lastname] => aaa
+    [gender] => m
+    [dob] => 2017-09-21
+    [country] => DE
+    [place] => ChIJYw4f3yHenUcRoKt2O6clHRw
+    [groups] => 7
+    [groups1] => 1016
+    [profession] => 1
+    [groups_status] => 2
+    [groups_handycap] => 
+)
+
+==register==22
+==============================2
+====8
+====12
+Array
+(
+    [content] => api
+    [content_value] => get_countries
+)
+
+==get_countries==22
+====8
+====60
+====12
+Array
+(
+    [content] => api
+    [content_value] => get_sportgroup
+)
+
+==get_sportgroup==22
+====60
+====5
+====12
+Array
+(
+    [nickname] => aaa
+    [email] => aaa@gmail.com
+)
+
+==chk_logindata==22
+====60
+====5
+====12
+Array
+(
+    [groupid] => 5
+    [sub_groupid] => 0
+)
+
+==get_sportsubgroup==22
+====60
+====5
+====12
+Array
+(
+    [register_type] => 4
+    [nickname] => aaa
+    [password] => aaa
+    [email] => aaa@gmail.com
+    [firstname] => aaa
+    [lastname] => aaa
+    [gender] => m
+    [dob] => 2017-09-04
+    [country] => DE
+    [place] => ChIJ9W3neKUOvUcR2Hs-n2_2xts
+    [groups] => 5
+    [profession] => 2
+    [groups_status] => 2
+    [groups_handycap] => 1
+)
+
+==register==22
+==============================2
+==============================23
+==============================30
+====5
+====12
+Array
+(
+    [register_type] => 4
+    [nickname] => aaa
+    [password] => aaa
+    [email] => aaa@gmail.com
+    [firstname] => aaa
+    [lastname] => aaa
+    [gender] => m
+    [dob] => 2017-09-04
+    [country] => DE
+    [place] => ChIJ9W3neKUOvUcR2Hs-n2_2xts
+    [groups] => 5
+    [profession] => 2
+    [groups_status] => 2
+    [groups_handycap] => 1
+)
+
+==register==22
+==============================2
+==============================23
+==============================30
+==============================37
+==============================51
+==============================73
+==============================88
+==============================102
+==============================110
+==============================115
+====8
+====8
+====12
+====12
+Array
+(
+    [content] => api
+    [content_value] => get_sportgroup
+)
+
+==get_countries==22
+==get_sportgroup==22
+====60
+====60
+====5
+====12
+Array
+(
+    [nickname] => aaa
+    [email] => aaa@gmail.com
+)
+
+==chk_logindata==22
+====5
+====12
+Array
+(
+    [nickname] => aaa
+    [email] => aaa@gmail.com
+)
+
+==chk_logindata==22
