@@ -29,21 +29,25 @@ $query = $DB->prepare($sql);
 $query->execute();
 $message = $query->fetch();
 
-if(isset($message['message_id'])) {
-    $sql = "DELETE FROM user_to_messages  WHERE message_box='trash' AND user_id = '".$user['user_id']."' AND message_id = '".$message['message_id']."'";
+if (!isset($message['message_id'])) {
+    header(HEADER_SERVERERR);
+    $response['code'] = NOTFOUND_MESSAGE;
+    die(json_encode($response));
+}
+
+$sql = "DELETE FROM user_to_messages  WHERE message_box='trash' AND user_id = '".$user['user_id']."' AND message_id = '".$message['message_id']."'";
+$query = $DB->prepare($sql);
+$query->execute();
+
+if($query->rowCount() == 1) {
+    // Nachricht asu dem System löschen, wenn kein Postfach mehr verknüpft ist,
+    $sql = "SELECT * FROM user_to_messages WHERE message_id = '".$message['message_id']."' LIMIT 1";
     $query = $DB->prepare($sql);
     $query->execute();
 
-    if($query->rowCount() == 1) {
-        // Nachricht asu dem System löschen, wenn kein Postfach mehr verknüpft ist,
-        $sql = "SELECT * FROM user_to_messages WHERE message_id = '".$message['message_id']."' LIMIT 1";
+    if($query->rowCount() < 1) {
+        $sql = "DELETE FROM message WHERE message_id = '".$message['message_id']."'";
         $query = $DB->prepare($sql);
         $query->execute();
-
-        if($query->rowCount() < 1) {
-            $sql = "DELETE FROM message WHERE message_id = '".$message['message_id']."'";
-            $query = $DB->prepare($sql);
-            $query->execute();
-        }
     }
 }

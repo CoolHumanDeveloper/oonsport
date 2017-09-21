@@ -32,6 +32,10 @@ switch($apiname){
     case "reactivate_shoutbox":
     case "get_mails":
     case "create_mail":
+    case "del_mail":
+    case "get_blockedusers":
+    case "set_blockuser":
+    case "recover_mail":
     case "profile":
         if (!isset($token))
         {
