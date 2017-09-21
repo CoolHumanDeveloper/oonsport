@@ -149,13 +149,13 @@ function build_shoutbox_feed( $user_id, $page, $filter = false ) {
         if(isset($_GET['marketplace_search_' . $_SESSION[ 'user' ][ 'secure_spam_key' ]])) {
             $search .= '&marketplace_search_' . $_SESSION[ 'user' ][ 'secure_spam_key' ] . '=' . $_GET['marketplace_search_' . $_SESSION[ 'user' ][ 'secure_spam_key' ]];
             
-            $search_sql = "(ubox.shoutbox_title LIKE '%" . $_GET['marketplace_search_' . $_SESSION[ 'user' ][ 'secure_spam_key' ]] . "%' OR ubox.shoutbox_text LIKE '%" . $_GET['marketplace_search_' . $_SESSION[ 'user' ][ 'secure_spam_key' ]] . "%' ) AND ";
+            $search_sql .= "(ubox.shoutbox_title LIKE '%" . $_GET['marketplace_search_' . $_SESSION[ 'user' ][ 'secure_spam_key' ]] . "%' OR ubox.shoutbox_text LIKE '%" . $_GET['marketplace_search_' . $_SESSION[ 'user' ][ 'secure_spam_key' ]] . "%' ) AND ";
             
         }
         if(isset($_GET['marketplace_type_' . $_SESSION[ 'user' ][ 'secure_spam_key' ]][0])) {
             $search .= '&marketplace_type_' . $_SESSION[ 'user' ][ 'secure_spam_key' ] . '[]=' . $_GET['marketplace_type_' . $_SESSION[ 'user' ][ 'secure_spam_key' ]][0];
             if($_GET['marketplace_type_' . $_SESSION[ 'user' ][ 'secure_spam_key' ]][0] != 'marketplace_all' ){
-               $search_sql = "shoutbox_type = '" . $_GET['marketplace_type_' . $_SESSION[ 'user' ][ 'secure_spam_key' ]][0] . "' AND "; 
+               $search_sql .= "shoutbox_type = '" . $_GET['marketplace_type_' . $_SESSION[ 'user' ][ 'secure_spam_key' ]][0] . "' AND ";
             }
             
         }

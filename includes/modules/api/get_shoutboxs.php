@@ -101,11 +101,11 @@ if($shoutbox_group) {
 }
 
 if($shoutbox_search) {
-    $search_sql = "(ubox.shoutbox_title LIKE '%$shoutbox_search%' OR ubox.shoutbox_text LIKE '%$shoutbox_search%' ) AND ";
+    $search_sql .= "(ubox.shoutbox_title LIKE '%$shoutbox_search%' OR ubox.shoutbox_text LIKE '%$shoutbox_search%' ) AND ";
 }
 if($shoutbox_type) {
     if ($shoutbox_type[0] != 'shoutbox_all' ){
-        $search_sql = "shoutbox_type = '" . $shoutbox_type[0] . "' AND ";
+        $search_sql .= "shoutbox_type = '" . $shoutbox_type[0] . "' AND ";
     }
 }
 
@@ -142,11 +142,12 @@ $sql .= "ORDER BY
 
 $query = $DB->prepare( $sql );
 $query->execute();
-$result = $query->fetchAll();
+$result = $query->fetchAll(PDO::FETCH_ASSOC);
 
 foreach($result as $key => $item)
 {
     $result[$key]['user_image'] = api_build_default_image( $item[ 'user_id' ], "50x50");
+    $result[$key]['sport_group_name'] = api_get_sport_group_name($item[ 'shoutbox_sport_group_id' ]);
 }
 
 $response['total'] = $total;

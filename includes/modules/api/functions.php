@@ -78,3 +78,26 @@ function api_build_user_image($image, $type, $size) {
 
     return $output;
 }
+
+function api_get_sport_group_name( $group_id ) {
+    global $DB;
+    if($group_id != 0) {
+        $sql = "SELECT 
+                    sgd.sport_group_name 
+                FROM 
+                    sport_group sg 
+                    LEFT JOIN sport_group_details AS sgd ON sgd.sport_group_id = sg.sport_group_id
+                WHERE 
+                    sg.sport_group_id = '" . $group_id . "' AND
+                    sgd.language_code='" . $_SESSION[ 'language_code' ] . "' 
+                LIMIT 1";
+
+        $query = $DB->prepare( $sql );
+        $query->execute();
+        $group_name = $query->fetch();
+
+        return $group_name[ 'sport_group_name' ];
+    }
+
+    return '';
+}
