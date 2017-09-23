@@ -49,6 +49,7 @@ switch($apiname){
     case "delete_account":
     case "get_friends":
     case "del_friend":
+    case "get_groups":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);

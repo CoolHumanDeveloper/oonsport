@@ -20,6 +20,4 @@ require("includes/config.php");
 
 // Ausgabe der Seite 
 echo load_template();
-
-mysqli_close(DB_LINKED);
  ?>

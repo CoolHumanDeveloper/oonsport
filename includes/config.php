@@ -147,8 +147,8 @@ else if($_SERVER['SERVER_PORT'] == 443) {
     define('DB_PASSWORD','');
     define('DB_DEFAULT','oon_sport');
 
-    define('SERVER_IMAGE_PATH','C:/xampp/htdocs/oon-sport.de-images/');
-    define('SITE_IMAGE_URL','http://dev-images.oon-sport.de/');
+    define('SERVER_IMAGE_PATH','D:/xampp7/htdocs/oonsrc/images/');
+    define('SITE_IMAGE_URL','http://localhost/oonsrc/images/');
 }
 else {
 	define('SERVER_PATH','/srv/www/vhosts/oon-sport.de/httpdocs/oon-sport/v1/');
