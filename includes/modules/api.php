@@ -50,6 +50,8 @@ switch($apiname){
     case "get_friends":
     case "del_friend":
     case "get_groups":
+    case "get_group_messages":
+    case "write_to_group":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);

@@ -419,3 +419,35 @@ function api_get_shoutbox_media($shoutbox_id) {
 
     return $output;
 }
+
+function api_build_group_feed($group) {
+    global $DB;
+
+    $sql = "	SELECT 
+				u.*, 
+				ud.*,
+				gs.* 
+			FROM 
+				user u
+				INNER JOIN user_details ud ON u.user_id=ud.user_id
+				INNER JOIN groups_message gs ON u.user_id = gs.group_message_user_id
+			WHERE 
+				u.user_status=1 AND
+				gs.group_message_group_id = '".$group."'
+			GROUP BY gs.group_message_id
+			ORDER BY 
+				gs.group_message_date DESC 
+			LIMIT 20";
+
+    $query = $DB->prepare($sql);
+    $query->execute();
+    $get_group_message = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($get_group_message as $key => $group_message) {
+        $get_group_message[$key]['user_image'] = api_build_default_image($group_message['user_id'],"50x50");
+        $get_group_message[$key]['message_date'] = date("H:i d.m.Y",strtotime($group_message['group_message_date']));
+        $get_group_message[$key]['city_name'] = get_city_name($group_message['user_geo_city_id'], $group_message['user_country']);
+    }
+
+    return $get_group_message;
+}
