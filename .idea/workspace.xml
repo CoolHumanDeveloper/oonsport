@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c4aab9-b50a-487f-ab15-b4c09931ef7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/modules/api/update_settings_marketplace.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/modules/api/update_settings_newsletter.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api.php" afterPath="$PROJECT_DIR$/includes/modules/api.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/modules/api.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -25,27 +24,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update_settings_shoutbox.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/modules/api/update_settings_shoutbox.php">
+      <file leaf-file-name="update_settings_newsletter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/modules/api/update_settings_newsletter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="306">
+              <caret line="23" column="88" lean-forward="false" selection-start-line="23" selection-start-column="88" selection-end-line="23" selection-end-column="88" />
               <folding>
-                <marker date="1506152073091" expanded="true" signature="305:358" ph="select * fro... user" />
-                <marker date="1506152073091" expanded="true" signature="552:689" ph="UPDATE user_... " />
+                <marker date="1506152691715" expanded="true" signature="259:312" ph="select * fro... user" />
+                <marker date="1506152691715" expanded="true" signature="486:612" ph="UPDATE user_... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update_settings_marketplace.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/modules/api/update_settings_marketplace.php">
+      <file leaf-file-name="quit.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/modules/me/settings/quit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="102" lean-forward="false" selection-start-line="23" selection-start-column="102" selection-end-line="23" selection-end-column="102" />
+            <state relative-caret-position="68">
+              <caret line="4" column="55" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="55" />
               <folding>
-                <marker date="1506152489763" expanded="true" signature="253:306" ph="select * fro... user" />
-                <marker date="1506152489763" expanded="true" signature="474:614" ph="UPDATE user_... " />
+                <marker date="1505254651743" expanded="true" signature="437:1059" ph="..." />
+                <marker date="1505254651743" expanded="true" signature="468:744" ph="..." />
+                <marker date="1505254651743" expanded="true" signature="588:738" ph="..." />
+                <marker date="1505254651743" expanded="true" signature="775:1053" ph="..." />
+                <marker date="1505254651743" expanded="true" signature="833:1047" ph="..." />
+                <marker date="1505254651743" expanded="true" signature="1177:1501" ph="..." />
+                <marker date="1505254651743" expanded="true" signature="1337:1484" ph="..." />
+                <marker date="1505254651743" expanded="true" signature="1602:1731" ph="..." />
               </folding>
             </state>
           </provider>
@@ -234,7 +239,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$action</find>
       <find>sport</find>
       <find>user_to_messages</find>
       <find>message_to_user_id</find>
@@ -264,6 +268,7 @@
       <find>emailcopy_on_friendship_accept</find>
       <find>map</find>
       <find>friendship_accept</find>
+      <find>delete_account</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -272,7 +277,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/modules/api/chk_dup_nickname.php" />
         <option value="$PROJECT_DIR$/includes/functions/session_register.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/chk_dup_email.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/chk_email.php" />
@@ -323,6 +327,7 @@
         <option value="$PROJECT_DIR$/includes/modules/api/update_settings_shoutbox.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/update_settings_marketplace.php" />
         <option value="$PROJECT_DIR$/includes/modules/api.php" />
+        <option value="$PROJECT_DIR$/includes/modules/api/update_settings_newsletter.php" />
       </list>
     </option>
   </component>
@@ -466,7 +471,7 @@
       <workItem from="1505475084850" duration="2531000" />
       <workItem from="1505686925884" duration="24224000" />
       <workItem from="1505769291018" duration="45680000" />
-      <workItem from="1506024485275" duration="32525000" />
+      <workItem from="1506024485275" duration="32772000" />
     </task>
     <task id="LOCAL-00001" summary="api excel&#10;chk email, nickname api">
       <created>1505260044590</created>
@@ -636,11 +641,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506152353557</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="update_settings_marketplace">
+      <created>1506152608929</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1506152608929</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167345000" />
+    <option name="totallyTimeSpent" value="167592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -691,7 +703,8 @@
     <MESSAGE value="get_profiles" />
     <MESSAGE value="update_settings" />
     <MESSAGE value="update_settings_shoutbox" />
-    <option name="LAST_COMMIT_MESSAGE" value="update_settings_shoutbox" />
+    <MESSAGE value="update_settings_marketplace" />
+    <option name="LAST_COMMIT_MESSAGE" value="update_settings_marketplace" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -700,22 +713,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/classes/PHPMailer_5.2.2/class.phpmailer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="751" column="18" lean-forward="false" selection-start-line="751" selection-start-column="18" selection-end-line="751" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/get_marketplaces.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="133" column="43" lean-forward="false" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/me/friends/request.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -1748,6 +1745,34 @@
         <state relative-caret-position="153">
           <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/update_settings_newsletter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="88" lean-forward="false" selection-start-line="23" selection-start-column="88" selection-end-line="23" selection-end-column="88" />
+          <folding>
+            <marker date="1506152691715" expanded="true" signature="259:312" ph="select * fro... user" />
+            <marker date="1506152691715" expanded="true" signature="486:612" ph="UPDATE user_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/me/settings/quit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="55" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="55" />
+          <folding>
+            <marker date="1505254651743" expanded="true" signature="437:1059" ph="..." />
+            <marker date="1505254651743" expanded="true" signature="468:744" ph="..." />
+            <marker date="1505254651743" expanded="true" signature="588:738" ph="..." />
+            <marker date="1505254651743" expanded="true" signature="775:1053" ph="..." />
+            <marker date="1505254651743" expanded="true" signature="833:1047" ph="..." />
+            <marker date="1505254651743" expanded="true" signature="1177:1501" ph="..." />
+            <marker date="1505254651743" expanded="true" signature="1337:1484" ph="..." />
+            <marker date="1505254651743" expanded="true" signature="1602:1731" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
