@@ -48,6 +48,14 @@ $get_search = $query->fetchAll(PDO::FETCH_ASSOC);
 foreach($get_search as $key => $item)
 {
     $get_search[$key]['user_image'] = api_build_default_image( $item[ 'user_id' ], "50x50");
+
+    $search_country_prefix="";
+    if($item['user_country'] != $userinfo['user_country']) {
+        $search_country_prefix = strtoupper($item['user_country']) . " - ";
+    }
+    $get_search[$key]['country'] = $search_country_prefix;
+    $get_search[$key]['city'] = get_city_name($item['user_geo_city_id'],$item['user_country']);
+    $get_search[$key]['main_sport'] = get_user_main_sport($item['user_id']);
 }
 
 $response['result'] = $get_search;

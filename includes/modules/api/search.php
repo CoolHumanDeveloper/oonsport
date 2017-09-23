@@ -27,7 +27,6 @@ foreach($user_detail as $key => $ud)
 
 $lang = isset($lang) ? $lang : 'en';
 $page = isset($page) ? $page - 1 : 0;
-$action = isset($action) ? $action : "search.do";
 $name = isset($name) ? $name : '';
 $placeid = isset($placeid) ? $placeid : $userinfo['user_geo_city_id'];
 $country = isset($country) ? $country : $userinfo['user_country'];
@@ -38,37 +37,29 @@ $search_url_types_string="";
 $search_url_page_string="";
 $search_sql="";
 
-if(isset($_GET['search_single_sport_group_'.$_SESSION['user']['secure_spam_key']])) {
-    $search_criteria_string .= $_GET['search_single_sport_group_'.$_SESSION['user']['secure_spam_key']].", ";
-    $search_sql.=" AND utsgv.sport_group_id = '".$_GET['search_single_sport_group_'.$_SESSION['user']['secure_spam_key']]."'";
-    $selected_sport_group_id = $_GET['search_single_sport_group_'.$_SESSION['user']['secure_spam_key']];
+for($sg_x = 3; $sg_x >=0; $sg_x--) {
+    if (isset(${"groups$sg_x"})) {
+        $selected_sport_group_value = ${"groups$sg_x"};
+        break;
+    }
 }
-else {
-    for($sg_x = 3; $sg_x >=0; $sg_x--) {
-        if (isset(${"groups$sg_x"})) {
-            $selected_sport_group_value = ${"groups$sg_x"};
-            break;
+
+// Wenn nur die Hauptgruppe gewählt wurde, die z.B. auch keine Unterpunkte hat:
+if($groups0 != 0) $selected_sport_group_id = $groups0;
+
+if($sg_x == 0 && $groups0 != 0) {
+    $search_sql.=" AND utsgv.sport_group_id = '$groups0' ";
+} else {
+    $search_sport_group_value_ids=check_for_all_value_ids($selected_sport_group_value, $groups0, $sg_x);
+
+    if(count($search_sport_group_value_ids) > 0) {
+        $sg_or="";
+        $search_sql.=" AND ( ";
+        foreach($search_sport_group_value_ids as $search_value_id) {
+            $search_sql.=$sg_or."utsgv.sport_group_value_id = '".$search_value_id."'";
+            $sg_or=" OR ";
         }
-    }
-
-    // Wenn nur die Hauptgruppe gewählt wurde, die z.B. auch keine Unterpunkte hat:
-    if($groups0 != 0) $selected_sport_group_id = $groups0;
-
-    if($sg_x == 0 && $groups0 != 0) {
-        $search_sql.=" AND utsgv.sport_group_id = '$groups0' ";
-    }
-    else {
-        $search_sport_group_value_ids=check_for_all_value_ids($selected_sport_group_value, $groups0, $sg_x);
-
-        if(count($search_sport_group_value_ids) > 0) {
-            $sg_or="";
-            $search_sql.=" AND ( ";
-            foreach($search_sport_group_value_ids as $search_value_id) {
-                $search_sql.=$sg_or."utsgv.sport_group_value_id = '".$search_value_id."'";
-                $sg_or=" OR ";
-            }
-            $search_sql.=" ) ";
-        }
+        $search_sql.=" ) ";
     }
 }
 
@@ -115,21 +106,10 @@ if ($name)
 $search_by_values = array("distance", "newest", "online");
 $search_by_values_to_db = array("distance" => 'DISTANCE ASC', "newest" => "u.user_id DESC", "online" => "u.user_online DESC");
 
-
-if(isset($_GET['search_sort_' . $_SESSION['user']['secure_spam_key']])) {
-    if(in_array($orderby, $search_by_values)) {
-        $search_by = $search_by_values_to_db[$orderby];
-    }
-    else {
-        $search_by = $search_by_values_to_db['distance'];
-    }
+if (in_array($orderby, $search_by_values)) {
+    $search_by = $search_by_values_to_db[$orderby];
 } else {
-    if($search_lat == 0) {
-        $search_by = $search_by_values_to_db['newest'];
-    }
-    else {
-        $search_by = $search_by_values_to_db['distance'];
-    }
+    $search_by = $search_by_values_to_db['distance'];
 }
 
 $radius = isset($radius) ? $radius : 0;
