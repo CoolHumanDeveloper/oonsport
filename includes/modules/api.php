@@ -47,6 +47,8 @@ switch($apiname){
     case "update_settings_marketplace":
     case "update_settings_newsletter":
     case "delete_account":
+    case "get_friends":
+    case "del_friend":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);

@@ -21,5 +21,5 @@ require("includes/config.php");
 // Ausgabe der Seite 
 echo load_template();
 
-mysql_close(DB_LINKED);
+mysqli_close(DB_LINKED);
  ?>
