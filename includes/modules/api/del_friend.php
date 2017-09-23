@@ -33,7 +33,7 @@ $friendship_user = $query->fetch();
 
 if ($user['user_id'] === $friendship_user['user_id']) {
     header(HEADER_SERVERERR);
-    $response['code'] = BLOCK_ME;
+    $response['code'] = PROCESS_ME;
     die();
 }
 

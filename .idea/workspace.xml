@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c4aab9-b50a-487f-ab15-b4c09931ef7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/modules/api/add_group.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/modules/api/send_invite.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api.php" afterPath="$PROJECT_DIR$/includes/modules/api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api/constants.php" afterPath="$PROJECT_DIR$/includes/modules/api/constants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api/del_friend.php" afterPath="$PROJECT_DIR$/includes/modules/api/del_friend.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,171 +20,111 @@
       <file leaf-file-name="constants.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/modules/api/constants.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="45" column="17" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="17" />
+            <state relative-caret-position="636">
+              <caret line="43" column="26" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/modules/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+            <state relative-caret-position="595">
+              <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="group.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/modules/group.php">
+      <file leaf-file-name="request.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/modules/me/friends/request.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="160" column="63" lean-forward="false" selection-start-line="160" selection-start-column="53" selection-end-line="160" selection-end-column="63" />
+            <state relative-caret-position="398">
+              <caret line="64" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
               <folding>
-                <marker date="1504458781063" expanded="true" signature="27:329" ph="SELECT g.*, groups" />
-                <marker date="1504458781063" expanded="true" signature="919:1057" ph="UPDATE user_... " />
-                <marker date="1504458781063" expanded="true" signature="1863:2001" ph="UPDATE user_... " />
-                <marker date="1504458781063" expanded="true" signature="2082:2199" ph="DELETE FROM " />
-                <marker date="1504458781063" expanded="true" signature="2947:3085" ph="UPDATE user_... " />
-                <marker date="1504458781063" expanded="true" signature="3164:3281" ph="DELETE FROM " />
-                <marker date="1504458781063" expanded="true" signature="4059:4301" ph="DELETE FROM " />
-                <marker date="1504458781063" expanded="true" signature="5655:5932" ph="INSERT INTO `groups_message`... " />
-                <marker date="1504458781063" expanded="true" signature="6262:6378" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="6503:7038" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="6647:7029" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="6673:7018" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="7062:7139" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="7196:7262" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="7285:7563" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="7364:7541" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="7598:8015" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="7671:8008" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="8216:8635" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="8293:8625" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="8715:9262" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="8782:8849" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="8915:8982" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="9049:9122" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="9185:9253" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="9309:9625" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="9332:9617" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="9358:9596" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="9418:9588" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="9508:9547" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="9676:9732" ph="..." />
-                <marker date="1504458781063" expanded="true" signature="9703:9724" ph="..." />
+                <marker date="1504458788842" expanded="true" signature="184:443" ph="SELECT ud.us... user" />
+                <marker date="1504458788842" expanded="true" signature="1254:1449" ph="INSERT INTO `user_friendship`... " />
+                <marker date="1504458788842" expanded="true" signature="3618:3883" ph="SELECT ud.us... user" />
+                <marker date="1504458788842" expanded="true" signature="4434:4643" ph="DELETE FROM " />
+                <marker date="1504458788842" expanded="true" signature="5328:5527" ph="UPDATE `user... " />
+                <marker date="1504458788842" expanded="true" signature="6250:6449" ph="UPDATE `user... " />
+                <marker date="1504458788842" expanded="true" signature="11520:11816" ph="..." />
+                <marker date="1504458788842" expanded="true" signature="11524:11663" ph="..." />
+                <marker date="1504458788842" expanded="true" signature="11590:11658" ph="..." />
+                <marker date="1504458788842" expanded="true" signature="11667:11811" ph="..." />
+                <marker date="1504458788842" expanded="true" signature="11733:11806" ph="..." />
+                <marker date="1504458788842" expanded="true" signature="13488:14175" ph="..." />
+                <marker date="1504458788842" expanded="true" signature="14394:14996" ph="..." />
+                <marker date="1504458788842" expanded="true" signature="15285:15370" ph="..." />
+                <marker date="1504458788842" expanded="true" signature="15457:15603" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_group.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/modules/api/add_group.php">
+      <file leaf-file-name="send_invite.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/modules/api/send_invite.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="1241">
+              <caret line="73" column="58" lean-forward="false" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
               <folding>
-                <marker date="1506160094112" expanded="true" signature="234:287" ph="select * fro... user" />
-                <marker date="1506160094112" expanded="true" signature="698:870" ph="INSERT INTO `groups`... " />
-                <marker date="1506160094112" expanded="true" signature="969:1118" ph="INSERT INTO user_to_groups... " />
+                <marker date="1506161621552" expanded="true" signature="180:233" ph="select * fro... user" />
+                <marker date="1506161621552" expanded="true" signature="363:404" ph="SELECT * FRO... user_details" />
+                <marker date="1506161621552" expanded="true" signature="627:808" ph="SELECT ud.us... user" />
+                <marker date="1506161621552" expanded="true" signature="1338:1505" ph="INSERT INTO `user_friendship`... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="group.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/functions/group.php">
+      <file leaf-file-name="messages.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/functions/messages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="79" column="44" lean-forward="true" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
+            <state relative-caret-position="314">
+              <caret line="119" column="9" lean-forward="false" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
               <folding>
-                <marker date="1504458800082" expanded="true" signature="1079:1187" ph="SELECT * FRO... user_to_groups" />
-                <marker date="1504458800082" expanded="true" signature="1411:1764" ph="SELECT u.*, user" />
-                <marker date="1504458800082" expanded="true" signature="1958:2264" ph="..." />
-                <marker date="1504458800082" expanded="true" signature="2006:2218" ph="..." />
-                <marker date="1504458800082" expanded="true" signature="5415:6086" ph="..." />
-                <marker date="1504458800082" expanded="true" signature="5454:6071" ph="..." />
-                <marker date="1504458800082" expanded="true" signature="5498:6053" ph="..." />
-                <marker date="1504458800082" expanded="true" signature="5545:5851" ph="..." />
-                <marker date="1504458800082" expanded="false" signature="5672:5679" ph="×" />
-                <marker date="1504458800082" expanded="true" signature="5898:6029" ph="..." />
+                <marker date="1504458797683" expanded="true" signature="1211:2181" ph="..." />
+                <marker date="1504458797683" expanded="true" signature="1257:2112" ph="..." />
+                <marker date="1504458797683" expanded="true" signature="1317:2091" ph="..." />
+                <marker date="1504458797683" expanded="true" signature="1512:2073" ph="..." />
+                <marker date="1504458797683" expanded="true" signature="1573:1678" ph="..." />
+                <marker date="1504458797683" expanded="true" signature="1737:1902" ph="..." />
+                <marker date="1504458797683" expanded="true" signature="1959:2064" ph="..." />
+                <marker date="1504458797683" expanded="true" signature="2166:2181" ph="..." />
+                <marker date="1504458797683" expanded="true" signature="4005:4605" ph="..." />
+                <marker date="1504458797683" expanded="true" signature="4854:5099" ph="SELECT COUNT... message" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/modules/api/functions.php">
+      <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/modules/api/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="448" column="94" lean-forward="false" selection-start-line="448" selection-start-column="94" selection-end-line="448" selection-end-column="94" />
+            <state relative-caret-position="238">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="25" selection-end-column="26" />
               <folding>
-                <marker date="1506158489776" expanded="true" signature="237:663" ph="SELECT m.*, user_media" />
-                <marker date="1506158489776" expanded="true" signature="892:1113" ph="SELECT u.use... user" />
-                <marker date="1506158489776" expanded="true" signature="2504:2897" ph="SELECT sgd.s... sport_group" />
-                <marker date="1506158489776" expanded="true" signature="3161:3351" ph="SELECT * FRO... groups" />
-                <marker date="1506158489776" expanded="true" signature="3617:3696" ph="UPDATE `user... " />
-                <marker date="1506158489776" expanded="true" signature="3927:4080" ph="DELETE FROM " />
-                <marker date="1506158489776" expanded="true" signature="6092:6405" ph="SELECT * FRO... user_to_sport_group_value" />
-                <marker date="1506158489776" expanded="true" signature="10366:11008" ph="SELECT u.*, user" />
-                <marker date="1506158489776" expanded="true" signature="14837:15019" ph="SELECT * FRO... user_shoutboxmedia" />
-                <marker date="1506158489776" expanded="true" signature="15379:15732" ph="SELECT u.*, user" />
+                <marker date="1506137091609" expanded="true" signature="260:313" ph="SELECT * FRO... user" />
+                <marker date="1506137091609" expanded="true" signature="414:455" ph="SELECT * FRO... user_details" />
+                <marker date="1506137091609" expanded="true" signature="3620:4181" ph="SELECT DISTI... user" />
+                <marker date="1506137091609" expanded="true" signature="6324:6754" ph="SELECT m.*, user_media" />
+                <marker date="1506137091609" expanded="true" signature="6948:7177" ph="SELECT u.use... user" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="groups.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/modules/me/friends/groups.php">
+      <file leaf-file-name="set_blockuser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/modules/api/set_blockuser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="64" lean-forward="true" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
+            <state relative-caret-position="408">
+              <caret line="29" column="10" lean-forward="false" selection-start-line="26" selection-start-column="46" selection-end-line="29" selection-end-column="10" />
               <folding>
-                <marker date="1504458788770" expanded="true" signature="934:1228" ph="INSERT INTO `groups`... " />
-                <marker date="1504458788770" expanded="true" signature="2828:3747" ph="..." />
-                <marker date="1504458788770" expanded="true" signature="2884:3664" ph="..." />
-                <marker date="1504458788770" expanded="true" signature="3040:3644" ph="..." />
-                <marker date="1504458788770" expanded="true" signature="3078:3627" ph="..." />
-                <marker date="1504458788770" expanded="true" signature="3130:3285" ph="..." />
-                <marker date="1504458788770" expanded="true" signature="3359:3432" ph="..." />
-                <marker date="1504458788770" expanded="true" signature="3522:3607" ph="..." />
-                <marker date="1504458788770" expanded="true" signature="3914:4847" ph="..." />
-                <marker date="1504458788770" expanded="true" signature="3942:4835" ph="..." />
-                <marker date="1504458788770" expanded="true" signature="3970:4556" ph="..." />
-                <marker date="1504458788770" expanded="true" signature="4583:4594" ph="..." />
-                <marker date="1504458788770" expanded="true" signature="4623:4823" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="write_to_group.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/modules/api/write_to_group.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="45" column="32" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="45" selection-end-column="32" />
-              <folding>
-                <marker date="1506157781232" expanded="true" signature="293:346" ph="select * fro... user" />
-                <marker date="1506157781232" expanded="true" signature="448:650" ph="SELECT g.*, groups" />
-                <marker date="1506157781232" expanded="true" signature="448:689" ph="SELECT g.*, groups" />
-                <marker date="1506157781232" expanded="true" signature="1200:1386" ph="INSERT INTO `groups_message`... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get_groups.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/modules/api/get_groups.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-              <folding>
-                <marker date="1506156054275" expanded="true" signature="285:338" ph="select * fro... user" />
-                <marker date="1506156054275" expanded="true" signature="439:480" ph="SELECT * FRO... user_details" />
-                <marker date="1506156054275" expanded="true" signature="727:956" ph="SELECT * FRO... groups" />
-                <marker date="1506156054275" expanded="true" signature="1125:1641" ph="SELECT * FRO... user" />
+                <marker date="1505959964569" expanded="true" signature="261:314" ph="select * fro... user" />
+                <marker date="1505959964569" expanded="true" signature="415:422" ph="SELECT * FRO... message" />
+                <marker date="1505959964569" expanded="true" signature="415:609" ph="SELECT ud.us... user" />
+                <marker date="1505959964569" expanded="true" signature="981:1128" ph="INSERT INTO `user_blocked`... " />
               </folding>
             </state>
           </provider>
@@ -192,10 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sport_group</find>
-      <find>$sport_group</find>
-      <find>thumbnail thumbnail-line</find>
-      <find>search_action_</find>
       <find>place</find>
       <find>search_place_id_</find>
       <find>action</find>
@@ -222,6 +160,10 @@
       <find>add_group_message_text_</find>
       <find>delete_group_message_key_</find>
       <find>add_group_</find>
+      <find>add_user_id_</find>
+      <find>BLOCK_ME</find>
+      <find>dup</find>
+      <find>$_</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -230,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/sport_subgroup.js" />
         <option value="$PROJECT_DIR$/includes/modules/api/get_sportsubgroup.php" />
         <option value="$PROJECT_DIR$/js/ajax_source/sport_subgroup.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/get_countries.php" />
@@ -269,17 +210,18 @@
         <option value="$PROJECT_DIR$/includes/modules/api/update_settings_marketplace.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/update_settings_newsletter.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/delete_account.php" />
-        <option value="$PROJECT_DIR$/includes/modules/api/del_friend.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/get_friends.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/get_groups.php" />
         <option value="$PROJECT_DIR$/includes/config.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/includes/modules/api/constants.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/write_to_group.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/get_group_messages.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/functions.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/del_group_message.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/add_group.php" />
+        <option value="$PROJECT_DIR$/includes/modules/api/del_friend.php" />
+        <option value="$PROJECT_DIR$/includes/modules/api/constants.php" />
+        <option value="$PROJECT_DIR$/includes/modules/api/send_invite.php" />
         <option value="$PROJECT_DIR$/includes/modules/api.php" />
       </list>
     </option>
@@ -416,7 +358,7 @@
       <workItem from="1505475084850" duration="2531000" />
       <workItem from="1505686925884" duration="24224000" />
       <workItem from="1505769291018" duration="45680000" />
-      <workItem from="1506024485275" duration="40156000" />
+      <workItem from="1506024485275" duration="41575000" />
     </task>
     <task id="LOCAL-00001" summary="api excel&#10;chk email, nickname api">
       <created>1505260044590</created>
@@ -635,11 +577,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506159749848</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="add_group">
+      <created>1506160243779</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1506160243779</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174976000" />
+    <option name="totallyTimeSpent" value="176395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -671,7 +620,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="register, get_countries api" />
     <MESSAGE value="login api" />
     <MESSAGE value="modify login api" />
     <MESSAGE value="add search api" />
@@ -696,7 +644,8 @@
     <MESSAGE value="get_groups" />
     <MESSAGE value="get_group_messages&#10;write_to_group" />
     <MESSAGE value="del_group_message" />
-    <option name="LAST_COMMIT_MESSAGE" value="del_group_message" />
+    <MESSAGE value="add_group" />
+    <option name="LAST_COMMIT_MESSAGE" value="add_group" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -705,57 +654,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/functions/messages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="119" column="34" lean-forward="true" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
-          <folding>
-            <marker date="1504458797683" expanded="true" signature="89:288" ph="SELECT * FRO... message" />
-            <marker date="1504458797683" expanded="true" signature="1211:2181" ph="..." />
-            <marker date="1504458797683" expanded="true" signature="1257:2112" ph="..." />
-            <marker date="1504458797683" expanded="true" signature="1317:2091" ph="..." />
-            <marker date="1504458797683" expanded="true" signature="1512:2073" ph="..." />
-            <marker date="1504458797683" expanded="true" signature="1573:1678" ph="..." />
-            <marker date="1504458797683" expanded="true" signature="1737:1902" ph="..." />
-            <marker date="1504458797683" expanded="true" signature="1959:2064" ph="..." />
-            <marker date="1504458797683" expanded="true" signature="2166:2181" ph="..." />
-            <marker date="1504458797683" expanded="true" signature="4005:4605" ph="..." />
-            <marker date="1504458797683" expanded="true" signature="4854:5099" ph="SELECT COUNT... message" />
-            <marker date="1504458797683" expanded="true" signature="5696:6030" ph="INSERT INTO `message`... " />
-            <marker date="1504458797683" expanded="true" signature="6152:6305" ph="INSERT INTO `user_to_messages`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/me/messages/trash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1504458793141" expanded="true" signature="73:184" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/del_mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="15" />
-          <folding>
-            <marker date="1506133718530" expanded="true" signature="257:310" ph="select * fro... user" />
-            <marker date="1506133718530" expanded="true" signature="487:501" ph="SELECT * FRO... message" />
-            <marker date="1506133718530" expanded="true" signature="487:605" ph="SELECT * FRO... message" />
-            <marker date="1506133718530" expanded="true" signature="487:793" ph="SELECT * FRO... message" />
-            <marker date="1506133718530" expanded="true" signature="1064:1210" ph="DELETE FROM " />
-            <marker date="1506133718530" expanded="true" signature="1405:1495" ph="SELECT * FRO... user_to_messages" />
-            <marker date="1506133718530" expanded="true" signature="1621:1692" ph="DELETE FROM " />
-            <marker date="1506133718530" expanded="true" signature="1804:2090" ph="SELECT * FRO... message" />
-            <marker date="1506133718530" expanded="true" signature="2461:2544" ph="UPDATE messa... " />
-            <marker date="1506133718530" expanded="true" signature="2630:2791" ph="UPDATE user_... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/me/messages/inbox.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -851,12 +749,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <marker date="1506142348440" expanded="true" signature="265:318" ph="select * fro... user" />
-            <marker date="1506142348440" expanded="true" signature="419:585" ph="SELECT ud.us... user" />
-            <marker date="1506142348440" expanded="true" signature="799:841" ph="DELETE FROM " />
-            <marker date="1506142348440" expanded="true" signature="799:905" ph="DELETE FROM " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1295,20 +1188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="25" selection-end-column="26" />
-          <folding>
-            <marker date="1506137091609" expanded="true" signature="260:313" ph="SELECT * FRO... user" />
-            <marker date="1506137091609" expanded="true" signature="414:455" ph="SELECT * FRO... user_details" />
-            <marker date="1506137091609" expanded="true" signature="3620:4181" ph="SELECT DISTI... user" />
-            <marker date="1506137091609" expanded="true" signature="6324:6754" ph="SELECT m.*, user_media" />
-            <marker date="1506137091609" expanded="true" signature="6948:7177" ph="SELECT u.use... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/me/settings/messages.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -1463,19 +1342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/set_blockuser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" column="10" lean-forward="false" selection-start-line="26" selection-start-column="46" selection-end-line="29" selection-end-column="10" />
-          <folding>
-            <marker date="1505959964569" expanded="true" signature="261:314" ph="select * fro... user" />
-            <marker date="1505959964569" expanded="true" signature="415:422" ph="SELECT * FRO... message" />
-            <marker date="1505959964569" expanded="true" signature="415:609" ph="SELECT ud.us... user" />
-            <marker date="1505959964569" expanded="true" signature="981:1128" ph="INSERT INTO `user_blocked`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/api/get_friends.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1483,19 +1349,6 @@
           <folding>
             <marker date="1506154810674" expanded="true" signature="285:338" ph="select * fro... user" />
             <marker date="1506154810674" expanded="true" signature="439:480" ph="SELECT * FRO... user_details" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/del_friend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="39" column="192" lean-forward="false" selection-start-line="39" selection-start-column="192" selection-end-line="39" selection-end-column="192" />
-          <folding>
-            <marker date="1506154778658" expanded="true" signature="253:306" ph="select * fro... user" />
-            <marker date="1506154778658" expanded="true" signature="407:448" ph="SELECT * FRO... user_details" />
-            <marker date="1506154778658" expanded="true" signature="656:816" ph="SELECT ud.us... user" />
-            <marker date="1506154778658" expanded="true" signature="1046:1230" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1515,14 +1368,6 @@
           <folding>
             <marker date="1506156271795" expanded="true" signature="7476:8272" ph="INSERT INTO `user_settings`... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="45" column="17" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1795,11 +1640,115 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/me/friends/request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="64" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
+          <folding>
+            <marker date="1504458788842" expanded="true" signature="184:443" ph="SELECT ud.us... user" />
+            <marker date="1504458788842" expanded="true" signature="1254:1449" ph="INSERT INTO `user_friendship`... " />
+            <marker date="1504458788842" expanded="true" signature="3618:3883" ph="SELECT ud.us... user" />
+            <marker date="1504458788842" expanded="true" signature="4434:4643" ph="DELETE FROM " />
+            <marker date="1504458788842" expanded="true" signature="5328:5527" ph="UPDATE `user... " />
+            <marker date="1504458788842" expanded="true" signature="6250:6449" ph="UPDATE `user... " />
+            <marker date="1504458788842" expanded="true" signature="11520:11816" ph="..." />
+            <marker date="1504458788842" expanded="true" signature="11524:11663" ph="..." />
+            <marker date="1504458788842" expanded="true" signature="11590:11658" ph="..." />
+            <marker date="1504458788842" expanded="true" signature="11667:11811" ph="..." />
+            <marker date="1504458788842" expanded="true" signature="11733:11806" ph="..." />
+            <marker date="1504458788842" expanded="true" signature="13488:14175" ph="..." />
+            <marker date="1504458788842" expanded="true" signature="14394:14996" ph="..." />
+            <marker date="1504458788842" expanded="true" signature="15285:15370" ph="..." />
+            <marker date="1504458788842" expanded="true" signature="15457:15603" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/set_blockuser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="29" column="10" lean-forward="false" selection-start-line="26" selection-start-column="46" selection-end-line="29" selection-end-column="10" />
+          <folding>
+            <marker date="1505959964569" expanded="true" signature="261:314" ph="select * fro... user" />
+            <marker date="1505959964569" expanded="true" signature="415:422" ph="SELECT * FRO... message" />
+            <marker date="1505959964569" expanded="true" signature="415:609" ph="SELECT ud.us... user" />
+            <marker date="1505959964569" expanded="true" signature="981:1128" ph="INSERT INTO `user_blocked`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/del_friend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding>
+            <marker date="1506161186081" expanded="true" signature="253:306" ph="select * fro... user" />
+            <marker date="1506161186081" expanded="true" signature="407:448" ph="SELECT * FRO... user_details" />
+            <marker date="1506161186081" expanded="true" signature="656:816" ph="SELECT ud.us... user" />
+            <marker date="1506161186081" expanded="true" signature="1048:1232" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="43" column="26" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="25" selection-end-column="26" />
+          <folding>
+            <marker date="1506137091609" expanded="true" signature="260:313" ph="SELECT * FRO... user" />
+            <marker date="1506137091609" expanded="true" signature="414:455" ph="SELECT * FRO... user_details" />
+            <marker date="1506137091609" expanded="true" signature="3620:4181" ph="SELECT DISTI... user" />
+            <marker date="1506137091609" expanded="true" signature="6324:6754" ph="SELECT m.*, user_media" />
+            <marker date="1506137091609" expanded="true" signature="6948:7177" ph="SELECT u.use... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/functions/messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="119" column="9" lean-forward="false" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
+          <folding>
+            <marker date="1504458797683" expanded="true" signature="1211:2181" ph="..." />
+            <marker date="1504458797683" expanded="true" signature="1257:2112" ph="..." />
+            <marker date="1504458797683" expanded="true" signature="1317:2091" ph="..." />
+            <marker date="1504458797683" expanded="true" signature="1512:2073" ph="..." />
+            <marker date="1504458797683" expanded="true" signature="1573:1678" ph="..." />
+            <marker date="1504458797683" expanded="true" signature="1737:1902" ph="..." />
+            <marker date="1504458797683" expanded="true" signature="1959:2064" ph="..." />
+            <marker date="1504458797683" expanded="true" signature="2166:2181" ph="..." />
+            <marker date="1504458797683" expanded="true" signature="4005:4605" ph="..." />
+            <marker date="1504458797683" expanded="true" signature="4854:5099" ph="SELECT COUNT... message" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        <state relative-caret-position="595">
+          <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/send_invite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="73" column="58" lean-forward="false" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
+          <folding>
+            <marker date="1506161621552" expanded="true" signature="180:233" ph="select * fro... user" />
+            <marker date="1506161621552" expanded="true" signature="363:404" ph="SELECT * FRO... user_details" />
+            <marker date="1506161621552" expanded="true" signature="627:808" ph="SELECT ud.us... user" />
+            <marker date="1506161621552" expanded="true" signature="1338:1505" ph="INSERT INTO `user_friendship`... " />
+          </folding>
         </state>
       </provider>
     </entry>

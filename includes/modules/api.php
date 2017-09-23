@@ -54,6 +54,7 @@ switch($apiname){
     case "write_to_group":
     case "del_group_message":
     case "add_group":
+    case "send_invite":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);
