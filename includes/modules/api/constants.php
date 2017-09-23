@@ -38,6 +38,8 @@ define('NOTVERIFIED',               519);
 define('DUPLICATED_EMAIL',          520);
 define('DUPLICATED_NICKNAME',       521);
 define('MESSAGE_TO_ME',             522);
+define('BLOCK_ME',                  523);
+define('ALREADY_BLOCKED',           524);
 define('SHORT_NICKNAME',            531);
 define('FAIL_USER',                 541);
 define('FAIL_SENDMAIL',             542);

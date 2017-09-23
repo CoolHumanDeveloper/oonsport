@@ -300,7 +300,7 @@ function sending_email( $email_to, $name_to, $subject, $content, $alt_content, $
     require( PHP_MAILER_CLASS );
     $mail = new phpmailer();
 
-    $mail->IsSMTP(); // per SMTP verschicken
+    $mail->IsSendmail(); // per SMTP verschicken
     $mail->Host = SYSTEM_MAIL_SERVER; // SMTP-Server
     $mail->SMTPAuth = true; // SMTP mit Authentifizierung benutzen
     $mail->Username = SYSTEM_MAIL; // SMTP-Benutzername
@@ -1019,7 +1019,7 @@ function geo_locate_check($place_id) {
     if(!$city) {
 
     
-        $url = 'https://maps.googleapis.com/maps/api/geocode/json?place_id='.$place_id.'&key=AIzaSyAAUCGinXBvsdx8WHD_PdVvoXA42lakEd4&language='.$_SESSION['language_code'];
+        $url = 'https://maps.googleapis.com/maps/api/geocode/json?place_id='.$place_id.'&key=AIzaSyCf73WkGWTzIZewfQIo6YHkhuBj8uxcfwo&language='.$_SESSION['language_code'];
     
         $result = file_get_contents($url);
         $result = json_decode($result);
