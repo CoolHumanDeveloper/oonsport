@@ -41,6 +41,7 @@ switch($apiname){
     case "update_profile":
     case "update_password":
     case "update_email":
+    case "get_profiles":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);
