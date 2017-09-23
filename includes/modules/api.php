@@ -37,6 +37,9 @@ switch($apiname){
     case "set_blockuser":
     case "recover_mail":
     case "profile":
+    case "update_profile":
+    case "update_password":
+    case "update_email":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);
