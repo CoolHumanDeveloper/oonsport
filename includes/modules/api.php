@@ -62,6 +62,7 @@ switch($apiname){
     case "add_watch":
     case "del_watch":
     case "get_watchs":
+    case "add_sport":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);
