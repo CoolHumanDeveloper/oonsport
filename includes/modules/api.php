@@ -57,6 +57,8 @@ switch($apiname){
     case "send_invite":
     case "get_invites":
     case "del_invite":
+    case "decline_invite":
+    case "accept_invite":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);
