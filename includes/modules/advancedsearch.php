@@ -968,7 +968,7 @@ function removeMoreSports(sIndex) {
 	
 	</script>
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBmiMufjGEPl3hRAXuGk6TQD2QLJPm7AEU"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAAUCGinXBvsdx8WHD_PdVvoXA42lakEd4"></script>
     <script src="#SITE_URL#js/geo_search.js"></script>
 ';
 /*<a class=\'btn btn-xs btn-danger moreSportLineDelete\' title=\'löschen\'>

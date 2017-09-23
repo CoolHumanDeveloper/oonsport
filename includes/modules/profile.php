@@ -582,7 +582,7 @@ var locations = [[\'<div class="map_box"><strong>'.addslashes($user_profile['use
         $longitude = ' . $geo_lng.',
         $map_zoom = 13;
         </script>
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBmiMufjGEPl3hRAXuGk6TQD2QLJPm7AEU"></script>';
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAAUCGinXBvsdx8WHD_PdVvoXA42lakEd4"></script>';
 		 }
 
 $content_output = array('TITLE' => SITE_NAME, 'CONTENT' => $output, 'HEADER_EXT' => $header_ext, 'FOOTER_EXT' => $footer_ext);

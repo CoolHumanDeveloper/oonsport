@@ -850,7 +850,7 @@ GOOGLE MAPS FUNCTIONS*/
 function geo_locate_by_input($geo_input) {
     global $DB;
     $geo_input= str_replace(array(',','-','.'),' ',$geo_input);
-    $url = 'https://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($geo_input).'&key=AIzaSyCf73WkGWTzIZewfQIo6YHkhuBj8uxcfwo&language='.$_SESSION['language_code'];
+    $url = 'https://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($geo_input).'&key=AIzaSyAAUCGinXBvsdx8WHD_PdVvoXA42lakEd4&language='.$_SESSION['language_code'];
     //echo $geo_input.'<br>';
     $result = file_get_contents($url);
     
@@ -1019,7 +1019,7 @@ function geo_locate_check($place_id) {
     if(!$city) {
 
     
-        $url = 'https://maps.googleapis.com/maps/api/geocode/json?place_id='.$place_id.'&key=AIzaSyCf73WkGWTzIZewfQIo6YHkhuBj8uxcfwo&language='.$_SESSION['language_code'];
+        $url = 'https://maps.googleapis.com/maps/api/geocode/json?place_id='.$place_id.'&key=AIzaSyAAUCGinXBvsdx8WHD_PdVvoXA42lakEd4&language='.$_SESSION['language_code'];
     
         $result = file_get_contents($url);
         $result = json_decode($result);

@@ -480,7 +480,7 @@ $footer_ext = '
         });
 	
 	</script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBmiMufjGEPl3hRAXuGk6TQD2QLJPm7AEU"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAAUCGinXBvsdx8WHD_PdVvoXA42lakEd4"></script>
     <script src="#SITE_URL#js/geo_profile.js"></script>';
 
 if($_SESSION['user']['user_type']>2) {
@@ -572,7 +572,7 @@ var locations = [[\'<div class="map_box"><strong>'.addslashes($_SESSION['user'][
         $longitude = ' . $geo_lng . ',
         $map_zoom = 13;
         </script>
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBmiMufjGEPl3hRAXuGk6TQD2QLJPm7AEU"></script>';
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAAUCGinXBvsdx8WHD_PdVvoXA42lakEd4"></script>';
 }
 
 
