@@ -155,10 +155,9 @@ if ($search_lat == 0) {
     $total = $query->rowCount();
 
     //Limit ausgabe der aktuellen Seite
-    $sql = $base_search_sql . $search_type_sql . "ORDER BY " . $search_by . " LIMIT " . $page * VIEW_PER_PAGE . ", " . VIEW_PER_PAGE;
+    $sql = $base_search_sql . $search_type_sql . " ORDER BY " . $search_by . " LIMIT " . $page * VIEW_PER_PAGE . ", " . VIEW_PER_PAGE;
 
 }
-//die($sql);
 $query = $DB->prepare($sql);
 $query->execute();
 $result = $query->fetchAll(PDO::FETCH_ASSOC);
