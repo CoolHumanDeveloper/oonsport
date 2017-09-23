@@ -41,6 +41,7 @@ define('MESSAGE_TO_ME',             522);
 define('BLOCK_ME',                  523);
 define('ALREADY_BLOCKED',           524);
 define('SHORT_NICKNAME',            531);
+define('SHORT_PASSWORD',            532);
 define('FAIL_USER',                 541);
 define('FAIL_SENDMAIL',             542);
 define('MESSAGE_TO_BLOCKED_USER',   551);
