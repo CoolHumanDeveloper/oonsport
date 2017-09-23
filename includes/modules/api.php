@@ -35,6 +35,7 @@ switch($apiname){
     case "del_mail":
     case "get_blockedusers":
     case "set_blockuser":
+    case "set_unblockuser":
     case "recover_mail":
     case "profile":
     case "update_profile":
