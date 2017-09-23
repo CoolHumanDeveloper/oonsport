@@ -61,6 +61,7 @@ switch($apiname){
     case "accept_invite":
     case "add_watch":
     case "del_watch":
+    case "get_watchs":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);
