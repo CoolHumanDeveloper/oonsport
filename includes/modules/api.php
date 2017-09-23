@@ -44,6 +44,7 @@ switch($apiname){
     case "get_profiles":
     case "update_settings":
     case "update_settings_shoutbox":
+    case "update_settings_marketplace":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);
