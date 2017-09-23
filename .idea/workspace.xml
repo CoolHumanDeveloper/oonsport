@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c4aab9-b50a-487f-ab15-b4c09931ef7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/modules/api/del_group_message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/modules/api/add_group.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api.php" afterPath="$PROJECT_DIR$/includes/modules/api.php" />
     </list>
@@ -25,17 +25,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/modules/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+            <state relative-caret-position="578">
+              <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="group.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="group.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/modules/group.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="274">
@@ -78,14 +78,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="del_group_message.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/modules/api/del_group_message.php">
+      <file leaf-file-name="add_group.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/modules/api/add_group.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="595">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
-                <marker date="1506159408048" expanded="true" signature="267:320" ph="select * fro... user" />
-                <marker date="1506159408048" expanded="true" signature="421:543" ph="DELETE FROM " />
+                <marker date="1506160094112" expanded="true" signature="234:287" ph="select * fro... user" />
+                <marker date="1506160094112" expanded="true" signature="698:870" ph="INSERT INTO `groups`... " />
+                <marker date="1506160094112" expanded="true" signature="969:1118" ph="INSERT INTO user_to_groups... " />
               </folding>
             </state>
           </provider>
@@ -136,8 +137,8 @@
       <file leaf-file-name="groups.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/modules/me/friends/groups.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1121">
-              <caret line="142" column="6" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="142" selection-end-column="6" />
+            <state relative-caret-position="646">
+              <caret line="38" column="64" lean-forward="true" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
               <folding>
                 <marker date="1504458788770" expanded="true" signature="934:1228" ph="INSERT INTO `groups`... " />
                 <marker date="1504458788770" expanded="true" signature="2828:3747" ph="..." />
@@ -152,6 +153,21 @@
                 <marker date="1504458788770" expanded="true" signature="3970:4556" ph="..." />
                 <marker date="1504458788770" expanded="true" signature="4583:4594" ph="..." />
                 <marker date="1504458788770" expanded="true" signature="4623:4823" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="write_to_group.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/modules/api/write_to_group.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="45" column="32" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="45" selection-end-column="32" />
+              <folding>
+                <marker date="1506157781232" expanded="true" signature="293:346" ph="select * fro... user" />
+                <marker date="1506157781232" expanded="true" signature="448:650" ph="SELECT g.*, groups" />
+                <marker date="1506157781232" expanded="true" signature="448:689" ph="SELECT g.*, groups" />
+                <marker date="1506157781232" expanded="true" signature="1200:1386" ph="INSERT INTO `groups_message`... " />
               </folding>
             </state>
           </provider>
@@ -214,7 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/modules/api/get_sportgroup.php" />
         <option value="$PROJECT_DIR$/js/sport_subgroup.js" />
         <option value="$PROJECT_DIR$/includes/modules/api/get_sportsubgroup.php" />
         <option value="$PROJECT_DIR$/js/ajax_source/sport_subgroup.php" />
@@ -264,6 +279,7 @@
         <option value="$PROJECT_DIR$/includes/modules/api/get_group_messages.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/functions.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/del_group_message.php" />
+        <option value="$PROJECT_DIR$/includes/modules/api/add_group.php" />
         <option value="$PROJECT_DIR$/includes/modules/api.php" />
       </list>
     </option>
@@ -400,7 +416,7 @@
       <workItem from="1505475084850" duration="2531000" />
       <workItem from="1505686925884" duration="24224000" />
       <workItem from="1505769291018" duration="45680000" />
-      <workItem from="1506024485275" duration="39659000" />
+      <workItem from="1506024485275" duration="40156000" />
     </task>
     <task id="LOCAL-00001" summary="api excel&#10;chk email, nickname api">
       <created>1505260044590</created>
@@ -612,11 +628,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506159121678</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="del_group_message">
+      <created>1506159749848</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1506159749848</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174479000" />
+    <option name="totallyTimeSpent" value="174976000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -648,7 +671,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="api excel&#10;chk email, nickname api" />
     <MESSAGE value="register, get_countries api" />
     <MESSAGE value="login api" />
     <MESSAGE value="modify login api" />
@@ -673,7 +695,8 @@
     <MESSAGE value="get_friends&#10;del_friend" />
     <MESSAGE value="get_groups" />
     <MESSAGE value="get_group_messages&#10;write_to_group" />
-    <option name="LAST_COMMIT_MESSAGE" value="get_group_messages&#10;write_to_group" />
+    <MESSAGE value="del_group_message" />
+    <option name="LAST_COMMIT_MESSAGE" value="del_group_message" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -682,19 +705,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/create_mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-          <folding>
-            <marker date="1506098209873" expanded="true" signature="413:466" ph="select * fro... user" />
-            <marker date="1506098209873" expanded="true" signature="567:574" ph="SELECT * FRO... message" />
-            <marker date="1506098209873" expanded="true" signature="567:696" ph="SELECT ud.us... user" />
-            <marker date="1506098209873" expanded="true" signature="567:755" ph="SELECT ud.us... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/functions/messages.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -1642,28 +1652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/me/friends/groups.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="142" column="6" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="142" selection-end-column="6" />
-          <folding>
-            <marker date="1504458788770" expanded="true" signature="934:1228" ph="INSERT INTO `groups`... " />
-            <marker date="1504458788770" expanded="true" signature="2828:3747" ph="..." />
-            <marker date="1504458788770" expanded="true" signature="2884:3664" ph="..." />
-            <marker date="1504458788770" expanded="true" signature="3040:3644" ph="..." />
-            <marker date="1504458788770" expanded="true" signature="3078:3627" ph="..." />
-            <marker date="1504458788770" expanded="true" signature="3130:3285" ph="..." />
-            <marker date="1504458788770" expanded="true" signature="3359:3432" ph="..." />
-            <marker date="1504458788770" expanded="true" signature="3522:3607" ph="..." />
-            <marker date="1504458788770" expanded="true" signature="3914:4847" ph="..." />
-            <marker date="1504458788770" expanded="true" signature="3942:4835" ph="..." />
-            <marker date="1504458788770" expanded="true" signature="3970:4556" ph="..." />
-            <marker date="1504458788770" expanded="true" signature="4583:4594" ph="..." />
-            <marker date="1504458788770" expanded="true" signature="4623:4823" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/api/get_group_messages.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="747">
@@ -1672,19 +1660,6 @@
             <marker date="1506158396400" expanded="true" signature="251:304" ph="select * fro... user" />
             <marker date="1506158396400" expanded="true" signature="405:446" ph="SELECT * FRO... user_details" />
             <marker date="1506158396400" expanded="true" signature="694:935" ph="SELECT g.*, groups" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/write_to_group.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="44" column="39" lean-forward="true" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
-          <folding>
-            <marker date="1506157781232" expanded="true" signature="293:346" ph="select * fro... user" />
-            <marker date="1506157781232" expanded="true" signature="448:650" ph="SELECT g.*, groups" />
-            <marker date="1506157781232" expanded="true" signature="448:689" ph="SELECT g.*, groups" />
-            <marker date="1506157781232" expanded="true" signature="1200:1386" ph="INSERT INTO `groups_message`... " />
           </folding>
         </state>
       </provider>
@@ -1732,14 +1707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/group.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -1778,6 +1745,61 @@
             <marker date="1504458781063" expanded="true" signature="9676:9732" ph="..." />
             <marker date="1504458781063" expanded="true" signature="9703:9724" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/me/friends/groups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="64" lean-forward="true" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
+          <folding>
+            <marker date="1504458788770" expanded="true" signature="934:1228" ph="INSERT INTO `groups`... " />
+            <marker date="1504458788770" expanded="true" signature="2828:3747" ph="..." />
+            <marker date="1504458788770" expanded="true" signature="2884:3664" ph="..." />
+            <marker date="1504458788770" expanded="true" signature="3040:3644" ph="..." />
+            <marker date="1504458788770" expanded="true" signature="3078:3627" ph="..." />
+            <marker date="1504458788770" expanded="true" signature="3130:3285" ph="..." />
+            <marker date="1504458788770" expanded="true" signature="3359:3432" ph="..." />
+            <marker date="1504458788770" expanded="true" signature="3522:3607" ph="..." />
+            <marker date="1504458788770" expanded="true" signature="3914:4847" ph="..." />
+            <marker date="1504458788770" expanded="true" signature="3942:4835" ph="..." />
+            <marker date="1504458788770" expanded="true" signature="3970:4556" ph="..." />
+            <marker date="1504458788770" expanded="true" signature="4583:4594" ph="..." />
+            <marker date="1504458788770" expanded="true" signature="4623:4823" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/write_to_group.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="45" column="32" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="45" selection-end-column="32" />
+          <folding>
+            <marker date="1506157781232" expanded="true" signature="293:346" ph="select * fro... user" />
+            <marker date="1506157781232" expanded="true" signature="448:650" ph="SELECT g.*, groups" />
+            <marker date="1506157781232" expanded="true" signature="448:689" ph="SELECT g.*, groups" />
+            <marker date="1506157781232" expanded="true" signature="1200:1386" ph="INSERT INTO `groups_message`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/add_group.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <marker date="1506160094112" expanded="true" signature="234:287" ph="select * fro... user" />
+            <marker date="1506160094112" expanded="true" signature="698:870" ph="INSERT INTO `groups`... " />
+            <marker date="1506160094112" expanded="true" signature="969:1118" ph="INSERT INTO user_to_groups... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
