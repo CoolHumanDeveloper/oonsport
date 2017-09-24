@@ -67,6 +67,7 @@ switch($apiname){
     case "del_sport":
     case "get_sports":
     case "get_aboutme":
+    case "set_aboutme":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);
