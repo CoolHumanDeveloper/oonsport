@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c4aab9-b50a-487f-ab15-b4c09931ef7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/modules/api/del_sport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/modules/api/get_sports.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api.php" afterPath="$PROJECT_DIR$/includes/modules/api.php" />
     </list>
@@ -15,12 +15,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/modules/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="66" column="13" lean-forward="false" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+            <state relative-caret-position="221">
+              <caret line="67" column="20" lean-forward="false" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_sports.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/modules/api/get_sports.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+              <folding>
+                <marker date="1506212057713" expanded="true" signature="284:337" ph="select * fro... user" />
+                <marker date="1506212057713" expanded="true" signature="476:896" ph="SELECT *, ut... user_to_sport_group_value" />
+                <marker date="1506212057713" expanded="true" signature="476:1015" ph="SELECT *, ut... user_to_sport_group_value" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -28,8 +42,8 @@
       <file leaf-file-name="sports.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/modules/me/profile/sports.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="154">
+              <caret line="212" column="33" lean-forward="false" selection-start-line="212" selection-start-column="33" selection-end-line="212" selection-end-column="33" />
               <folding>
                 <marker date="1504458794876" expanded="true" signature="98:202" ph="SELECT COUNT... user_to_sport_group_value" />
                 <marker date="1504458794876" expanded="true" signature="361:577" ph="DELETE FROM " />
@@ -46,6 +60,115 @@
                 <marker date="1504458794876" expanded="true" signature="10497:10513" ph="..." />
                 <marker date="1504458794876" expanded="false" signature="10500:10506" ph=" " />
                 <marker date="1504458794876" expanded="true" signature="10813:11074" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/functions/default.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="625">
+              <caret line="669" column="5" lean-forward="true" selection-start-line="617" selection-start-column="4" selection-end-line="669" selection-end-column="5" />
+              <folding>
+                <marker date="1506147693704" expanded="true" signature="6818:6850" ph="SELECT * FRO... navigation" />
+                <marker date="1506147693704" expanded="true" signature="7092:7372" ph="SELECT conte... navigation" />
+                <marker date="1506147693704" expanded="true" signature="8139:8427" ph="SELECT conte... content" />
+                <marker date="1506147693704" expanded="true" signature="13283:13389" ph="SELECT * FRO... user_settings" />
+                <marker date="1506147693704" expanded="true" signature="13654:13760" ph="SELECT * FRO... user_settings" />
+                <marker date="1506147693704" expanded="true" signature="14575:14687" ph="SELECT * FRO... user" />
+                <marker date="1506147693704" expanded="true" signature="14950:15071" ph="SELECT * FRO... user" />
+                <marker date="1506147693704" expanded="true" signature="15325:15439" ph="SELECT * FRO... user" />
+                <marker date="1506147693704" expanded="true" signature="15699:16074" ph="SELECT sgd.s... sport_group_details" />
+                <marker date="1506147693704" expanded="true" signature="16372:16767" ph="SELECT sgd.s... sport_group" />
+                <marker date="1506147693704" expanded="true" signature="17067:17447" ph="SELECT sgd.s... sport_group_details" />
+                <marker date="1506147693704" expanded="true" signature="17723:17900" ph="SELECT * FRO... sport_group_details" />
+                <marker date="1506147693704" expanded="true" signature="17988:18325" ph="SELECT * FRO... user_to_sport_group_value" />
+                <marker date="1506147693704" expanded="true" signature="18357:18693" ph="SELECT * FRO... user_to_sport_group_value" />
+                <marker date="1506147693704" expanded="true" signature="20164:20429" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="20576:21067" ph="SELECT *, ut... user_to_sport_group_value" />
+                <marker date="1506147693704" expanded="true" signature="21989:22729" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="22738:22810" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="23650:23916" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="24059:24340" ph="SELECT * FRO... sport_group_value" />
+                <marker date="1506147693704" expanded="true" signature="24372:24792" ph="SELECT * FRO... sport_group_value" />
+                <marker date="1506147693704" expanded="true" signature="25550:25780" ph="SELECT * FRO... sport_group_value" />
+                <marker date="1506147693704" expanded="true" signature="26179:26698" ph="SELECT sgv.s... sport_group_value" />
+                <marker date="1506147693704" expanded="true" signature="26759:26994" ph="SELECT sgv.s... sport_group_value" />
+                <marker date="1506147693704" expanded="true" signature="27404:27663" ph="SELECT * FRO... sport_group_value" />
+                <marker date="1506147693704" expanded="true" signature="28377:28580" ph="SELECT * FRO... user_types" />
+                <marker date="1506147693704" expanded="true" signature="29752:29851" ph="SELECT * FRO... geo_cities" />
+                <marker date="1506147693704" expanded="true" signature="31676:32248" ph="INSERT INTO geo_cities" />
+                <marker date="1506147693704" expanded="true" signature="32961:33060" ph="SELECT * FRO... geo_cities" />
+                <marker date="1506147693704" expanded="true" signature="33547:33646" ph="SELECT * FRO... geo_cities" />
+                <marker date="1506147693704" expanded="true" signature="35477:36049" ph="INSERT INTO geo_cities" />
+                <marker date="1506147693704" expanded="true" signature="36773:36901" ph="SELECT CONCA... geo_cities" />
+                <marker date="1506147693704" expanded="true" signature="37231:37695" ph="SELECT c.*, geo_countries" />
+                <marker date="1506147693704" expanded="true" signature="38043:38171" ph="SELECT latit... ${strtolower( $country )}" />
+                <marker date="1506147693704" expanded="true" signature="38481:38642" ph="SELECT city_... ${strtolower( $country )}" />
+                <marker date="1506147693704" expanded="true" signature="39933:39973" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="39943:39973" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="43023:43063" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="43033:43063" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="45985:46054" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="46170:46210" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="46180:46210" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="47911:48145" ph="INSERT INTO `user_history`... " />
+                <marker date="1506147693704" expanded="true" signature="48295:48375" ph="UPDATE `user... " />
+                <marker date="1506147693704" expanded="true" signature="48640:49140" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="48668:49140" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="48698:49140" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="48728:48970" ph="..." />
+                <marker date="1506147693704" expanded="false" signature="48835:48842" ph="×" />
+                <marker date="1506147693704" expanded="true" signature="49007:49140" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="49098:49140" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="49132:49140" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="49157:49337" ph="SELECT * FRO... user_types" />
+                <marker date="1506147693704" expanded="true" signature="50272:51384" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="50303:51375" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="50333:51365" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="50362:51354" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="50420:51332" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="50468:50666" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="50482:50532" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="50714:50996" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="50727:50773" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="51045:51319" ph="..." />
+                <marker date="1506147693704" expanded="true" signature="51516:51712" ph="SELECT * FRO... user_friendship" />
+                <marker date="1506147693704" expanded="true" signature="51934:52204" ph="SELECT * FRO... user_friendship" />
+                <marker date="1506147693704" expanded="true" signature="52425:52545" ph="SELECT * FRO... user_watchlist" />
+                <marker date="1506147693704" expanded="true" signature="52768:52884" ph="SELECT * FRO... user_blocked" />
+                <marker date="1506147693704" expanded="true" signature="53114:53301" ph="SELECT * FRO... user_blocked" />
+                <marker date="1506147693704" expanded="true" signature="53516:53630" ph="SELECT histo... user_history" />
+                <marker date="1506147693704" expanded="true" signature="56881:57256" ph="SELECT * FRO... affiliate_group" />
+                <marker date="1506147693704" expanded="true" signature="57815:58163" ph="SELECT * FRO... affiliate_group" />
+                <marker date="1506147693704" expanded="true" signature="59079:59173" ph="SELECT * FRO... text" />
+                <marker date="1506147693704" expanded="true" signature="59402:59593" ph="SELECT u.use... user" />
+                <marker date="1506147693704" expanded="true" signature="60125:60317" ph="SELECT u.use... user" />
+                <marker date="1506147693704" expanded="true" signature="60686:60781" ph="SELECT u.use... user" />
+                <marker date="1506147693704" expanded="true" signature="60969:61418" ph="SELECT u.*, user" />
+                <marker date="1506147693704" expanded="true" signature="62013:62063" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="62074:62132" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="62143:62214" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="62225:62326" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="62337:62396" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="62407:62466" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="62477:62536" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="62547:62605" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="62616:62678" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="62689:62747" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="62758:62860" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="62871:62929" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="62940:63037" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="63048:63108" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="63119:63193" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="63406:63512" ph="SELECT * FRO... user_media" />
+                <marker date="1506147693704" expanded="true" signature="63678:63750" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="63836:63941" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="65225:65400" ph="SELECT * FRO... user_media" />
+                <marker date="1506147693704" expanded="true" signature="65508:65580" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="65654:65759" ph="DELETE FROM " />
+                <marker date="1506147693704" expanded="true" signature="67006:67192" ph="SELECT m.med... user_media" />
               </folding>
             </state>
           </provider>
@@ -181,8 +304,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>update_email</find>
-      <find>length</find>
       <find>reactivate_shoutbox_key_</find>
       <find>marketplace_display_sports</find>
       <find>switchprofile_user_id_</find>
@@ -211,6 +332,8 @@
       <find>deletefriendship_</find>
       <find>add_sports</find>
       <find>delete_sports_</find>
+      <find>table scroll-table</find>
+      <find>main_sport</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,7 +342,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/modules/me/messages/inbox.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/mail_inbox.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/notfound.php" />
         <option value="$PROJECT_DIR$/includes/modules/search.php" />
@@ -270,6 +392,7 @@
         <option value="$PROJECT_DIR$/includes/modules/api/update_sport.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/del_sport.php" />
         <option value="$PROJECT_DIR$/includes/modules/api.php" />
+        <option value="$PROJECT_DIR$/includes/modules/api/get_sports.php" />
       </list>
     </option>
   </component>
@@ -406,7 +529,7 @@
       <workItem from="1505475084850" duration="2531000" />
       <workItem from="1505686925884" duration="24224000" />
       <workItem from="1505769291018" duration="45680000" />
-      <workItem from="1506024485275" duration="51544000" />
+      <workItem from="1506024485275" duration="53185000" />
     </task>
     <task id="LOCAL-00001" summary="api excel&#10;chk email, nickname api">
       <created>1505260044590</created>
@@ -709,11 +832,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506210699687</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="del_sport">
+      <created>1506211028788</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1506211028788</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186364000" />
+    <option name="totallyTimeSpent" value="188005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
@@ -745,7 +875,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update_password" />
     <MESSAGE value="update_email" />
     <MESSAGE value="set_unblockuser" />
     <MESSAGE value="get_profiles" />
@@ -770,7 +899,8 @@
     <MESSAGE value="get_watchs" />
     <MESSAGE value="add_sport" />
     <MESSAGE value="update_sport" />
-    <option name="LAST_COMMIT_MESSAGE" value="update_sport" />
+    <MESSAGE value="del_sport" />
+    <option name="LAST_COMMIT_MESSAGE" value="del_sport" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -779,62 +909,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/modules/marketplace.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="75" lean-forward="false" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
-          <folding>
-            <marker date="1504458782537" expanded="true" signature="329:555" ph="DELETE FROM " />
-            <marker date="1504458782537" expanded="true" signature="1298:1594" ph="UPDATE `user... " />
-            <marker date="1504458782537" expanded="true" signature="4002:4615" ph="INSERT INTO user_shoutbox" />
-            <marker date="1504458782537" expanded="true" signature="6594:6793" ph="INSERT INTO user_shoutboxmedia... " />
-            <marker date="1504458782537" expanded="true" signature="7170:7433" ph="INSERT INTO user_to_shoutboxmedia... " />
-            <marker date="1504458782537" expanded="true" signature="7921:8024" ph="UPDATE user_... " />
-            <marker date="1504458782537" expanded="true" signature="8210:8392" ph="UPDATE user_... " />
-            <marker date="1504458782537" expanded="true" signature="8706:8789" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="8735:8789" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="9006:9171" ph="SELECT * FRO... user_settings" />
-            <marker date="1504458782537" expanded="true" signature="9586:9807" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="9640:9783" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="9859:10052" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="11654:12149" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="11677:11961" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="11701:11938" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="11761:11930" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="11853:11892" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="12203:12261" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="12230:12253" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="12567:15604" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="12733:15290" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="12773:13787" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="12897:13101" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="13123:13321" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="13818:15277" ph="..." />
-            <marker date="1504458782537" expanded="false" signature="13978:13992" ph="..." />
-            <marker date="1504458782537" expanded="false" signature="14251:14261" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="14528:14905" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="15317:15597" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="15546:15588" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="15662:16011" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="15745:16011" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="15832:16011" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="15863:16011" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="15880:16011" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="17584:17792" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="17821:18001" ph="..." />
-            <marker date="1504458782537" expanded="false" signature="17861:17867" ph=" " />
-            <marker date="1504458782537" expanded="true" signature="18077:18265" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="18343:18526" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="18378:18515" ph="{...}" />
-            <marker date="1504458782537" expanded="true" signature="18439:18511" ph="{...}" />
-            <marker date="1504458782537" expanded="true" signature="18552:19126" ph="..." />
-            <marker date="1504458782537" expanded="true" signature="18581:18715" ph="{...}" />
-            <marker date="1504458782537" expanded="true" signature="18747:18937" ph="{...}" />
-            <marker date="1504458782537" expanded="true" signature="18977:19114" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/api/get_profiles.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
@@ -1239,113 +1313,6 @@
           <caret line="150" column="60" lean-forward="false" selection-start-line="150" selection-start-column="60" selection-end-line="150" selection-end-column="60" />
           <folding>
             <marker date="1506156271795" expanded="true" signature="7476:8272" ph="INSERT INTO `user_settings`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/functions/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="1658" column="92" lean-forward="false" selection-start-line="1657" selection-start-column="42" selection-end-line="1658" selection-end-column="92" />
-          <folding>
-            <marker date="1506147693704" expanded="true" signature="6818:6850" ph="SELECT * FRO... navigation" />
-            <marker date="1506147693704" expanded="true" signature="7092:7372" ph="SELECT conte... navigation" />
-            <marker date="1506147693704" expanded="true" signature="8139:8427" ph="SELECT conte... content" />
-            <marker date="1506147693704" expanded="true" signature="13283:13389" ph="SELECT * FRO... user_settings" />
-            <marker date="1506147693704" expanded="true" signature="13654:13760" ph="SELECT * FRO... user_settings" />
-            <marker date="1506147693704" expanded="true" signature="14575:14687" ph="SELECT * FRO... user" />
-            <marker date="1506147693704" expanded="true" signature="14950:15071" ph="SELECT * FRO... user" />
-            <marker date="1506147693704" expanded="true" signature="15325:15439" ph="SELECT * FRO... user" />
-            <marker date="1506147693704" expanded="true" signature="15699:16074" ph="SELECT sgd.s... sport_group_details" />
-            <marker date="1506147693704" expanded="true" signature="16372:16767" ph="SELECT sgd.s... sport_group" />
-            <marker date="1506147693704" expanded="true" signature="17067:17447" ph="SELECT sgd.s... sport_group_details" />
-            <marker date="1506147693704" expanded="true" signature="17723:17900" ph="SELECT * FRO... sport_group_details" />
-            <marker date="1506147693704" expanded="true" signature="17988:18325" ph="SELECT * FRO... user_to_sport_group_value" />
-            <marker date="1506147693704" expanded="true" signature="18357:18693" ph="SELECT * FRO... user_to_sport_group_value" />
-            <marker date="1506147693704" expanded="true" signature="20164:20429" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="20576:21067" ph="SELECT *, ut... user_to_sport_group_value" />
-            <marker date="1506147693704" expanded="true" signature="21989:22729" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="22738:22810" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="23650:23916" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="24059:24340" ph="SELECT * FRO... sport_group_value" />
-            <marker date="1506147693704" expanded="true" signature="24372:24792" ph="SELECT * FRO... sport_group_value" />
-            <marker date="1506147693704" expanded="true" signature="25550:25780" ph="SELECT * FRO... sport_group_value" />
-            <marker date="1506147693704" expanded="true" signature="26179:26698" ph="SELECT sgv.s... sport_group_value" />
-            <marker date="1506147693704" expanded="true" signature="26759:26994" ph="SELECT sgv.s... sport_group_value" />
-            <marker date="1506147693704" expanded="true" signature="27404:27663" ph="SELECT * FRO... sport_group_value" />
-            <marker date="1506147693704" expanded="true" signature="28377:28580" ph="SELECT * FRO... user_types" />
-            <marker date="1506147693704" expanded="true" signature="29752:29851" ph="SELECT * FRO... geo_cities" />
-            <marker date="1506147693704" expanded="true" signature="31676:32248" ph="INSERT INTO geo_cities" />
-            <marker date="1506147693704" expanded="true" signature="32961:33060" ph="SELECT * FRO... geo_cities" />
-            <marker date="1506147693704" expanded="true" signature="33547:33646" ph="SELECT * FRO... geo_cities" />
-            <marker date="1506147693704" expanded="true" signature="35477:36049" ph="INSERT INTO geo_cities" />
-            <marker date="1506147693704" expanded="true" signature="36773:36901" ph="SELECT CONCA... geo_cities" />
-            <marker date="1506147693704" expanded="true" signature="37231:37695" ph="SELECT c.*, geo_countries" />
-            <marker date="1506147693704" expanded="true" signature="38043:38171" ph="SELECT latit... ${strtolower( $country )}" />
-            <marker date="1506147693704" expanded="true" signature="38481:38642" ph="SELECT city_... ${strtolower( $country )}" />
-            <marker date="1506147693704" expanded="true" signature="39933:39973" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="39943:39973" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="43023:43063" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="43033:43063" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="45985:46054" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="46170:46210" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="46180:46210" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="47911:48145" ph="INSERT INTO `user_history`... " />
-            <marker date="1506147693704" expanded="true" signature="48295:48375" ph="UPDATE `user... " />
-            <marker date="1506147693704" expanded="true" signature="48640:49140" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="48668:49140" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="48698:49140" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="48728:48970" ph="..." />
-            <marker date="1506147693704" expanded="false" signature="48835:48842" ph="×" />
-            <marker date="1506147693704" expanded="true" signature="49007:49140" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="49098:49140" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="49132:49140" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="49157:49337" ph="SELECT * FRO... user_types" />
-            <marker date="1506147693704" expanded="true" signature="50272:51384" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="50303:51375" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="50333:51365" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="50362:51354" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="50420:51332" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="50468:50666" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="50482:50532" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="50714:50996" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="50727:50773" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="51045:51319" ph="..." />
-            <marker date="1506147693704" expanded="true" signature="51516:51712" ph="SELECT * FRO... user_friendship" />
-            <marker date="1506147693704" expanded="true" signature="51934:52204" ph="SELECT * FRO... user_friendship" />
-            <marker date="1506147693704" expanded="true" signature="52425:52545" ph="SELECT * FRO... user_watchlist" />
-            <marker date="1506147693704" expanded="true" signature="52768:52884" ph="SELECT * FRO... user_blocked" />
-            <marker date="1506147693704" expanded="true" signature="53114:53301" ph="SELECT * FRO... user_blocked" />
-            <marker date="1506147693704" expanded="true" signature="53516:53630" ph="SELECT histo... user_history" />
-            <marker date="1506147693704" expanded="true" signature="56881:57256" ph="SELECT * FRO... affiliate_group" />
-            <marker date="1506147693704" expanded="true" signature="57815:58163" ph="SELECT * FRO... affiliate_group" />
-            <marker date="1506147693704" expanded="true" signature="59079:59173" ph="SELECT * FRO... text" />
-            <marker date="1506147693704" expanded="true" signature="59402:59593" ph="SELECT u.use... user" />
-            <marker date="1506147693704" expanded="true" signature="60125:60317" ph="SELECT u.use... user" />
-            <marker date="1506147693704" expanded="true" signature="60686:60781" ph="SELECT u.use... user" />
-            <marker date="1506147693704" expanded="true" signature="60969:61418" ph="SELECT u.*, user" />
-            <marker date="1506147693704" expanded="true" signature="62013:62063" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="62074:62132" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="62143:62214" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="62225:62326" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="62337:62396" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="62407:62466" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="62477:62536" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="62547:62605" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="62616:62678" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="62689:62747" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="62758:62860" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="62871:62929" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="62940:63037" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="63048:63108" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="63119:63193" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="63406:63512" ph="SELECT * FRO... user_media" />
-            <marker date="1506147693704" expanded="true" signature="63678:63750" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="63836:63941" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="65225:65400" ph="SELECT * FRO... user_media" />
-            <marker date="1506147693704" expanded="true" signature="65508:65580" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="65654:65759" ph="DELETE FROM " />
-            <marker date="1506147693704" expanded="true" signature="67006:67192" ph="SELECT m.med... user_media" />
           </folding>
         </state>
       </provider>
@@ -1931,10 +1898,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/del_sport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <marker date="1506210901616" expanded="true" signature="180:233" ph="select * fro... user" />
+            <marker date="1506210901616" expanded="true" signature="363:479" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/me/profile/sports.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="154">
+          <caret line="212" column="33" lean-forward="false" selection-start-line="212" selection-start-column="33" selection-end-line="212" selection-end-column="33" />
           <folding>
             <marker date="1504458794876" expanded="true" signature="98:202" ph="SELECT COUNT... user_to_sport_group_value" />
             <marker date="1504458794876" expanded="true" signature="361:577" ph="DELETE FROM " />
@@ -1955,22 +1933,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/del_sport.php">
+    <entry file="file://$PROJECT_DIR$/includes/functions/default.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="625">
+          <caret line="669" column="5" lean-forward="true" selection-start-line="617" selection-start-column="4" selection-end-line="669" selection-end-column="5" />
           <folding>
-            <marker date="1506210901616" expanded="true" signature="180:233" ph="select * fro... user" />
-            <marker date="1506210901616" expanded="true" signature="363:479" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="6818:6850" ph="SELECT * FRO... navigation" />
+            <marker date="1506147693704" expanded="true" signature="7092:7372" ph="SELECT conte... navigation" />
+            <marker date="1506147693704" expanded="true" signature="8139:8427" ph="SELECT conte... content" />
+            <marker date="1506147693704" expanded="true" signature="13283:13389" ph="SELECT * FRO... user_settings" />
+            <marker date="1506147693704" expanded="true" signature="13654:13760" ph="SELECT * FRO... user_settings" />
+            <marker date="1506147693704" expanded="true" signature="14575:14687" ph="SELECT * FRO... user" />
+            <marker date="1506147693704" expanded="true" signature="14950:15071" ph="SELECT * FRO... user" />
+            <marker date="1506147693704" expanded="true" signature="15325:15439" ph="SELECT * FRO... user" />
+            <marker date="1506147693704" expanded="true" signature="15699:16074" ph="SELECT sgd.s... sport_group_details" />
+            <marker date="1506147693704" expanded="true" signature="16372:16767" ph="SELECT sgd.s... sport_group" />
+            <marker date="1506147693704" expanded="true" signature="17067:17447" ph="SELECT sgd.s... sport_group_details" />
+            <marker date="1506147693704" expanded="true" signature="17723:17900" ph="SELECT * FRO... sport_group_details" />
+            <marker date="1506147693704" expanded="true" signature="17988:18325" ph="SELECT * FRO... user_to_sport_group_value" />
+            <marker date="1506147693704" expanded="true" signature="18357:18693" ph="SELECT * FRO... user_to_sport_group_value" />
+            <marker date="1506147693704" expanded="true" signature="20164:20429" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="20576:21067" ph="SELECT *, ut... user_to_sport_group_value" />
+            <marker date="1506147693704" expanded="true" signature="21989:22729" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="22738:22810" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="23650:23916" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="24059:24340" ph="SELECT * FRO... sport_group_value" />
+            <marker date="1506147693704" expanded="true" signature="24372:24792" ph="SELECT * FRO... sport_group_value" />
+            <marker date="1506147693704" expanded="true" signature="25550:25780" ph="SELECT * FRO... sport_group_value" />
+            <marker date="1506147693704" expanded="true" signature="26179:26698" ph="SELECT sgv.s... sport_group_value" />
+            <marker date="1506147693704" expanded="true" signature="26759:26994" ph="SELECT sgv.s... sport_group_value" />
+            <marker date="1506147693704" expanded="true" signature="27404:27663" ph="SELECT * FRO... sport_group_value" />
+            <marker date="1506147693704" expanded="true" signature="28377:28580" ph="SELECT * FRO... user_types" />
+            <marker date="1506147693704" expanded="true" signature="29752:29851" ph="SELECT * FRO... geo_cities" />
+            <marker date="1506147693704" expanded="true" signature="31676:32248" ph="INSERT INTO geo_cities" />
+            <marker date="1506147693704" expanded="true" signature="32961:33060" ph="SELECT * FRO... geo_cities" />
+            <marker date="1506147693704" expanded="true" signature="33547:33646" ph="SELECT * FRO... geo_cities" />
+            <marker date="1506147693704" expanded="true" signature="35477:36049" ph="INSERT INTO geo_cities" />
+            <marker date="1506147693704" expanded="true" signature="36773:36901" ph="SELECT CONCA... geo_cities" />
+            <marker date="1506147693704" expanded="true" signature="37231:37695" ph="SELECT c.*, geo_countries" />
+            <marker date="1506147693704" expanded="true" signature="38043:38171" ph="SELECT latit... ${strtolower( $country )}" />
+            <marker date="1506147693704" expanded="true" signature="38481:38642" ph="SELECT city_... ${strtolower( $country )}" />
+            <marker date="1506147693704" expanded="true" signature="39933:39973" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="39943:39973" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="43023:43063" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="43033:43063" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="45985:46054" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="46170:46210" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="46180:46210" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="47911:48145" ph="INSERT INTO `user_history`... " />
+            <marker date="1506147693704" expanded="true" signature="48295:48375" ph="UPDATE `user... " />
+            <marker date="1506147693704" expanded="true" signature="48640:49140" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="48668:49140" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="48698:49140" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="48728:48970" ph="..." />
+            <marker date="1506147693704" expanded="false" signature="48835:48842" ph="×" />
+            <marker date="1506147693704" expanded="true" signature="49007:49140" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="49098:49140" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="49132:49140" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="49157:49337" ph="SELECT * FRO... user_types" />
+            <marker date="1506147693704" expanded="true" signature="50272:51384" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="50303:51375" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="50333:51365" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="50362:51354" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="50420:51332" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="50468:50666" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="50482:50532" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="50714:50996" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="50727:50773" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="51045:51319" ph="..." />
+            <marker date="1506147693704" expanded="true" signature="51516:51712" ph="SELECT * FRO... user_friendship" />
+            <marker date="1506147693704" expanded="true" signature="51934:52204" ph="SELECT * FRO... user_friendship" />
+            <marker date="1506147693704" expanded="true" signature="52425:52545" ph="SELECT * FRO... user_watchlist" />
+            <marker date="1506147693704" expanded="true" signature="52768:52884" ph="SELECT * FRO... user_blocked" />
+            <marker date="1506147693704" expanded="true" signature="53114:53301" ph="SELECT * FRO... user_blocked" />
+            <marker date="1506147693704" expanded="true" signature="53516:53630" ph="SELECT histo... user_history" />
+            <marker date="1506147693704" expanded="true" signature="56881:57256" ph="SELECT * FRO... affiliate_group" />
+            <marker date="1506147693704" expanded="true" signature="57815:58163" ph="SELECT * FRO... affiliate_group" />
+            <marker date="1506147693704" expanded="true" signature="59079:59173" ph="SELECT * FRO... text" />
+            <marker date="1506147693704" expanded="true" signature="59402:59593" ph="SELECT u.use... user" />
+            <marker date="1506147693704" expanded="true" signature="60125:60317" ph="SELECT u.use... user" />
+            <marker date="1506147693704" expanded="true" signature="60686:60781" ph="SELECT u.use... user" />
+            <marker date="1506147693704" expanded="true" signature="60969:61418" ph="SELECT u.*, user" />
+            <marker date="1506147693704" expanded="true" signature="62013:62063" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="62074:62132" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="62143:62214" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="62225:62326" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="62337:62396" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="62407:62466" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="62477:62536" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="62547:62605" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="62616:62678" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="62689:62747" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="62758:62860" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="62871:62929" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="62940:63037" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="63048:63108" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="63119:63193" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="63406:63512" ph="SELECT * FRO... user_media" />
+            <marker date="1506147693704" expanded="true" signature="63678:63750" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="63836:63941" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="65225:65400" ph="SELECT * FRO... user_media" />
+            <marker date="1506147693704" expanded="true" signature="65508:65580" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="65654:65759" ph="DELETE FROM " />
+            <marker date="1506147693704" expanded="true" signature="67006:67192" ph="SELECT m.med... user_media" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="66" column="13" lean-forward="false" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+        <state relative-caret-position="221">
+          <caret line="67" column="20" lean-forward="false" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/get_sports.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <marker date="1506212057713" expanded="true" signature="284:337" ph="select * fro... user" />
+            <marker date="1506212057713" expanded="true" signature="476:896" ph="SELECT *, ut... user_to_sport_group_value" />
+            <marker date="1506212057713" expanded="true" signature="476:1015" ph="SELECT *, ut... user_to_sport_group_value" />
+          </folding>
         </state>
       </provider>
     </entry>
