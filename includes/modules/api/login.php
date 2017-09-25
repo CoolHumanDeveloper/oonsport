@@ -49,5 +49,7 @@ unset($user_profile['user_id']);
 foreach($user_profile as $key => $ud)
     $userinfo[$key] = $ud;
 
+$userinfo['user_image'] = api_build_default_image($userinfo['user_id'], "50x50");
+
 $response['userinfo'] = $userinfo;
 ?>

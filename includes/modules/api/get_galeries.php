@@ -26,6 +26,8 @@ $get_galerie_image = $query->fetchAll(PDO::FETCH_ASSOC);
 foreach ($get_galerie_image as $key => $galerie_image) {
     if ($galerie_image['media_type'] == 1) {
         $get_galerie_image[$key]['user_image'] = api_build_user_image($galerie_image['media_file'], "profil", "115x115");
+    } else if ($galerie_image['media_type'] == 3) {
+        $get_galerie_image[$key]['media_url'] = SITE_IMAGE_URL . 'user/' . $galerie_image['media_url'];
     }
 }
 
