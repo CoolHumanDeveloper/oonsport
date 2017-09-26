@@ -451,3 +451,69 @@ function api_build_group_feed($group) {
 
     return $get_group_message;
 }
+function api_get_user_sport_list( $user_id, $value_id ) {
+    global $DB;
+    global $lang;
+    $lang = $lang ?: 'en';
+    if ( $user_id === 0 ) {
+        $sql = "SELECT * 
+			FROM 
+				sport_group_value sgv, 
+				sport_group_value_details sgvd 
+			WHERE 
+				sgv.sport_group_value_id = '" . $value_id . "' AND
+				sgv.sport_group_value_id = sgvd.sport_group_value_id AND
+				sgvd.language_code='" . $lang . "'
+			LIMIT 1";
+    } else {
+        $sql = "SELECT * 
+			FROM 
+				sport_group_value sgv, 
+				user_to_sport_group_value uts, 
+				sport_group_value_details sgvd 
+			WHERE 
+				uts.sport_group_value_id = '" . $value_id . "' AND
+				sgv.sport_group_value_id = sgvd.sport_group_value_id AND
+				uts.sport_group_value_id = sgvd.sport_group_value_id AND 
+				uts.user_id ='" . $user_id . "' AND 
+				sgvd.language_code='" . $lang . "'
+			LIMIT 1";
+    }
+
+    $query = $DB->prepare( $sql );
+    $query->execute();
+    $main_sport = $query->fetch(PDO::FETCH_ASSOC);
+    if (!$main_sport)
+        return [];
+
+    $sub_of = $main_sport[ 'sport_group_sub_of' ];
+    $res = array();
+    $res[] = $main_sport;
+    while ( $sub_of > 0 ) {
+        $parent = api_get_sport_parent( $sub_of );
+        $res[] = $parent;
+
+        $sub_of = $parent[ 'sport_group_sub_of' ];
+    }
+
+    $res = array_reverse($res);
+    return $res;
+}
+function api_get_sport_parent( $parent_id ) {
+    global $DB;
+    global $lang;
+    $sql = "SELECT * FROM 
+	sport_group_value sgv, 
+	sport_group_value_details sgvd 
+	WHERE 
+	sgv.sport_group_value_id = '" . $parent_id . "' AND
+	sgv.sport_group_value_id = sgvd.sport_group_value_id AND 
+	sgvd.language_code='" . $lang . "' LIMIT 1";
+
+
+    $query = $DB->prepare( $sql );
+    $query->execute();
+    $sport_name = $query->fetch(PDO::FETCH_ASSOC);
+
+    return $sport_name;
+}

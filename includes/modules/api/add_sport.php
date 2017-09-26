@@ -1,7 +1,7 @@
 <?php
 if (!isset($sport_groups_0) || $sport_groups_0 == ""
     || !isset($profession) || $profession == ""
-    || !isset($handycap) || $handycap == ""
+    || !isset($handycap)
 ) {
     header(HEADER_SERVERERR);
     $response['code'] = MISSING_PARAMETER;

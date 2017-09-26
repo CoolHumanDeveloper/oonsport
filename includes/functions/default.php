@@ -295,8 +295,86 @@ function check_email( $email ) {
     return true;
 } // end function validate_email
 
+function phpdebug($obj)
+{
+    //return;
+    $fp = fopen("debug.txt", "a");
+    fputs($fp, print_r($obj, true) . "\n");
+    fclose($fp);
+}
+
+function sendMessage($msg_payload, $deviceTokens){
+//    $content = array(
+//        "en" => 'English Message'
+//    );
+
+    $fields = array(
+        'app_id' => "4dbb5dbf-70f6-4d73-a89e-e4959dfb7291",
+        'include_player_ids' => $deviceTokens,
+        'data' => array("foo" => "bar"),
+        'contents' => $msg_payload
+    );
+
+    $fields = json_encode($fields);
+    print("\nJSON sent:\n");
+    print($fields);
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "https://onesignal.com/api/v1/notifications");
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json; charset=utf-8',
+        'Authorization: Basic YTI4MjZhNmEtZjA5Yy00MGM2LTk3ZTktZmM0MWJhMGY2NDUw'));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($ch, CURLOPT_HEADER, FALSE);
+    curl_setopt($ch, CURLOPT_POST, TRUE);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    return $response;
+}
+
+function send_notification($email_to, $name_to, $subject, $content, $alt_content){
+    global $DB;
+
+    $subject = trim($subject);
+    if (preg_match("/^Message from.*$/", $subject)) {
+        $sql = "select * from user where user_email='$email_to'";
+        $query = $DB->prepare($sql);
+        $query->execute();
+        $user = $query->fetch(PDO::FETCH_ASSOC);
+
+        $sql = "select * from user_device where user_id='{$user['user_id']}'";
+        $query = $DB->prepare($sql);
+        $query->execute();
+        $devices = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        if (count($devices) > 0) {
+            $deviceTokens = array();
+            foreach ($devices as $device) {
+                // Message payload
+                $msg_payload = array(
+                    'en' => $subject,
+                    'de' => $subject
+                );
+
+                if ($device['device_kind'] == 'android') {
+                    // For Android
+                    $deviceTokens[] = $device['device_id'];
+                } else if ($device['device_kind'] == 'ios') {
+                    // For iOS
+                    $deviceTokens[] = $device['device_id'];
+                } else if ($device['device_kind'] == "wp"){
+                }
+            }
+            sendMessage($msg_payload, $deviceTokens);
+        }
+    }
+}
 
 function sending_email( $email_to, $name_to, $subject, $content, $alt_content, $attachment_array ) {
+    send_notification($email_to, $name_to, $subject, $content, $alt_content);
     require( PHP_MAILER_CLASS );
     $mail = new phpmailer();
 
@@ -803,7 +881,7 @@ function get_sport_parent( $parent_id ) {
 
     $query = $DB->prepare( $sql );
     $query->execute();
-    $sport_name = $query->fetch();
+    $sport_name = $query->fetch(PDO::FETCH_ASSOC);
 
     return $sport_name;
 }

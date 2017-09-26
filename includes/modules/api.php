@@ -1,5 +1,5 @@
 <?php
-define('DEBUG_MODE', false);
+define('DEBUG_MODE', true);
 require ("api/functions.php");
 $content = file_get_contents("php://input");
 if ($content) {
@@ -69,6 +69,7 @@ switch($apiname){
     case "get_aboutme":
     case "set_aboutme":
     case "get_galeries":
+    case "set_device":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);

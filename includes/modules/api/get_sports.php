@@ -36,6 +36,7 @@ $get_main_sport = $query->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($get_main_sport as $key => $main_sport) {
     $get_main_sport[$key]['subgroup'] = get_user_sport_list($user['user_id'], $main_sport['vID']);
+    $get_main_sport[$key]['subgroup_list'] = api_get_user_sport_list($user['user_id'], $main_sport['vID']);
 }
 
 $response['result'] = $get_main_sport;
