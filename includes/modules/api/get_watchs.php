@@ -49,13 +49,14 @@ $sql.=" ORDER BY uw.watchlist_date DESC LIMIT ".$page*VIEW_PER_PAGE.",".VIEW_PER
 if($total > 0) {
     $query = $DB->prepare($sql);
     $query->execute();
-    $get_search = $query->fetchAll();
+    $get_search = $query->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($get_search as $key => $search) {
         $get_search[$key]['grid_image'] = api_build_default_image($search['user_id'],"115x100");
         $get_search[$key]['list_image'] = api_build_default_image($search['user_id'],"100x100");
         $get_search[$key]['user_country'] = strtoupper($search['user_country']);
         $get_search[$key]['city_name'] = get_city_name($search['user_geo_city_id'],$search['user_country']);
+        $get_search[$key]['main_sport'] = get_user_main_sport($search['user_id']);
     }
 }
 
