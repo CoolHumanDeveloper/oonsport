@@ -70,6 +70,7 @@ switch($apiname){
     case "set_aboutme":
     case "get_galeries":
     case "set_device":
+    case "get_settings":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);
