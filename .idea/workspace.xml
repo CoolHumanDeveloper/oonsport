@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c4aab9-b50a-487f-ab15-b4c09931ef7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/modules/api/get_settings.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api.php" afterPath="$PROJECT_DIR$/includes/modules/api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api/get_settings.php" afterPath="$PROJECT_DIR$/includes/modules/api/get_settings.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/modules/api.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="199">
@@ -162,14 +161,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_settings.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="get_settings.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/modules/api/get_settings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
               <folding>
-                <marker date="1506441765027" expanded="true" signature="97:150" ph="select * fro... user" />
-                <marker date="1506441765027" expanded="true" signature="251:293" ph="SELECT * FRO... user_settings" />
+                <marker date="1506442099728" expanded="true" signature="97:150" ph="select * fro... user" />
+                <marker date="1506442099728" expanded="true" signature="251:293" ph="SELECT * FRO... user_settings" />
               </folding>
             </state>
           </provider>
@@ -359,8 +358,8 @@
         <option value="$PROJECT_DIR$/includes/functions/default.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/get_invites.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/get_watchs.php" />
-        <option value="$PROJECT_DIR$/includes/modules/api/get_settings.php" />
         <option value="$PROJECT_DIR$/includes/modules/api.php" />
+        <option value="$PROJECT_DIR$/includes/modules/api/get_settings.php" />
       </list>
     </option>
   </component>
@@ -500,14 +499,7 @@
       <workItem from="1505686925884" duration="24224000" />
       <workItem from="1505769291018" duration="45680000" />
       <workItem from="1506024485275" duration="87953000" />
-      <workItem from="1506441515445" duration="300000" />
-    </task>
-    <task id="LOCAL-00004" summary="modify login api">
-      <created>1505271524483</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1505271524483</updated>
+      <workItem from="1506441515445" duration="612000" />
     </task>
     <task id="LOCAL-00005" summary="modify login api">
       <created>1505431239338</created>
@@ -845,11 +837,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506407373720</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="get_settings">
+      <created>1506441832206</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1506441832206</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223073000" />
+    <option name="totallyTimeSpent" value="223385000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="706" extended-state="6" />
@@ -881,7 +880,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="get_friends&#10;del_friend" />
     <MESSAGE value="get_groups" />
     <MESSAGE value="get_group_messages&#10;write_to_group" />
     <MESSAGE value="del_group_message" />
@@ -906,7 +904,8 @@
     <MESSAGE value="push notification" />
     <MESSAGE value="update get invites for sent and received" />
     <MESSAGE value="update get_watchs" />
-    <option name="LAST_COMMIT_MESSAGE" value="update get_watchs" />
+    <MESSAGE value="get_settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="get_settings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1691,22 +1690,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/get_settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <marker date="1506441765027" expanded="true" signature="97:150" ph="select * fro... user" />
-            <marker date="1506441765027" expanded="true" signature="251:293" ph="SELECT * FRO... user_settings" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="72" column="22" lean-forward="false" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/get_settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding>
+            <marker date="1506442099728" expanded="true" signature="97:150" ph="select * fro... user" />
+            <marker date="1506442099728" expanded="true" signature="251:293" ph="SELECT * FRO... user_settings" />
+          </folding>
         </state>
       </provider>
     </entry>

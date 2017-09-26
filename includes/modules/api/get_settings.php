@@ -14,6 +14,11 @@ $user = $query->fetch(PDO::FETCH_ASSOC);
 $sql = "SELECT * FROM user_settings WHERE user_id=" . $user['user_id'];
 $query = $DB->prepare($sql);
 $query->execute();
-$user_settings = $query->fetch(PDO::FETCH_ASSOC);
+$user_settings = $query->fetchAll(PDO::FETCH_ASSOC);
 
-$response['result'] = $user_settings;
+$settings = array();
+foreach($user_settings as $setting){
+    $settings[$setting['settings_key']] = $setting['settings_value'];
+}
+
+$response['result'] = $settings;
