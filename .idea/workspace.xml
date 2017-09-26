@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c4aab9-b50a-487f-ab15-b4c09931ef7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/modules/api/set_device.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/functions/default.php" afterPath="$PROJECT_DIR$/includes/functions/default.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api.php" afterPath="$PROJECT_DIR$/includes/modules/api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api/add_sport.php" afterPath="$PROJECT_DIR$/includes/modules/api/add_sport.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api/functions.php" afterPath="$PROJECT_DIR$/includes/modules/api/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api/get_sports.php" afterPath="$PROJECT_DIR$/includes/modules/api/get_sports.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api/update_sport.php" afterPath="$PROJECT_DIR$/includes/modules/api/update_sport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api/get_invites.php" afterPath="$PROJECT_DIR$/includes/modules/api/get_invites.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/functions/default.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="324" column="82" lean-forward="true" selection-start-line="324" selection-start-column="82" selection-end-line="324" selection-end-column="82" />
+            <state relative-caret-position="81">
+              <caret line="362" column="34" lean-forward="true" selection-start-line="362" selection-start-column="34" selection-end-line="362" selection-end-column="34" />
               <folding>
                 <marker date="1506401991444" expanded="true" signature="6818:6850" ph="SELECT * FRO... navigation" />
                 <marker date="1506401991444" expanded="true" signature="7092:7372" ph="SELECT conte... navigation" />
@@ -136,6 +130,19 @@
                 <marker date="1506401991444" expanded="true" signature="68085:68157" ph="DELETE FROM " />
                 <marker date="1506401991444" expanded="true" signature="68231:68336" ph="DELETE FROM " />
                 <marker date="1506401991444" expanded="true" signature="69583:69769" ph="SELECT m.med... user_media" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_invites.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/modules/api/get_invites.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+              <folding>
+                <marker date="1506405641423" expanded="true" signature="285:338" ph="select * fro... user" />
+                <marker date="1506405641423" expanded="true" signature="439:480" ph="SELECT * FRO... user_details" />
               </folding>
             </state>
           </provider>
@@ -276,12 +283,12 @@
       <find>country</find>
       <find>sendNotificationCustom</find>
       <find>video</find>
-      <find>sending_email</find>
       <find>sending</find>
       <find>port</find>
       <find>del_sport</find>
       <find>CURLOPT_HEADER</find>
       <find>RECHTE SIND DA</find>
+      <find>sending_email</find>
     </findStrings>
     <dirStrings>
       <dir>D:\xampp7\htdocs\oonsrc\includes\modules\api</dir>
@@ -320,7 +327,6 @@
         <option value="$PROJECT_DIR$/includes/modules/api/add_group.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/del_friend.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/constants.php" />
-        <option value="$PROJECT_DIR$/includes/modules/api/get_invites.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/del_invite.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/decline_invite.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/add_watch.php" />
@@ -344,6 +350,7 @@
         <option value="$PROJECT_DIR$/includes/functions/notification.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/functions.php" />
         <option value="$PROJECT_DIR$/includes/functions/default.php" />
+        <option value="$PROJECT_DIR$/includes/modules/api/get_invites.php" />
       </list>
     </option>
   </component>
@@ -482,14 +489,7 @@
       <workItem from="1505475084850" duration="2531000" />
       <workItem from="1505686925884" duration="24224000" />
       <workItem from="1505769291018" duration="45680000" />
-      <workItem from="1506024485275" duration="84103000" />
-    </task>
-    <task id="LOCAL-00001" summary="api excel&#10;chk email, nickname api">
-      <created>1505260044590</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1505260044590</updated>
+      <workItem from="1506024485275" duration="85865000" />
     </task>
     <task id="LOCAL-00002" summary="register, get_countries api">
       <created>1505270462172</created>
@@ -827,11 +827,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506302751715</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="push notification">
+      <created>1506402081040</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1506402081040</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218923000" />
+    <option name="totallyTimeSpent" value="220685000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="706" extended-state="6" />
@@ -863,7 +870,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update_settings_marketplace" />
     <MESSAGE value="update_settings_newsletter" />
     <MESSAGE value="delete_account" />
     <MESSAGE value="get_friends&#10;del_friend" />
@@ -888,7 +894,8 @@
     <MESSAGE value="set_aboutme" />
     <MESSAGE value="get_galeries" />
     <MESSAGE value="change get_galeries and login" />
-    <option name="LAST_COMMIT_MESSAGE" value="change get_galeries and login" />
+    <MESSAGE value="push notification" />
+    <option name="LAST_COMMIT_MESSAGE" value="push notification" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1062,17 +1069,6 @@
             <marker date="1506161186081" expanded="true" signature="407:448" ph="SELECT * FRO... user_details" />
             <marker date="1506161186081" expanded="true" signature="656:816" ph="SELECT ud.us... user" />
             <marker date="1506161186081" expanded="true" signature="1048:1232" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/get_invites.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="58" column="51" lean-forward="false" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
-          <folding>
-            <marker date="1506163930766" expanded="true" signature="285:338" ph="select * fro... user" />
-            <marker date="1506163930766" expanded="true" signature="439:480" ph="SELECT * FRO... user_details" />
           </folding>
         </state>
       </provider>
@@ -1794,8 +1790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/functions/default.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="324" column="82" lean-forward="true" selection-start-line="324" selection-start-column="82" selection-end-line="324" selection-end-column="82" />
+        <state relative-caret-position="81">
+          <caret line="362" column="34" lean-forward="true" selection-start-line="362" selection-start-column="34" selection-end-line="362" selection-end-column="34" />
           <folding>
             <marker date="1506401991444" expanded="true" signature="6818:6850" ph="SELECT * FRO... navigation" />
             <marker date="1506401991444" expanded="true" signature="7092:7372" ph="SELECT conte... navigation" />
@@ -1897,6 +1893,17 @@
             <marker date="1506401991444" expanded="true" signature="68085:68157" ph="DELETE FROM " />
             <marker date="1506401991444" expanded="true" signature="68231:68336" ph="DELETE FROM " />
             <marker date="1506401991444" expanded="true" signature="69583:69769" ph="SELECT m.med... user_media" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/get_invites.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+          <folding>
+            <marker date="1506405641423" expanded="true" signature="285:338" ph="select * fro... user" />
+            <marker date="1506405641423" expanded="true" signature="439:480" ph="SELECT * FRO... user_details" />
           </folding>
         </state>
       </provider>

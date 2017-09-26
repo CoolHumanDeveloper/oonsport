@@ -53,6 +53,8 @@ $sql.="
  ";
 
 $get_search = array();
+$sent_invites = array();
+$received_invites = array();
 if($total > 0) {
     $query = $DB->prepare($sql);
     $query->execute();
@@ -61,8 +63,20 @@ if($total > 0) {
     foreach ($get_search as $key => $search){
         $get_search[$key]['grid_image'] = api_build_default_image($search['user_id'],"115x100");
         $get_search[$key]['list_image'] = api_build_default_image($search['user_id'],"100x100");
+        $search['grid_image'] = api_build_default_image($search['user_id'],"115x100");
+        $search['list_image'] = api_build_default_image($search['user_id'],"100x100");
+        if ($search['user_id'] == $search['friend_id'])
+        {
+            $sent_invites[] = $search;
+            $get_search[$key]['direct'] = 'sent';
+        } else {
+            $received_invites[] = $search;
+            $get_search[$key]['direct'] = 'received';
+        }
     }
 }
 
 $response['total'] = $total;
 $response['result'] = $get_search;
+$response['sent_invites'] = $sent_invites;
+$response['received_invites'] = $received_invites;
