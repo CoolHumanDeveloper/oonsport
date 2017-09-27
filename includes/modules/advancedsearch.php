@@ -583,8 +583,7 @@ if($search_lat == 0) {
 
 }
 
-die($sql);
- 
+
 if($total < 1) {
     $_SESSION['system_temp_message'] .= set_system_message("error",TEXT_SEARCH_NO_RESULTS);		
             header("Location: ".SITE_URL."advancedsearch/");
