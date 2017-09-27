@@ -559,10 +559,30 @@ function api_get_user_main_sport( $user_id, $lang, $type = "plain" ) {
 
     foreach ( $get_main_sport as $key => $main_sport ) {
         if ( $type == "detail_list" ) {
-            $get_main_sport[$key]['subgroup'] = api_get_user_sport_list( $user_id, $main_sport[ 'sport_group_value_id' ] );
+            $get_main_sport[$key]['subgroup'] = get_user_sport_list( $user_id, $main_sport[ 'sport_group_value_id' ] );
             $get_main_sport[$key]['profession_name'] = get_profession_name( $main_sport[ 'sport_group_profession' ], $main_sport[ 'user_type' ] );
         }
     }
 
     return $get_main_sport;
+}
+function api_isValidUserParent( $switchID, $user ) {
+    global $DB;
+    $sql = "SELECT 
+			u.user_id, u.user_sub_of
+		 FROM 
+			user u
+			LEFT JOIN user_details ud ON u.user_id = ud.user_id
+		 WHERE 
+			u.user_id = '" . $switchID . "' LIMIT 1";
+
+    $query = $DB->prepare( $sql );
+    $query->execute();
+    $parent = $query->fetch();
+
+    if ( $parent[ 'user_id' ] == $_SESSION[ 'user' ][ 'user_sub_of' ] && $_SESSION[ 'user' ][ 'user_sub_of' ] > 0 ) {
+        return true;
+    }
+
+    return false;
 }

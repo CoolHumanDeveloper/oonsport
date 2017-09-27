@@ -3,15 +3,18 @@ define('DEBUG_MODE', true);
 require ("api/functions.php");
 $content = file_get_contents("php://input");
 if ($content) {
-//    debug("====" . __LINE__);
+    debug("====" . __LINE__);
     $params = json_decode($content, true);
 } else {
-//    debug("====" . __LINE__);
+    debug("====" . __LINE__);
     $params = $_REQUEST;
 }
 
-//debug("====" . __LINE__);
-//debug($params);
+debug("====" . __LINE__);
+debug($params);
+debug("====" . __LINE__);
+debug($_FILES);
+debug("====" . __LINE__);
 extract($params);
 $response = array();
 
