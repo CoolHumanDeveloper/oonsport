@@ -24,6 +24,7 @@ $apiname = $_GET['content_value'];
 switch($apiname){
     case "getdata":
     case "search":
+    case "advancedsearch":
     case "get_marketplaces":
     case "get_shoutboxs":
     case "add_shoutbox":
