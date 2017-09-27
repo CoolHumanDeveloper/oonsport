@@ -76,6 +76,9 @@ switch($apiname){
     case "set_device":
     case "get_settings":
     case "add_profile":
+    case "del_profile":
+    case "switch_profile":
+    case "report_profile":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);

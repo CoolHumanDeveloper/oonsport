@@ -641,3 +641,23 @@ Array
 )
 
 ====17
+====9
+====13
+Array
+(
+    [content] => api
+    [content_value] => profile
+    [email] => noah.bagge@outlook.com
+    [password] => rosy0419
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTE5IDIyOjM4OjQ3In0.4KOM6DBfOVXpYMGfODOokmpw-qxJFiXIHD1N_mBEeR4SgLsuXEsEYBZAz1kRWDiDY5jkXRDjiUBou2X_YyMegQ
+    [group_id] => 5
+    [profile_id] => 835
+    [lang] => de
+)
+
+====15
+Array
+(
+)
+
+====17
