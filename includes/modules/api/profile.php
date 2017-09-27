@@ -58,7 +58,7 @@ if ($user['user_id'] != $user_profile['user_id']) {
         }
     }
 
-    $profile_info['watchlist_exists'] = watchlist_exists($_SESSION['user']['user_id'],$user_profile['user_id']) === true;
+    $profile_info['watchlist_exists'] = watchlist_exists($user['user_id'],$user_profile['user_id']) === true;
 }
 
 $profile_info['city_name'] = get_city_name($user_profile['user_geo_city_id'], $user_profile['user_country']);
