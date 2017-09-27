@@ -72,6 +72,7 @@ switch($apiname){
     case "get_galeries":
     case "set_device":
     case "get_settings":
+    case "add_profile":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);

@@ -56,7 +56,7 @@ $get_search = array();
 if($total > 0) {
     $query = $DB->prepare($sql);
     $query->execute();
-    $get_search = $query->fetchAll();
+    $get_search = $query->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($get_search as $key => $search) {
         $get_search[$key]['grid_image'] = api_build_default_image($search['user_id'], "115x100");
