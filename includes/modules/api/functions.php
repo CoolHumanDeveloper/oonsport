@@ -517,3 +517,52 @@ function api_get_sport_parent( $parent_id ) {
 
     return $sport_name;
 }
+
+function api_get_user_main_sport( $user_id, $lang, $type = "plain" ) {
+    global $DB;
+    if ( $user_id === "register" ) {
+        $sql = "SELECT * 
+			FROM 
+				sport_group_details AS sgd
+			WHERE 
+				sgd.sport_group_id = '" . $type . "' AND
+				sgd.language_code='$lang' 
+			LIMIT 1";
+
+        $type = "plain";
+    } else if ( $type == 'detail_list' ) {
+        $sql = "SELECT * 
+			FROM 
+				user_to_sport_group_value uts
+				LEFT JOIN sport_group_details AS sgd ON uts.sport_group_id = sgd.sport_group_id
+				LEFT JOIN user AS u ON uts.user_id = u.user_id
+			WHERE 
+				uts.user_id ='" . $user_id . "' AND 
+				sgd.language_code='$lang' 
+			ORDER BY sgd.sport_group_name ASC";
+    } else {
+        $sql = "SELECT * 
+			FROM 
+				user_to_sport_group_value uts
+				LEFT JOIN sport_group_details AS sgd ON uts.sport_group_id = sgd.sport_group_id
+				LEFT JOIN user AS u ON uts.user_id = u.user_id
+			WHERE 
+				uts.user_id ='" . $user_id . "' AND 
+				sgd.language_code='$lang' 
+			GROUP BY 
+				sgd.sport_group_id";
+    }
+
+    $query = $DB->prepare( $sql );
+    $query->execute();
+    $get_main_sport = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ( $get_main_sport as $key => $main_sport ) {
+        if ( $type == "detail_list" ) {
+            $get_main_sport[$key]['subgroup'] = api_get_user_sport_list( $user_id, $main_sport[ 'sport_group_value_id' ] );
+            $get_main_sport[$key]['profession_name'] = get_profession_name( $main_sport[ 'sport_group_profession' ], $main_sport[ 'user_type' ] );
+        }
+    }
+
+    return $get_main_sport;
+}

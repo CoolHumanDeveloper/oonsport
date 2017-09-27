@@ -26,6 +26,8 @@ unset($user_detail['user_id']);
 foreach($user_detail as $key => $ud)
     $userinfo[$key] = $ud;
 
+$lang = isset($lang) ? $lang : 'en';
+
 $sql = "SELECT u.*, ud.*, upro.* FROM user u
         LEFT JOIN user_details AS ud ON u.user_id = ud.user_id
         LEFT JOIN user_profile AS upro ON u.user_id = upro.user_id
@@ -61,12 +63,12 @@ if ($user['user_id'] != $user_profile['user_id']) {
 
 $profile_info['city_name'] = get_city_name($user_profile['user_geo_city_id'], $user_profile['user_country']);
 $profile_info['age'] = get_age($user_profile['user_dob'],$user_profile['user_type']);
-$profile_info['main_sport'] = get_user_main_sport($user_profile['user_id']);
+$profile_info['main_sport'] = api_get_user_main_sport($user_profile['user_id'], $lang, "detail_list");
 
 $sql = "SELECT * FROM user_media m, user_to_media um WHERE um.user_id='".$user_profile['user_id']."' AND um.media_id=m.media_id ORDER BY m.media_id DESC LIMIT ".PROFILE_MAX_IMAGES;
 $query = $DB->prepare($sql);
 $query->execute();
-$get_galerie_image = $query->fetchAll();
+$get_galerie_image = $query->fetchAll(PDO::FETCH_ASSOC);
 
 $media_x = 0;
 
@@ -81,6 +83,7 @@ foreach ($get_galerie_image as $k => $galerie_image){
         $get_galerie_image[$k]['image'] = SITE_URL . 'images/default/video_play.jpg';
     }
 }
+$profile_info['medias'] = $get_galerie_image;
 
 $actpage = isset($page) ? $page - 1 : 0;
 $profile_info['shoutbox'] = api_build_shoutbox_feed($user_profile['user_id'],'profile');
