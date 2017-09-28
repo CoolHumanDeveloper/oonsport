@@ -2998,3 +2998,351 @@ Array
 )
 
 ====17
+====9
+====13
+Array
+(
+    [content] => aaaaaaaaaa
+    [content_value] => create_mail
+    [message_to_user_id] => 835
+    [subject] => hello
+)
+
+====15
+Array
+(
+)
+
+====17
+====9
+====13
+Array
+(
+    [content] => aaaaaaaaaa
+    [content_value] => create_mail
+    [message_to_user_id] => 835
+    [subject] => hello
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDA1OjAwOjEwIiwidXNlZF9pbl9wcm9maWxlIjoiODk2In0.JdTaL8bLMlaQvb5B-Uy8RmbaD0HWEf6jdyk5HnstxuQdypRiQqVK9JaEdKlNIzNXYDxtCqX8ObgpodBGcau6WQ
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [message_to_user_id] => 5
+    [subject] => Re: nick hat deine Freundschaftsanfrage akzeptiert.
+    [content] => test
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [box_type] => send
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [box_type] => send
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [box_type] => inbox
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [box_type] => send
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [box_type] => inbox
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [message_to_user_id] => 5
+    [subject] => Re: nick hat deine Freundschaftsanfrage akzeptiert.
+    [content] => kkk
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [box_type] => send
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [profile_id] => 760
+    [lang] => de
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [message_to_user_id] => 760
+    [subject] => ttt
+    [content] => ttt
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [message_to_user_id] => 760
+    [subject] => ttt
+    [content] => ttt
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [message_to_user_id] => 760
+    [subject] => ttt
+    [content] => ttt
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [message_to_user_id] => 760
+    [subject] => ttt
+    [content] => ttt
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [message_to_user_id] => 760
+    [subject] => ttt
+    [content] => ttt
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [box_type] => inbox
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [box_type] => send
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [box_type] => send
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [message_to_user_id] => 814
+    [subject] => Re: hello
+    [content] => hhh
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [message_to_user_id] => 814
+    [subject] => Re: hello
+    [content] => hhh
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [message_to_user_id] => 814
+    [subject] => Re: hello
+    [content] => jkk
+)
+
+====15
+Array
+(
+)
+
+====17
+====6
+====13
+Array
+(
+    [token] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJlbWFpbCI6Im5vYWguYmFnZ2VAb3V0bG9vay5jb20iLCJsb2dpbnRpbWUiOiIyMDE3LTA5LTI4IDAzOjA3OjQwIn0.S42-NkicygEqnRLShy5QrybbGPqoUn-3-l3Xll1Yqx31PB-Yf6yi7rtcM_s4QQ7sOx7Abs_L9KrTHY_6FgZS4Q
+    [box_type] => inbox
+)
+
+====15
+Array
+(
+)
+
+====17

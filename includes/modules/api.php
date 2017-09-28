@@ -1,5 +1,5 @@
 <?php
-define('DEBUG_MODE', true);
+define('DEBUG_MODE', false);
 require ("api/functions.php");
 $content = file_get_contents("php://input");
 if ($content) {
