@@ -17,6 +17,10 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+
 $lang = isset($lang) ? $lang : "en";
 
 $sql = "SELECT *, uts.sport_group_id AS sgID, uts.sport_group_value_id AS vID
@@ -26,7 +30,7 @@ $sql = "SELECT *, uts.sport_group_id AS sgID, uts.sport_group_value_id AS vID
             LEFT JOIN sport_group_value AS sgv ON uts.sport_group_value_id = sgv.sport_group_value_id
             LEFT JOIN user AS u ON uts.user_id = u.user_id
         WHERE 
-            uts.user_id ='" . $user['user_id'] . "' AND 
+            uts.user_id ='$used_in_profile_id' AND 
             sgd.language_code='" . $lang . "' 
         ORDER BY sgd.sport_group_name ASC";
 
@@ -35,8 +39,8 @@ $query->execute();
 $get_main_sport = $query->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($get_main_sport as $key => $main_sport) {
-    $get_main_sport[$key]['subgroup'] = get_user_sport_list($user['user_id'], $main_sport['vID']);
-    $get_main_sport[$key]['subgroup_list'] = api_get_user_sport_list($user['user_id'], $main_sport['vID']);
+    $get_main_sport[$key]['subgroup'] = get_user_sport_list($used_in_profile_id, $main_sport['vID']);
+    $get_main_sport[$key]['subgroup_list'] = api_get_user_sport_list($used_in_profile_id, $main_sport['vID']);
 }
 
 $response['result'] = $get_main_sport;

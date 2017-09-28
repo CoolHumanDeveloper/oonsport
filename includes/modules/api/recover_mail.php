@@ -18,12 +18,16 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+
 $sql = "SELECT * FROM 
 	message m
 	LEFT JOIN user_to_messages AS utm ON m.message_id = utm.message_id WHERE
 	m.message_key = '$message_key' AND 
-	(m.message_from_user_id = '" . $user['user_id'] . "' OR m.message_to_user_id = '" . $user['user_id'] . "') AND
-	utm.user_id = '" . $user['user_id'] . "'";
+	(m.message_from_user_id = '$used_in_profile_id' OR m.message_to_user_id = '$used_in_profile_id') AND
+	utm.user_id = '$used_in_profile_id'";
 
 $query = $DB->prepare($sql);
 $query->execute();
@@ -36,11 +40,11 @@ if (!isset($message['message_id'])) {
 }
 
 if ($message['message_type'] == 'from') {
-    $sql = "UPDATE user_to_messages SET message_box='send' WHERE user_id = '" . $user['user_id'] . "' AND message_id = '" . $message['message_id'] . "'";
+    $sql = "UPDATE user_to_messages SET message_box='send' WHERE user_id = '$used_in_profile_id' AND message_id = '" . $message['message_id'] . "'";
     $query = $DB->prepare($sql);
     $query->execute();
 } else {
-    $sql = "UPDATE user_to_messages SET message_box='inbox' WHERE user_id = '" . $user['user_id'] . "' AND message_id = '" . $message['message_id'] . "'";
+    $sql = "UPDATE user_to_messages SET message_box='inbox' WHERE user_id = '$used_in_profile_id' AND message_id = '" . $message['message_id'] . "'";
     $query = $DB->prepare($sql);
     $query->execute();
 }

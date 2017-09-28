@@ -19,6 +19,10 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+
 $sql = "	SELECT 
 			g.*,
 			u.user_id 
@@ -34,7 +38,7 @@ $query = $DB->prepare($sql);
 $query->execute();
 $group = $query->fetch();
 
-if (is_group_member($group['group_id'], $user['user_id']) === false && is_group_invited($group['group_id'], $user['user_id']) === false) {
+if (is_group_member($group['group_id'], $used_in_profile_id) === false && is_group_invited($group['group_id'], $used_in_profile_id) === false) {
     header(HEADER_FORBIDDEN);
     $response['code'] = FAIL_USER;
     die(json_encode($response));
@@ -48,6 +52,6 @@ if(strlen($message) > 255) {
 
 $message = preg_replace("/'/", "\\'", $message);
 
-$sql = "INSERT INTO `groups_message` (group_message_user_id, group_message_group_id, `group_message_date`, `group_message_value`) VALUES ('".$user['user_id']."', '$group_id',  NOW(), '$message');";
+$sql = "INSERT INTO `groups_message` (group_message_user_id, group_message_group_id, `group_message_date`, `group_message_value`) VALUES ('$used_in_profile_id', '$group_id',  NOW(), '$message');";
 $query = $DB->prepare($sql);
 $query->execute();

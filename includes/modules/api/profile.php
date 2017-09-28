@@ -18,7 +18,10 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+$sql = "SELECT * FROM user_details WHERE user_id=" . $used_in_profile_id;
 $query = $DB->prepare($sql);
 $query->execute();
 $user_detail = $query->fetch(PDO::FETCH_ASSOC);
@@ -44,21 +47,21 @@ $profile_info['total_media'] = $total_media;
 $profile_info['user_image_300'] = api_build_default_image($user_profile['user_id'],"300x300");
 $profile_info['user_image_200'] = api_build_default_image($user_profile['user_id'],"200x200");
 $profile_info['last_online_time'] = last_time_online($user_profile['user_id']);
-$profile_info['is_friend'] = friendship_exists($user['user_id'], $user_profile['user_id']) === true;
+$profile_info['is_friend'] = friendship_exists($used_in_profile_id, $user_profile['user_id']) === true;
 
 $my_groups = array();
 
-if ($user['user_id'] != $user_profile['user_id']) {
+if ($used_in_profile_id != $user_profile['user_id']) {
     if ($profile_info['is_friend']) {
-        $profile_info['is_active'] = friendship_active($user['user_id'], $user_profile['user_id']) === true;
+        $profile_info['is_active'] = friendship_active($used_in_profile_id, $user_profile['user_id']) === true;
 
         if ($profile_info['is_active']) {
-            $my_groups = api_build_group_select($user['user_id'], $user_profile);
+            $my_groups = api_build_group_select($used_in_profile_id, $user_profile);
             $profile_info['is_group_connected'] = is_group_connected($groups['group_id'], $profile['user_id']) === true;
         }
     }
 
-    $profile_info['watchlist_exists'] = watchlist_exists($user['user_id'],$user_profile['user_id']) === true;
+    $profile_info['watchlist_exists'] = watchlist_exists($used_in_profile_id,$user_profile['user_id']) === true;
 }
 
 $profile_info['city_name'] = get_city_name($user_profile['user_geo_city_id'], $user_profile['user_country']);
@@ -89,8 +92,8 @@ $actpage = isset($page) ? $page - 1 : 0;
 $profile_info['shoutbox'] = api_build_shoutbox_feed($user_profile['user_id'],'profile');
 $profile_info['marketplace'] = api_build_shoutbox_feed($user_profile['user_id'],'marketplace_profil');
 
-if ($user['user_id'] != $user_profile['user_id']) {
-    $profile_info['is_blocked'] = blockedlist_exists($user['user_id'], $user_profile['user_id']) === true;
+if ($used_in_profile_id != $user_profile['user_id']) {
+    $profile_info['is_blocked'] = blockedlist_exists($used_in_profile_id, $user_profile['user_id']) === true;
 }
 
 $response['profile_info'] = $profile_info;

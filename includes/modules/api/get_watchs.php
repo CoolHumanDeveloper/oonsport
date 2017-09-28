@@ -18,7 +18,10 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+$sql = "SELECT * FROM user_details WHERE user_id=" . $used_in_profile_id;
 $query = $DB->prepare($sql);
 $query->execute();
 $user_detail = $query->fetch(PDO::FETCH_ASSOC);
@@ -35,8 +38,8 @@ $sql = "SELECT u.*, ud.*, uw.watchlist_date , uw.watchlist_user_id,
 		 LEFT JOIN user_details AS ud ON u.user_id=ud.user_id
 		 LEFT JOIN user_watchlist AS uw ON u.user_id = uw.watchlist_user_id
 		 WHERE 
-		u.user_id!='".$user['user_id']."'  AND
-		uw.user_id = '".$user['user_id']."' AND
+		u.user_id!='$used_in_profile_id'  AND
+		uw.user_id = '$used_in_profile_id' AND
 		u.user_status=1
  		";
 $query = $DB->prepare($sql);

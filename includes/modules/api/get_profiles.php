@@ -18,7 +18,10 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+$sql = "SELECT * FROM user_details WHERE user_id=" . $used_in_profile_id;
 $query = $DB->prepare($sql);
 $query->execute();
 $user_detail = $query->fetch(PDO::FETCH_ASSOC);
@@ -39,8 +42,8 @@ $sql = "SELECT
             user u
             LEFT JOIN user_details AS ud ON u.user_id=ud.user_id
         WHERE 
-            u.user_id='".$user['user_id']."' OR
-            u.user_sub_of='".$user['user_id']."' OR
+            u.user_id='$used_in_profile_id' OR
+            u.user_sub_of='$used_in_profile_id' OR
             (u.user_sub_of='".$user['user_sub_of']."'AND u.user_sub_of IS NOT NULL) OR
             (u.user_id = '".$user['user_sub_of']."' AND u.user_sub_of IS NULL)
         ";
@@ -66,16 +69,16 @@ if($total > 0) {
 
         $friendship_status = '';
 
-        if ($search['user_sub_of'] > 0 && $search['user_id'] != $user['user_id']) {
+        if ($search['user_sub_of'] > 0 && $search['user_id'] != $used_in_profile_id) {
 //            $friendship_status = '<form method="post" action="#SITE_URL#me/settings/profiles/" >
 //		                            <input name="profile_user_id_' . $_SESSION['user']['secure_spam_key'] . '" value="' . md5($search['user_id'] . $search['user_nickname']) . '" type="hidden">
 //	                                <button name="deleteprofile_' . $_SESSION['user']['secure_spam_key'] . '" class="btn btn-xs btn-danger is-left" type="submit" value="1" ><i class="fa fa-trash"></i></button>
 //	                                </form> ';
-        } else if ($search['user_id'] == $user['user_id']) {
+        } else if ($search['user_id'] == $used_in_profile_id) {
 //            $friendship_status = ' <span class="btn btn-xs btn-primary is-right">' . TEXT_PROFILE_IN_USE . '</span>';
         }
 
-        if ($search['user_id'] != $user['user_id']) {
+        if ($search['user_id'] != $used_in_profile_id) {
 //            $friendship_status .= '<form method="post" action="#SITE_URL#me/settings/profiles/" >
 //                                    <input name="switchprofile_user_id_' . $_SESSION['user']['secure_spam_key'] . '" value="' . md5($search['user_id'] . $search['user_nickname']) . '" type="hidden">
 //                                    <button name="switchprofile_' . $_SESSION['user']['secure_spam_key'] . '" class="btn btn-xs btn-primary  is-right" type="submit" value="1" title="' . TEXT_PROFILE_SWITCH . '" ><i class="fa fa-exchange "></i> ' . TEXT_GLOBAL_SWITCH . '</button>

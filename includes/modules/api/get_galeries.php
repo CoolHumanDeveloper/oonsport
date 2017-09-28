@@ -18,7 +18,11 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM user_media m, user_to_media um WHERE um.user_id='" . $user['user_id'] . "' AND um.media_id=m.media_id ORDER BY m.media_id DESC";
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+
+$sql = "SELECT * FROM user_media m, user_to_media um WHERE um.user_id='$used_in_profile_id' AND um.media_id=m.media_id ORDER BY m.media_id DESC";
 $query = $DB->prepare($sql);
 $query->execute();
 

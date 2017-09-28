@@ -11,7 +11,10 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+$sql = "SELECT * FROM user_details WHERE user_id=" . $used_in_profile_id;
 $query = $DB->prepare($sql);
 $query->execute();
 $user_detail = $query->fetch(PDO::FETCH_ASSOC);
@@ -20,7 +23,6 @@ foreach($user_detail as $key => $ud)
     $userinfo[$key] = $ud;
 
 $output = '';
-$user_id = $user['user_id'];
 $page = isset($page) ? $page - 1 : 0;
 $filter = array();
 $lang = isset($lang) ? $lang : 'en';
@@ -31,17 +33,17 @@ $shoutbox_type = isset($shoutbox_type) ? $shoutbox_type : '';
 $show_marketplace = false;
 $limit = 20;
 
-$distance = get_setting( "shoutbox_display_radius", $user_id );
-$show_sports = get_setting( "shoutbox_display_sports", $user_id );
-$show_friends = get_setting( "shoutbox_display_friends", $user_id );
-$show_marketplace = get_setting( "shoutbox_display_marketplace", $user_id );
+$distance = get_setting( "shoutbox_display_radius", $used_in_profile_id );
+$show_sports = get_setting( "shoutbox_display_sports", $used_in_profile_id );
+$show_friends = get_setting( "shoutbox_display_friends", $used_in_profile_id );
+$show_marketplace = get_setting( "shoutbox_display_marketplace", $used_in_profile_id );
 
 $friends_sql = "";
 $friends_sql_join = "";
 
 if ( $show_friends == 1 ) {
     $friends_sql_join = " LEFT JOIN user_friendship AS uf ON uf.user_id = u.user_id OR uf.friendship_user_id=u.user_id ";
-    $friends_sql = " (uf.user_id = '" . $user_id . "' OR uf.friendship_user_id = '" . $user_id . "') AND ";
+    $friends_sql = " (uf.user_id = '$used_in_profile_id' OR uf.friendship_user_id = '$used_in_profile_id') AND ";
 }
 
 
@@ -69,7 +71,7 @@ if ( $show_sports == 1 ) {
 				LEFT JOIN sport_group_details AS sgd ON uts.sport_group_id = sgd.sport_group_id
 				LEFT JOIN user AS u ON uts.user_id = u.user_id
 			WHERE 
-				uts.user_id ='" . $user_id . "' AND 
+				uts.user_id ='$used_in_profile_id' AND 
 				sgd.language_code='" . $lang . "' 
 			GROUP BY 
 				sgd.sport_group_id";
@@ -122,7 +124,7 @@ $sql = "SELECT
         " . $sports_sql_join . "
     WHERE 
         u.user_status=1 AND
-        (ubox.shoutbox_status = 0 OR (ubox.shoutbox_status = 1 AND ubox.user_id = '" . $user_id . "')) AND
+        (ubox.shoutbox_status = 0 OR (ubox.shoutbox_status = 1 AND ubox.user_id = '$used_in_profile_id')) AND
         " . $distance_sql . "
         " . $friends_sql . "
         " . $sports_sql . "

@@ -18,7 +18,10 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+$sql = "SELECT * FROM user_details WHERE user_id=" . $used_in_profile_id;
 $query = $DB->prepare($sql);
 $query->execute();
 $user_detail = $query->fetch(PDO::FETCH_ASSOC);
@@ -43,7 +46,7 @@ $query = $DB->prepare($sql);
 $query->execute();
 $group = $query->fetch(PDO::FETCH_ASSOC);
 
-if (is_group_member($group['group_id'], $user['user_id']) === false && is_group_invited($group['group_id'], $user['user_id']) === false) {
+if (is_group_member($group['group_id'], $used_in_profile_id) === false && is_group_invited($group['group_id'], $used_in_profile_id) === false) {
     header(HEADER_FORBIDDEN);
     $response['code'] = FAIL_USER;
     die(json_encode($response));

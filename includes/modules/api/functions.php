@@ -566,7 +566,7 @@ function api_get_user_main_sport( $user_id, $lang, $type = "plain" ) {
 
     return $get_main_sport;
 }
-function api_isValidUserParent( $switchID, $user ) {
+function api_isValidUserProfile( $switchID, $userid ) {
     global $DB;
     $sql = "SELECT 
 			u.user_id, u.user_sub_of
@@ -578,9 +578,9 @@ function api_isValidUserParent( $switchID, $user ) {
 
     $query = $DB->prepare( $sql );
     $query->execute();
-    $parent = $query->fetch();
+    $profile = $query->fetch();
 
-    if ( $parent[ 'user_id' ] == $_SESSION[ 'user' ][ 'user_sub_of' ] && $_SESSION[ 'user' ][ 'user_sub_of' ] > 0 ) {
+    if ( $profile[ 'user_sub_of' ] > 0 && $userid == $profile[ 'user_sub_of' ] ) {
         return true;
     }
 

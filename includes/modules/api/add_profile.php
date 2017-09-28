@@ -18,7 +18,10 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+$sql = "SELECT * FROM user_details WHERE user_id=" . $used_in_profile_id;
 $query = $DB->prepare($sql);
 $query->execute();
 $user_detail = $query->fetch(PDO::FETCH_ASSOC);
@@ -41,10 +44,10 @@ if(strlen($profile_nickname) < 3) {
 if ($user['user_sub_of'] > 0) {
     $new_sub_of = $user['user_sub_of'];
 } else {
-    $new_sub_of = $user['user_id'];
+    $new_sub_of = $used_in_profile_id;
 }
 
-$sql = "INSERT INTO `user` (`user_password`, `user_email`, `user_type`, `user_status`, `user_auth_key`, user_register_date, user_sub_of) VALUES ('".md5($user['user_id'].time())."', '".md5($user['user_id'].time())."', '".$user_type."', 1, '', NOW(), '".$new_sub_of ."')";
+$sql = "INSERT INTO `user` (`user_password`, `user_email`, `user_type`, `user_status`, `user_auth_key`, user_register_date, user_sub_of) VALUES ('".md5($used_in_profile_id.time())."', '".md5($used_in_profile_id.time())."', '".$user_type."', 1, '', NOW(), '".$new_sub_of ."')";
 $query = $DB->prepare($sql);
 $query->execute();
 
@@ -70,7 +73,7 @@ if ($user_id > 0) {
             FROM 
                 user_to_sport_group_value uts
             WHERE 
-                uts.user_id ='" . $user['user_id'] . "'
+                uts.user_id ='$used_in_profile_id'
             LIMIT 1";
 
     $query = $DB->prepare($sql);

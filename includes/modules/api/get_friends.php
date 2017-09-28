@@ -18,7 +18,10 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+$sql = "SELECT * FROM user_details WHERE user_id=" . $used_in_profile_id;
 $query = $DB->prepare($sql);
 $query->execute();
 $user_detail = $query->fetch(PDO::FETCH_ASSOC);
@@ -36,8 +39,8 @@ $sql = "SELECT u.*, ud.*, uf.friendship_date, uf.friendship_user_id AS friend_id
  LEFT JOIN user_friendship AS uf ON u.user_id = uf.user_id OR u.user_id = uf.friendship_user_id
  WHERE 
  uf.friendship_confirmed = 1 AND
-u.user_id!='".$user['user_id']."'  AND
-(uf.user_id = '".$user['user_id']."' OR uf.friendship_user_id = '".$user['user_id']."') AND
+u.user_id!='$used_in_profile_id'  AND
+(uf.user_id = '$used_in_profile_id' OR uf.friendship_user_id = '$used_in_profile_id') AND
 u.user_status=1 
 ";
 

@@ -12,9 +12,10 @@ $sql = "select * from user where user_email='{$infos->email}'";
 $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
-$user_id = $user['user_id'];
 
-$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+$sql = "SELECT * FROM user_details WHERE user_id=" . $used_in_profile_id;
 $query = $DB->prepare($sql);
 $query->execute();
 $user_detail = $query->fetch(PDO::FETCH_ASSOC);
@@ -31,7 +32,7 @@ for($sg_x = 3; $sg_x >=0; $sg_x--) {
             $selected_sport_group_value=0;
         }
 
-        $sql = "INSERT INTO `user_to_sport_group_value` (`user_id`, `sport_group_id`, `sport_group_value_id`, sport_group_profession, sport_group_handycap) VALUES ('".$user['user_id']."', '$sport_groups_0', '".$selected_sport_group_value."', '$profession', '$handycap')";
+        $sql = "INSERT INTO `user_to_sport_group_value` (`user_id`, `sport_group_id`, `sport_group_value_id`, sport_group_profession, sport_group_handycap) VALUES ('$used_in_profile_id', '$sport_groups_0', '".$selected_sport_group_value."', '$profession', '$handycap')";
         $query = $DB->prepare($sql);
         $query->execute();
 

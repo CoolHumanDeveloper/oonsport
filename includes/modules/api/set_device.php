@@ -19,6 +19,10 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+
 $query = $DB->prepare("show tables");
 $query->execute();
 $tables = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -38,12 +42,12 @@ if (!$found){
     $query->execute();
 }
 
-$query = $DB->prepare("select * from user_device where user_id='" . $user['user_id'] . "' and device_id='$device_id'");
+$query = $DB->prepare("select * from user_device where user_id='$used_in_profile_id' and device_id='$device_id'");
 $query->execute();
 $devices = $query->fetchAll(PDO::FETCH_ASSOC);
 
 if (count($devices) == 0)
 {
-    $query = $DB->prepare("insert into user_device (user_id, device_kind, device_id) values ('" . $user['user_id'] . "', '$device_kind', '$device_id')");
+    $query = $DB->prepare("insert into user_device (user_id, device_kind, device_id) values ('$used_in_profile_id', '$device_kind', '$device_id')");
     $query->execute();
 }

@@ -14,9 +14,11 @@ $sql = "select * from user where user_email='{$infos->email}'";
 $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
-$user_id = $user['user_id'];
 
-$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+$sql = "SELECT * FROM user_details WHERE user_id=" . $used_in_profile_id;
 $query = $DB->prepare($sql);
 $query->execute();
 $user_detail = $query->fetch(PDO::FETCH_ASSOC);
@@ -37,7 +39,7 @@ if($media_type==1) {
             $userfile_tmp = $_FILES['media_file']['tmp_name'];
             // CHECK FILE TYPE
 
-            $md5_file_name=md5($_FILES['media_file']['tmp_name'].$user['user_id']);
+            $md5_file_name=md5($_FILES['media_file']['tmp_name'].$used_in_profile_id);
 
             $prod_img = SERVER_IMAGE_PATH . "user/".$md5_file_name.'-'.IMAGE_MAX_DEFAULT_SIZE.".jpg";					//echo $prod_img;
             $temp_img = SERVER_IMAGE_PATH . "temp/".$md5_file_name.".jpg"; // Hier wird das bild nur zwischengespeichert zum konvertieren
@@ -71,12 +73,12 @@ if($media_type==1) {
             $sql_last_image = $DB->lastInsertId();
 
             if($_POST['media_default']==1) {
-                $sql = "UPDATE user_to_media SET user_default_media=0 WHERE user_id='".$user['user_id']."'";
+                $sql = "UPDATE user_to_media SET user_default_media=0 WHERE user_id='$used_in_profile_id'";
                 $query = $DB->prepare($sql);
                 $query->execute();
             }
 
-            $sql = "INSERT INTO user_to_media (user_id, media_id, user_default_media, media_sort_order) VALUES ('".$user['user_id']."', '".$sql_last_image."','".$media_default."','".$media_sort."')";
+            $sql = "INSERT INTO user_to_media (user_id, media_id, user_default_media, media_sort_order) VALUES ('$used_in_profile_id', '".$sql_last_image."','".$media_default."','".$media_sort."')";
 
             $query = $DB->prepare($sql);
             $query->execute();
@@ -91,7 +93,7 @@ if($media_type==1) {
 
         $sql_last_image = $DB->lastInsertId();
 
-        $sql = "INSERT INTO user_to_media (user_id, media_id, user_default_media, media_sort_order) VALUES ('".$user['user_id']."', '".$sql_last_image."', 0 , 0)";
+        $sql = "INSERT INTO user_to_media (user_id, media_id, user_default_media, media_sort_order) VALUES ('$used_in_profile_id', '".$sql_last_image."', 0 , 0)";
         $query = $DB->prepare($sql);
         $query->execute();
     }
@@ -106,7 +108,7 @@ if($media_type==1) {
             $userfile_tmp = $_FILES['media_file']['tmp_name'];
             // CHECK FILE TYPE
 
-            $md5_file_name=md5($_FILES['media_file']['tmp_name'].$user['user_id']);
+            $md5_file_name=md5($_FILES['media_file']['tmp_name'].$used_in_profile_id);
 
             $prod_img = SERVER_IMAGE_PATH . "user/".$md5_file_name."." . $extension;
             //echo $prod_img;
@@ -121,12 +123,12 @@ if($media_type==1) {
             $sql_last_image = $DB->lastInsertId();
 
             if($_POST['media_default']==1) {
-                $sql = "UPDATE user_to_media SET user_default_media=0 WHERE user_id='".$user['user_id']."'";
+                $sql = "UPDATE user_to_media SET user_default_media=0 WHERE user_id='$used_in_profile_id'";
                 $query = $DB->prepare($sql);
                 $query->execute();
             }
 
-            $sql = "INSERT INTO user_to_media (user_id, media_id, user_default_media, media_sort_order) VALUES ('".$user['user_id']."', '".$sql_last_image."','".$media_default."','".$media_sort."')";
+            $sql = "INSERT INTO user_to_media (user_id, media_id, user_default_media, media_sort_order) VALUES ('$used_in_profile_id', '".$sql_last_image."','".$media_default."','".$media_sort."')";
 
             $query = $DB->prepare($sql);
             $query->execute();

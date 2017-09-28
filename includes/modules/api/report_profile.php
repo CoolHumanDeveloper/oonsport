@@ -20,7 +20,10 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+$sql = "SELECT * FROM user_details WHERE user_id=" . $used_in_profile_id;
 $query = $DB->prepare($sql);
 $query->execute();
 $user_detail = $query->fetch(PDO::FETCH_ASSOC);
@@ -35,7 +38,7 @@ $user_profile = $query->fetch();
 
 $email_content_array = array(
     "SEND_NAME" => $userinfo['user_firstname'].' ' . $userinfo['user_lastname'].' (' . $userinfo['user_nickname'].')',
-    "SEND_ID" => $user['user_id'],
+    "SEND_ID" => $used_in_profile_id,
     "REPORT_NAME" => $user_profile['user_firstname'].' ' . $user_profile['user_lastname'].' (' . $user_profile['user_nickname'].')',
     "REPORT_ID" => $profile_id,
     "SUBJECT" => $alert_subject,
@@ -46,5 +49,5 @@ $email_content_template=email_content_to_template("report-profile",$email_conten
 $alt_content="";
 
 if(sending_email(SYSTEM_MAIL,SITE_NAME,'Profil ' . $user_profile['user_nickname'].' (' . $user_profile['user_id'].') wurde gemeldet',$email_content_template,$alt_content,0)) {
-    build_history_log($user['user_id'],"report_profile", $user_profile['user_id']);
+    build_history_log($used_in_profile_id,"report_profile", $user_profile['user_id']);
 }

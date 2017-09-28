@@ -11,7 +11,10 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+$sql = "SELECT * FROM user_details WHERE user_id=" . $used_in_profile_id;
 $query = $DB->prepare($sql);
 $query->execute();
 $user_detail = $query->fetch(PDO::FETCH_ASSOC);
@@ -225,7 +228,7 @@ if ($placeid) {
     $search_lat = $userinfo['user_lat'];
     $search_lng = $userinfo['user_lng'];
 }
-$search_exclude_user = $user['user_id'];
+$search_exclude_user = $used_in_profile_id;
 
 if ($name != '') {
     $search_sql .= " AND ud.user_nickname LIKE '%$name%'";

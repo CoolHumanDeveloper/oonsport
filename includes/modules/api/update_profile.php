@@ -22,7 +22,10 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+$sql = "SELECT * FROM user_details WHERE user_id=" . $used_in_profile_id;
 $query = $DB->prepare($sql);
 $query->execute();
 $user_detail = $query->fetch(PDO::FETCH_ASSOC);
@@ -40,6 +43,6 @@ $gender = isset($gender) ? $gender : "";
 
 $place_id = geo_locate_by_input( get_country_name( $country ) . ',' . $geo);
 
-$sql = "UPDATE `user_details` SET `user_firstname`='$firstname', `user_lastname`='$lastname', `user_dob`='".date("Y-m-d",strtotime($dob))."', `user_gender`='$gender', `user_country`='$country', user_geo_city_id='$place_id'  WHERE  `user_id`='" . $user['user_id']."'";
+$sql = "UPDATE `user_details` SET `user_firstname`='$firstname', `user_lastname`='$lastname', `user_dob`='".date("Y-m-d",strtotime($dob))."', `user_gender`='$gender', `user_country`='$country', user_geo_city_id='$place_id'  WHERE  `user_id`='$used_in_profile_id'";
 $query = $DB->prepare($sql);
 $query->execute();

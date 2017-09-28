@@ -18,9 +18,13 @@ $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+
 $box_type = isset($box_type) ? $box_type : "inbox"; // inbox, send, trash, blocked
 
-$sql = "SELECT * FROM message m, user_to_messages utm WHERE utm.user_id='".$user['user_id']."' AND m.message_id = utm.message_id AND utm.message_box = '".$box_type."' ORDER BY m.message_date DESC";
+$sql = "SELECT * FROM message m, user_to_messages utm WHERE utm.user_id='$used_in_profile_id' AND m.message_id = utm.message_id AND utm.message_box = '".$box_type."' ORDER BY m.message_date DESC";
 
 $query = $DB->prepare($sql);
 $query->execute();

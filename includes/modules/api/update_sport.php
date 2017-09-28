@@ -12,9 +12,11 @@ $sql = "select * from user where user_email='{$infos->email}'";
 $query = $DB->prepare($sql);
 $query->execute();
 $user = $query->fetch(PDO::FETCH_ASSOC);
-$user_id = $user['user_id'];
 
-$sql = "SELECT * FROM user_details WHERE user_id=" . $user['user_id'];
+$used_in_profile_id = $user['user_id'];
+if (isset($infos->used_in_profile))
+    $used_in_profile_id = $infos->used_in_profile;
+$sql = "SELECT * FROM user_details WHERE user_id=" . $used_in_profile_id;
 $query = $DB->prepare($sql);
 $query->execute();
 $user_detail = $query->fetch(PDO::FETCH_ASSOC);
@@ -40,7 +42,7 @@ for($sg_x = 3; $sg_x >=0; $sg_x--) {
                         sport_group_handycap ='$handycap'
                     WHERE 
                         sport_group_id = '$sport_groups_0'  
-                        AND user_id = '".$user['user_id']."'";
+                        AND user_id = '$used_in_profile_id'";
         $query = $DB->prepare($sql);
         $query->execute();
         break;
