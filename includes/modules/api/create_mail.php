@@ -28,7 +28,7 @@ $message_user = $query->fetch();
 if ($user['user_id'] == $message_user['user_id']) {
     header(HEADER_SERVERERR);
     $response['code'] = MESSAGE_TO_ME;
-    die();
+    die(json_encode($response));
 }
 
 if($message_user['user_sub_of'] > 0) {
@@ -38,7 +38,7 @@ if($message_user['user_sub_of'] > 0) {
 if (action_blockedlist_exists($user['user_id'], $message_user['user_id']) === true) {
     header(HEADER_SERVERERR);
     $response['code'] = MESSAGE_TO_BLOCKED_USER;
-    die();
+    die(json_encode($response));
 }
 
 $systemlink = "me/message/inbox/";
@@ -47,7 +47,7 @@ if (have_permission("emailcopy_on_message", $message_user['user_id'])) {
     (
         "NAME" => $message_user['user_firstname'],
         "FROM_USER_NAME" => $user['user_nickname'],
-        "FROM_USER_IMAGE" => build_default_image($user['user_id'],"115x115","plain"),
+        "FROM_USER_IMAGE" => api_build_default_image($user['user_id'],"115x115"),
         "FROM_USER_LINK" => $systemlink,
         "FROM_USER_DETAILS" => get_city_name($user['user_city_id'], $user['user_country']) . "<br>" . get_user_main_sport($user['user_id'])
     );
@@ -55,11 +55,11 @@ if (have_permission("emailcopy_on_message", $message_user['user_id'])) {
     $email_content_template = email_content_to_template("message-new", $email_content_array,"");
     $alt_content = "";
 
+    send_message_online($message_user['user_id'], $user['user_id'], $subject, $content, '', 0);
+    
     if (sending_email($message_user['user_email'], $message_user['user_firstname'],TEXT_MESSAGES_SUBJECT_FROM . " " . $user['user_nickname'] . " : " . substr($subject,0,64), $email_content_template, $alt_content,0) === false) {
         $response['code'] = FAIL_SENDMAIL;
         header(HEADER_SERVERERR);
-        die();
+        die(json_encode($response));
     }
 }
-
-send_message_online($message_user['user_id'], $user['user_id'], $subject, $content, '', 0);

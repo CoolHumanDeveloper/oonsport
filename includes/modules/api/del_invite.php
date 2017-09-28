@@ -30,7 +30,7 @@ if($friendship_user['user_sub_of'] > 0) {
 if ($user['user_id'] === $friendship_user['user_id']) {
     header(HEADER_SERVERERR);
     $response['code'] = PROCESS_ME;
-    die();
+    die(json_encode($response));
 }
 
 $sql = "DELETE FROM `user_friendship` WHERE friendship_user_id='$invite_user_id' AND user_id = '".$user['user_id']."'";

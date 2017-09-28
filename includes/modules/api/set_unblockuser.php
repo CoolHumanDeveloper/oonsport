@@ -26,7 +26,7 @@ $blocked = $query->fetch();
 if ($user['user_id'] === $blocked['user_id']) {
     header(HEADER_SERVERERR);
     $response['code'] = BLOCK_ME;
-    die();
+    die(json_encode($response));
 }
 
 $sql = "DELETE FROM `user_blocked` WHERE user_id='" . $user['user_id'] . "' and blocked_user_id='$blocked_user_id'";

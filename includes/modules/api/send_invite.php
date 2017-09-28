@@ -32,13 +32,13 @@ if($friendship_user['user_sub_of'] > 0) {
 if($user['user_id'] === $friendship_user['user_id']) {
     header(HEADER_SERVERERR);
     $response['code'] = PROCESS_ME;
-    die();
+    die(json_encode($response));
 }
 
 if(friendship_exists($user['user_id'], $friendship_user['user_id']) === true) {
     header(HEADER_SERVERERR);
     $response['code'] = ALREADY_REGISTERED;
-    die();
+    die(json_encode($response));
 }
 
 $sql = "INSERT INTO `user_friendship` (`user_id`, `friendship_user_id`, `friendship_confirmed`, `friendship_date`) VALUES ('".$user['user_id']."', '$invite_user_id', 0, NOW());";

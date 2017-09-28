@@ -89,8 +89,8 @@ $actpage = isset($page) ? $page - 1 : 0;
 $profile_info['shoutbox'] = api_build_shoutbox_feed($user_profile['user_id'],'profile');
 $profile_info['marketplace'] = api_build_shoutbox_feed($user_profile['user_id'],'marketplace_profil');
 
-if ($userinfo['user_id'] != $user_profile['user_id']) {
-    $profile_info['is_blocked'] = blockedlist_exists($userinfo['user_id'], $user_profile['user_id']) === true;
+if ($user['user_id'] != $user_profile['user_id']) {
+    $profile_info['is_blocked'] = blockedlist_exists($user['user_id'], $user_profile['user_id']) === true;
 }
 
 $response['profile_info'] = $profile_info;
