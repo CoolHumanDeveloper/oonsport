@@ -62,6 +62,10 @@ if($total > 0) {
     $get_search = $query->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($get_search as $key => $search) {
+        if ($search['user_id'] == $used_in_profile_id)
+            $get_search[$key]['in_use'] = true;
+        else
+            $get_search[$key]['in_use'] = false;
         $get_search[$key]['grid_image'] = api_build_default_image($search['user_id'], "115x100");
         $get_search[$key]['list_image'] = api_build_default_image($search['user_id'], "100x100");
         $get_search[$key]['user_country'] = strtoupper($search['user_country']);
