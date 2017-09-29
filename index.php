@@ -1,11 +1,4 @@
 <?php
-session_start();
-
-function debug1($obj){
-    $fp = fopen("debug.txt", 'a');
-    fputs($fp, print_r($obj, true) . "\n");
-    fclose($fp);
-}
 
 require("includes/config.php");
 
@@ -20,4 +13,4 @@ require("includes/config.php");
 
 // Ausgabe der Seite 
 echo load_template();
- ?>
+?>

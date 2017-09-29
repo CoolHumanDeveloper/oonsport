@@ -1,20 +1,13 @@
 <?php
-define('DEBUG_MODE', false);
+define('DEBUG_MODE', true);
 require ("api/functions.php");
 $content = file_get_contents("php://input");
 if ($content) {
-    debug("====" . __LINE__);
     $params = json_decode($content, true);
 } else {
-    debug("====" . __LINE__);
     $params = $_REQUEST;
 }
 
-debug("====" . __LINE__);
-debug($params);
-debug("====" . __LINE__);
-debug($_FILES);
-debug("====" . __LINE__);
 extract($params);
 $response = array();
 
@@ -23,7 +16,6 @@ require ("api/jwt/src/JWT.php");
 
 $jwt = new \Firebase\JWT\JWT();
 $apiname = $_GET['content_value'];
-//debug("==$apiname==" . __LINE__);
 switch($apiname){
     case "getdata":
     case "search":
@@ -79,6 +71,7 @@ switch($apiname){
     case "del_profile":
     case "switch_profile":
     case "report_profile":
+    case "add_media":
         if (!isset($token))
         {
             header(HEADER_UNAUTHORIZED);
@@ -105,6 +98,5 @@ switch($apiname){
         require(MODULE_PATH . "api/notfound.php");
     break;
 }
-//debug("====" . __LINE__);
 $response['code'] = SUCCESS;
 die(json_encode($response));

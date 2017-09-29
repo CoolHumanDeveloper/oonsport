@@ -1,6 +1,6 @@
 <?php
 if (!isset($media_type) || $media_type == ""
-    || !isset($media_title) || $media_title == ""
+    || !isset($media_title)
     || $media_type == 2
     && (!isset($media_url) || $media_url == ""
     || !isset($media_url_type) || $media_url_type == "")
@@ -49,13 +49,11 @@ if($media_type==1) {
             $new_size=explode("x",IMAGE_MAX_DEFAULT_SIZE);
 
             $command='convert "'.$temp_img.'" -auto-orient "'.$temp_img.'"';
-
-
-
             exec($command, $return);
 
             $command='convert "'.$temp_img.'" -resize '.$new_size[0].'x -resize "x'.$new_size[1].'<" -colorspace rgb "'.$prod_img.'"';
             exec($command, $return);
+
             $image = imagecreatefromjpeg($prod_img);
 
             $bg = imagecreatetruecolor(imagesx($image), imagesy($image));
