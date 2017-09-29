@@ -23,7 +23,7 @@ unset($user_detail['user_id']);
 foreach($user_detail as $key => $ud)
     $userinfo[$key] = $ud;
 
-if(!api_isValidUserProfile($switchprofile_user_id, $used_in_profile_id) == true) {
+if($user['user_id'] != $switchprofile_user_id && !api_isValidUserProfile($switchprofile_user_id, $user['user_id']) == true) {
     header(HEADER_FORBIDDEN);
     $response['code'] = FAIL_USER;
     die(json_encode($response));
