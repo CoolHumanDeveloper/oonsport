@@ -42,11 +42,13 @@ $sql = "SELECT
             user u
             LEFT JOIN user_details AS ud ON u.user_id=ud.user_id
         WHERE 
-            u.user_id='$used_in_profile_id' OR
-            u.user_sub_of='$used_in_profile_id' OR
+            u.user_id='{$user['user_id']}' OR
+            u.user_sub_of='{$user['user_id']}' OR
             (u.user_sub_of='".$user['user_sub_of']."'AND u.user_sub_of IS NOT NULL) OR
             (u.user_id = '".$user['user_sub_of']."' AND u.user_sub_of IS NULL)
         ";
+
+
 
 $query = $DB->prepare($sql);
 $query->execute();

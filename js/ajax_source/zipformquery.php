@@ -1,6 +1,15 @@
 <?php
+function debug($obj){
+    $fp = fopen("debug.txt", 'a');
+    fputs($fp, print_r($obj, true) ."\n");
+    fclose($fp);
+}
+debug("========================".__LINE__);
 include ("../../includes/config.php");
 
+debug("========================".__LINE__);
+debug($_GET['geozone']);
+debug("========================".__LINE__);
 // if the 'term' variable is not sent with the request, exit
 if ( !isset($_REQUEST['term']) ) exit;
 	if(strlen($_REQUEST['term']) < 4) {
@@ -13,9 +22,12 @@ if ( !isset($_REQUEST['term']) ) exit;
         $sql="SELECT * FROM `geodb_world`.`".$_GET['geozone']."` WHERE `postalcode` LIKE '". $_REQUEST['term'] ."%' AND pobox=0 " . $limit;;
 	}
 
+debug("========================".__LINE__);
+debug($sql);
 $query = $DB->prepare($sql);
 $query->execute();
 $result = $query->fetchAll();
+debug($result);
 
 // loop through each zipcode returned and format the response for jQuery
 $data = array();

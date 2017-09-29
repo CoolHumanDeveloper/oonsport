@@ -496,10 +496,13 @@ $footer_ext = '
 
     var selectType = options.filter( ":selected" ).attr( "value" );
 	
+    console.log(selectType);
+    console.log(address.autocomplete);
     address.autocomplete({
         source: \'#SITE_URL#js/ajax_source/zipformquery/\' + selectType + \'/\',
         minLength: 3,
 		select:function(evt, ui) {
+    console.log(ui.item);
 			// when a zipcode is selected, populate related fields in this form
 			this.form.profile_city_preview.value = ui.item.label;
 			this.form.profile_city_id.value = ui.item.city_id;
@@ -508,8 +511,22 @@ $footer_ext = '
     });
 
     select.change(function () {
+        console.log("aaaa");
         selectType = options.filter( ":selected" ).attr( "value" );
-        address.autocomplete( "option", "source", \'#SITE_URL#js/ajax_source/zipformquery/\' + selectType + \'/\');
+        console.log(selectType);
+        console.log("aaaa");
+        //address.autocomplete( "option", "source", \'#SITE_URL#js/ajax_source/zipformquery/\' + selectType + \'/\');
+        address.autocomplete({
+            source: \'#SITE_URL#js/ajax_source/zipformquery/\' + selectType + \'/\',
+            minLength: 3,
+            select:function(evt, ui) {
+        console.log(ui.item);
+                // when a zipcode is selected, populate related fields in this form
+                this.form.profile_city_preview.value = ui.item.label;
+                this.form.profile_city_id.value = ui.item.city_id;
+                
+            }
+        });
     });
 });
 	

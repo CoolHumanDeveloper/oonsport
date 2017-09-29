@@ -44,7 +44,7 @@ if(strlen($profile_nickname) < 3) {
 if ($user['user_sub_of'] > 0) {
     $new_sub_of = $user['user_sub_of'];
 } else {
-    $new_sub_of = $used_in_profile_id;
+    $new_sub_of = $user['user_id'];
 }
 
 $sql = "INSERT INTO `user` (`user_password`, `user_email`, `user_type`, `user_status`, `user_auth_key`, user_register_date, user_sub_of) VALUES ('".md5($used_in_profile_id.time())."', '".md5($used_in_profile_id.time())."', '".$user_type."', 1, '', NOW(), '".$new_sub_of ."')";
