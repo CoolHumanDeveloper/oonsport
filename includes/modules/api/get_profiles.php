@@ -68,8 +68,9 @@ if($total > 0) {
             $get_search[$key]['in_use'] = true;
         else
             $get_search[$key]['in_use'] = false;
-        $get_search[$key]['grid_image'] = api_build_default_image($search['user_id'], "115x100");
-        $get_search[$key]['list_image'] = api_build_default_image($search['user_id'], "100x100");
+        $get_search[$key]['user_image'] = api_build_default_image($search['user_id'], "50x50");
+        //$get_search[$key]['grid_image'] = api_build_default_image($search['user_id'], "115x100");
+        //$get_search[$key]['list_image'] = api_build_default_image($search['user_id'], "100x100");
         $get_search[$key]['user_country'] = strtoupper($search['user_country']);
         $get_search[$key]['city_name'] = get_city_name($search['user_geo_city_id'], $search['user_country']);
 
