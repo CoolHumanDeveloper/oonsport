@@ -7,6 +7,7 @@ if (
     || !isset($profile_country) || $profile_country == ""
     || !isset($profile_zipcode) || $profile_zipcode == ""
     || !isset($profile_city_id) || $profile_city_id == ""
+    || !isset($place_id) || $place_id == ""
 ) {
     header(HEADER_SERVERERR);
     $response['code'] = MISSING_PARAMETER;
@@ -54,10 +55,7 @@ $query->execute();
 $user_id = $DB->lastInsertId();
 
 if ($user_id > 0) {
-    $profile_geo = get_city_latlng($profile_city_id, $profile_country);
-    $place_id = geo_locate_by_input( get_country_name( $profile_country ) . ',' . $profile_city_id);
-
-    $sql = "INSERT INTO `user_details` (`user_id`, `user_nickname`, `user_firstname`, `user_lastname`, `user_dob`, `user_gender`, `user_country`, `user_zipcode`, `user_city_idX`,user_lat,user_lng, user_geo_city_id) VALUES ('" . $user_id . "', '" . $profile_nickname . "', '" . $userinfo['user_firstname'] . "', '" . $userinfo['user_lastname'] . "', '" . date("Y-m-d", strtotime($profile_dob)) . "', '" . $profile_gender . "', '" . $profile_country . "', '" . $profile_zipcode . "', '" . $profile_city_id . "', '" . $profile_geo['lat'] . "', '" . $profile_geo['lng'] . "', '$place_id');";
+    $sql = "INSERT INTO `user_details` (`user_id`, `user_nickname`, `user_firstname`, `user_lastname`, `user_dob`, `user_gender`, `user_country`, `user_geo_city_id`) VALUES ('$user_id', '$profile_nickname', '" . $userinfo['user_firstname'] . "', '" . $userinfo['user_lastname'] . "', '" . date("Y-m-d", strtotime($profile_dob)) . "', '" . $profile_gender . "', '" . $profile_country . "', '$place_id');";
     $query = $DB->prepare($sql);
     $query->execute();
 

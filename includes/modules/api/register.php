@@ -9,6 +9,7 @@ if (!isset($register_type) || !$register_type
     || !isset($dob) || trim($dob) == ""
     || !isset($country) || trim($country) == ""
     //|| (!isset($geo) || trim($geo) == "") && (!isset($place) || trim($place) == "")
+    || !isset($place_id) || trim($place_id) == ""
     || !isset($groups) || trim($groups) == ""
     || !isset($profession) || trim($profession) == ""
     || (!isset($groups_status) || $groups_status == "") && $register_type != 3 && $register_type != 4
@@ -66,7 +67,7 @@ if (!$user_id > 0) {
 }
 
 $dob = date("Y-m-d", strtotime($dob));
-$sql = "INSERT INTO `user_details` (`user_id`, `user_nickname`, `user_firstname`, `user_lastname`, `user_dob`, `user_gender`, user_country, `user_geo_city_id`) VALUES ('$user_id', '$nickname', '$firstname', '$lastname', '$dob', '$gender', '$country', '$place');";
+$sql = "INSERT INTO `user_details` (`user_id`, `user_nickname`, `user_firstname`, `user_lastname`, `user_dob`, `user_gender`, user_country, `user_geo_city_id`) VALUES ('$user_id', '$nickname', '$firstname', '$lastname', '$dob', '$gender', '$country', '$place_id');";
 $query = $DB->prepare($sql);
 $query->execute();
 
