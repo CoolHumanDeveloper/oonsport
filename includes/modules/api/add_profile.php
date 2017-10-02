@@ -5,8 +5,8 @@ if (
     || (!isset($profile_gender) || $profile_gender == "") && ($user_type == 1 || $user_type == 2)
     || !isset($profile_dob) || $profile_dob == ""
     || !isset($profile_country) || $profile_country == ""
-    || !isset($profile_zipcode) || $profile_zipcode == ""
-    || !isset($profile_city_id) || $profile_city_id == ""
+//    || !isset($profile_zipcode) || $profile_zipcode == ""
+//    || !isset($profile_city_id) || $profile_city_id == ""
     || !isset($place_id) || $place_id == ""
 ) {
     header(HEADER_SERVERERR);
