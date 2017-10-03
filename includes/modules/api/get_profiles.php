@@ -29,8 +29,8 @@ unset($user_detail['user_id']);
 foreach($user_detail as $key => $ud)
     $userinfo[$key] = $ud;
 
-$search_lat = $userinfo['user_lat'];
-$search_lng = $userinfo['user_lng'];
+$search_lat = $userinfo['user_lat'] ? : "0";
+$search_lng = $userinfo['user_lng'] ? : "0";
 
 $page = isset($page) ? $page - 1 : 0;
 

@@ -119,7 +119,7 @@ else if($_SERVER['SERVER_PORT'] == 443) {
 	define('SERVER_IMAGE_PATH','/srv/www/vhosts/oon-sport.de/subdomain_images/');
 	define('SITE_IMAGE_URL','https://images.oon-sport.de/');
 	define('DB_DEFAULT','oon-sport2015');
-} else if( $_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '192.168.0.116' ) {
+} else if( $_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '192.168.0.22' ) {
 	define('SERVER_PATH','D:/xampp7/htdocs/oonsrc/');
     include (SERVER_PATH . "includes/functions/locate.php");
 
