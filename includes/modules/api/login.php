@@ -53,6 +53,7 @@ foreach($user_profile as $key => $ud)
     $userinfo[$key] = $ud;
 
 $userinfo['user_image'] = api_build_default_image($user['user_id'], "50x50");
+$userinfo['user_type'] = $user['user_type'];
 
 $response['userinfo'] = $userinfo;
 ?>

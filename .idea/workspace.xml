@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78c4aab9-b50a-487f-ab15-b4c09931ef7a" name="Default" comment="change register and add_profile">
+    <list default="true" id="78c4aab9-b50a-487f-ab15-b4c09931ef7a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/config.php" afterPath="$PROJECT_DIR$/includes/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api/get_profiles.php" afterPath="$PROJECT_DIR$/includes/modules/api/get_profiles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/modules/api/login.php" afterPath="$PROJECT_DIR$/includes/modules/api/login.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +17,7 @@
       <file leaf-file-name="add_profile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/modules/api/add_profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="323">
               <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
               <folding>
                 <marker date="1506936024663" expanded="true" signature="605:658" ph="select * fro... user" />
@@ -35,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_profiles.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get_profiles.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/modules/api/get_profiles.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -43,6 +42,20 @@
               <folding>
                 <marker date="1506938145110" expanded="true" signature="285:338" ph="select * fro... user" />
                 <marker date="1506938145110" expanded="true" signature="566:607" ph="SELECT * FRO... user_details" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/modules/api/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="846">
+              <caret line="55" column="44" lean-forward="false" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+              <folding>
+                <marker date="1507188180338" expanded="true" signature="166:253" ph="SELECT * FRO... user" />
+                <marker date="1507188180338" expanded="true" signature="965:1006" ph="SELECT * FRO... user_details" />
+                <marker date="1507188180338" expanded="true" signature="1232:1273" ph="SELECT * FRO... user_profile" />
               </folding>
             </state>
           </provider>
@@ -151,12 +164,12 @@
         <option value="$PROJECT_DIR$/js/ajax_source/zipformquery.php" />
         <option value="$PROJECT_DIR$/includes/modules/me/settings/profiles.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/switch_profile.php" />
-        <option value="$PROJECT_DIR$/includes/modules/api/login.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/functions.php" />
         <option value="$PROJECT_DIR$/includes/config.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/register.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/add_profile.php" />
         <option value="$PROJECT_DIR$/includes/modules/api/get_profiles.php" />
+        <option value="$PROJECT_DIR$/includes/modules/api/login.php" />
       </list>
     </option>
   </component>
@@ -175,9 +188,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="499" />
-    <option name="y" value="34" />
-    <option name="width" value="1608" />
+    <option name="x" value="92" />
+    <option name="y" value="54" />
+    <option name="width" value="1720" />
     <option name="height" value="925" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -199,7 +212,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -230,11 +242,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../usermanagement" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -297,14 +310,8 @@
       <workItem from="1506917217740" duration="3439000" />
       <workItem from="1506959466769" duration="573000" />
       <workItem from="1507023348510" duration="720000" />
-      <workItem from="1507029586651" duration="1353000" />
-    </task>
-    <task id="LOCAL-00024" summary="update_settings_shoutbox">
-      <created>1506152353557</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1506152353557</updated>
+      <workItem from="1507029586651" duration="1468000" />
+      <workItem from="1507108305497" duration="712000" />
     </task>
     <task id="LOCAL-00025" summary="update_settings_marketplace">
       <created>1506152608929</created>
@@ -642,11 +649,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506936066743</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="change config for ip">
+      <created>1507056719254</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1507056719255</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286984000" />
+    <option name="totallyTimeSpent" value="287811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -678,7 +692,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="get_sports" />
     <MESSAGE value="get_aboutme" />
     <MESSAGE value="set_aboutme" />
     <MESSAGE value="get_galeries" />
@@ -703,7 +716,8 @@
     <MESSAGE value="change get profiles for user_image" />
     <MESSAGE value="change login and config" />
     <MESSAGE value="change register and add_profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="change register and add_profile" />
+    <MESSAGE value="change config for ip" />
+    <option name="LAST_COMMIT_MESSAGE" value="change config for ip" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1182,16 +1196,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/modules/api/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="54" column="55" lean-forward="false" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/modules/api/add_profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="323">
           <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
           <folding>
             <marker date="1506936024663" expanded="true" signature="605:658" ph="select * fro... user" />
@@ -1222,7 +1229,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1230,7 +1236,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,6 +1246,18 @@
           <folding>
             <marker date="1506938145110" expanded="true" signature="285:338" ph="select * fro... user" />
             <marker date="1506938145110" expanded="true" signature="566:607" ph="SELECT * FRO... user_details" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/modules/api/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="55" column="44" lean-forward="false" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+          <folding>
+            <marker date="1507188180338" expanded="true" signature="166:253" ph="SELECT * FRO... user" />
+            <marker date="1507188180338" expanded="true" signature="965:1006" ph="SELECT * FRO... user_details" />
+            <marker date="1507188180338" expanded="true" signature="1232:1273" ph="SELECT * FRO... user_profile" />
           </folding>
         </state>
       </provider>
